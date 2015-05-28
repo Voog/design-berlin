@@ -1009,6 +1009,13 @@ label .form_control_indicator:before {
 .formatted .edy-texteditor-container-wrapper-right {
   margin-left: 2em;
 }
+.formatted .edy-image-container-with-title:after {
+  display: block;
+  padding: 4px;
+  font-size: 16px;
+  line-height: 1.3em;
+  content: attr(data-title);
+}
 
 /* articles */
 .blog-content h1 {
