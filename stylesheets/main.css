@@ -26,7 +26,7 @@ ol li, .lang-menu-btn {
 html,
 body {
   height: 100% !important;
-  font: 18px/1.67 "Lato", Helvetica, Arial, "sans-serif";
+  font: 18px/1.67 "Lato", Helvetica, Arial, sans-serif;
 }
 @media screen and (min-width: 1500px) {
   html,
@@ -77,7 +77,7 @@ img {
 h1,
 h2,
 h3 {
-  font: normal 36px/1.1 "Montserrat", Helvetica, Arial, "sans-serif";
+  font: normal 36px/1.1 "Montserrat", Helvetica, Arial, sans-serif;
   color: #222222;
 }
 
@@ -92,7 +92,7 @@ h2 {
 
 h3 {
   margin: 30px 0 20px;
-  font-family: "Lato", Helvetica, Arial, "sans-serif";
+  font-family: "Lato", Helvetica, Arial, sans-serif;
   font-size: 18px;
   font-weight: bold;
 }
@@ -167,7 +167,7 @@ blockquote {
 }
 
 .font-size-small {
-  font: 18px/1.67 "Lato", Helvetica, Arial, "sans-serif" !important;
+  font: 18px/1.67 "Lato", Helvetica, Arial, sans-serif !important;
 }
 @media screen and (min-width: 1500px) {
   .font-size-small {
@@ -178,7 +178,7 @@ blockquote {
 /* select */
 .jq-select {
   position: relative;
-  font: 18px/1.67 "Lato", Helvetica, Arial, "sans-serif";
+  font: 18px/1.67 "Lato", Helvetica, Arial, sans-serif;
   cursor: pointer;
   color: #222222;
   background: white;
@@ -193,7 +193,7 @@ blockquote {
   height: 100%;
   margin: 0;
   padding: 0;
-  font: 18px/1.67 "Lato", Helvetica, Arial, "sans-serif";
+  font: 18px/1.67 "Lato", Helvetica, Arial, sans-serif;
   cursor: pointer;
   opacity: 0;
   color: #222222;
@@ -259,7 +259,7 @@ blockquote {
 .form_field_textarea {
   width: 30%;
   padding: 4px 5px;
-  font: 18px/1.67 "Lato", Helvetica, Arial, "sans-serif";
+  font: 18px/1.67 "Lato", Helvetica, Arial, sans-serif;
   color: #222222;
   border: none;
   outline: none;
@@ -320,7 +320,7 @@ blockquote {
 .form_submit input,
 .submit {
   height: 45px;
-  font: 18px/1.67 "Lato", Helvetica, Arial, "sans-serif";
+  font: 18px/1.67 "Lato", Helvetica, Arial, sans-serif;
   cursor: pointer;
   border: 0;
   outline: 0;
@@ -451,7 +451,7 @@ label .form_control_indicator:before {
   position: relative;
 }
 .front-page .main-inner {
-  font-family: "Montserrat", Helvetica, Arial, "sans-serif";
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
   font-size: 36px;
   line-height: 1.05;
   text-align: center;
@@ -499,7 +499,7 @@ label .form_control_indicator:before {
 .site-title {
   overflow: hidden;
   padding-top: 25px;
-  font-family: "Montserrat", Helvetica, Arial, "sans-serif";
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
   font-size: 36px;
   line-height: 1.05;
   vertical-align: top;
@@ -537,7 +537,7 @@ label .form_control_indicator:before {
 .sub-menu {
   min-height: 35px;
   padding: 30px 30px 15px 30px;
-  font: 14px/1.1 "Montserrat", Helvetica, Arial, "sans-serif";
+  font: 14px/1.1 "Montserrat", Helvetica, Arial, sans-serif;
   text-align: right;
   word-wrap: break-word;
 }
@@ -988,11 +988,26 @@ label .form_control_indicator:before {
 .formatted .form_fields {
   text-align: left;
 }
-.formatted .edy-image-container-with-title:after {
-  display: block;
-  padding: 4px;
-  font-size: 12px;
-  content: attr(data-title);
+.formatted .edy-positionable-container-center,
+.formatted .edy-positionable-container-left-block,
+.formatted .edy-positionable-container-right-block,
+.formatted .edy-texteditor-container-wrapper-center,
+.formatted .edy-texteditor-container-wrapper-left-block,
+.formatted .edy-texteditor-container-wrapper-right-block {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.formatted .edy-positionable-container-left,
+.formatted .edy-positionable-container-right {
+  width: 45%;
+}
+.formatted .edy-positionable-container-left,
+.formatted .edy-texteditor-container-wrapper-left {
+  margin-right: 2em;
+}
+.formatted .edy-positionable-container-right,
+.formatted .edy-texteditor-container-wrapper-right {
+  margin-left: 2em;
 }
 
 /* articles */
@@ -1318,7 +1333,7 @@ table th {
   width: 100%;
   margin: 0;
   padding: 5px 0;
-  font: 18px/1.67 "Lato", Helvetica, Arial, "sans-serif";
+  font: 18px/1.67 "Lato", Helvetica, Arial, sans-serif;
   color: #222222;
   border: none;
   outline: 0;

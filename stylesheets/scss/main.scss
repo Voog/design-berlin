@@ -1048,14 +1048,30 @@ $flags:
     text-align: left;
   }
 
-  // Content area image title
-  .edy-image-container-with-title {
-    &:after {
-      display: block;
-      padding: 4px;
-      font-size: 12px;
-      content: attr(data-title);
-    }
+  // IMAGE CONTAINERS
+  .edy-positionable-container-center,
+  .edy-positionable-container-left-block,
+  .edy-positionable-container-right-block,
+  .edy-texteditor-container-wrapper-center,
+  .edy-texteditor-container-wrapper-left-block,
+  .edy-texteditor-container-wrapper-right-block {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .edy-positionable-container-left,
+  .edy-positionable-container-right {
+    width: 45%;
+  }
+
+  .edy-positionable-container-left,
+  .edy-texteditor-container-wrapper-left {
+    margin-right: 2em;
+  }
+
+  .edy-positionable-container-right,
+  .edy-texteditor-container-wrapper-right {
+    margin-left: 2em;
   }
 }
 
