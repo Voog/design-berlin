@@ -452,13 +452,13 @@ label {
 }
 
 .topbar {
-  position: absolute;
-  z-index: 100;
-  top: 0;
-  left: 0;
+  // position: absolute;
+  // z-index: 100;
+  // top: 0;
+  // left: 0;
   display: none;
   width: 100%;
-  height: 90px;
+  // min-height: 90px;
   background: white;
 }
 
@@ -555,7 +555,7 @@ label {
 }
 
 .site-title {
-  overflow: hidden;
+  // overflow: hidden;
   padding-top: 25px;
   font-family: $font-secondary;
   font-size: 36px;
@@ -569,10 +569,11 @@ label {
   }
 
   .topbar & {
-    height: 40px;
+    min-height: 40px;
     margin-right: 80px;
-    padding: 27px 0 0 30px;
-    white-space: nowrap;
+    // padding: 27px 0 0 30px;
+    padding: 27px 0 23px 30px;
+    // white-space: nowrap;
   }
 }
 
@@ -1703,13 +1704,13 @@ table {
   }
 }
 
-@media screen and (max-width: $break-middle) {
-  .site-title {
-    br {
-      display: none;
-    }
-  }
-}
+// @media screen and (max-width: $break-middle) {
+//   .site-title {
+//     br {
+//       display: none;
+//     }
+//   }
+// }
 
 @media screen and (min-width: $break-small + 1px) and (max-width: $break-middle) {
   body {
@@ -1726,7 +1727,7 @@ table {
 
   .main {
     margin-left: $side-width-small;
-    padding-top: 90px;
+    // padding-top: 90px;
   }
 
   .sidebar {
