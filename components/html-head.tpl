@@ -20,7 +20,7 @@
 {% stylesheet_link "main.min.css" %}
 
 {% comment %}SITE TITLE{% endcomment %}
-{% capture page_title %}{% if article %}{{ article.title }} — {{ page.site_title }}{% else %}{% if site.root_item.selected? %}{% unless page.site_title == "" %}{{ page.site_title }}{% endunless %}{% else %}{{ page.title }}{% unless page.site_title == "" %} — {{ page.site_title }}{% endunless %}{% endif %}{% endif %}{% endcapture %}
+{% capture page_title %}{% if article %}{{ article.title }}{% unless page.site_title == "" %} — {{ page.site_title }}{% endunless %}{% else %}{% if site.root_item.selected? and page.site_title != "" %}{{ page.site_title }}{% else %}{{ page.title }}{% unless page.site_title == "" %} — {{ page.site_title }}{% endunless %}{% endif %}{% endif %}{% endcapture %}
 <title>{{ page_title }}</title>
 
 {% include "open-graph" %}
