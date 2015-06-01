@@ -211,6 +211,8 @@ blockquote {
 
 .bgpicker-btn {
   @extend %button;
+  top: 0;
+  left: 0;
 }
 
 /* select */
@@ -1362,60 +1364,6 @@ table {
   z-index: 1;
   color: white;
   background: rgba(0,0,0,.2);
-
-  .edy-empty-bordered {
-    border-color: white;
-    border-color: rgba(255,255,255,.35);
-  }
-
-  .edy-content-element-hover {
-    border-color: white;
-    border-color: rgba(255,255,255,.1);
-  }
-
-  .edy-empty-bordered {
-    .edy-empty-header {
-      color: white;
-      color: rgba(255,255,255,.5);
-    }
-  }
-
-  .edy-texteditor-active {
-    outline: 1px solid rgba(255, 255, 255, .2);
-  }
-
-  .edy-texteditor-active:hover {
-    outline: 1px solid rgba(255, 255, 255, .3);
-  }
-
-  &.light-background {
-    color: $main-color;
-
-    .edy-empty-bordered {
-      border-color: white;
-      border-color: rgba(0,0,0,.35);
-    }
-
-    .edy-content-element-hover {
-      border-color: white;
-      border-color: rgba(0,0,0,.1);
-    }
-
-    .edy-empty-bordered {
-      .edy-empty-header {
-        color: white;
-        color: rgba(0,0,0,.5);
-      }
-    }
-
-    .edy-texteditor-active {
-      outline: 1px solid rgba(0, 0, 0, .2);
-    }
-
-    .edy-texteditor-active:hover {
-      outline: 1px solid rgba(0, 0, 0, .3);
-    }
-  }
 }
 
 .rgba .js-bgpicker-cover-color {
@@ -2223,5 +2171,29 @@ table {
     right: 0;
     bottom: 0;
     left: 0;
+  }
+}
+
+// EDITMODE
+.dark-background {
+  .edy-empty-bordered {
+    border-color: $white;
+    border-color: rgba($white, .63);
+
+    .edy-empty-header {
+      @include color($white, .63);
+    }
+  }
+
+  .edy-content-element-hover {
+    @include border(all, 1px, solid, $white, .2);
+  }
+
+  .edy-texteditor-active {
+    outline: 1px solid rgba($white, .4);
+
+    &:hover {
+      outline: 1px solid rgba($white, .63);
+    }
   }
 }
