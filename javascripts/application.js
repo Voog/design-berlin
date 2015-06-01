@@ -10517,6 +10517,22 @@ return jQuery;
 ;(function($) {
 
     $(function() {
+      // Function to limit the rate at which a function can fire.
+      var debounce = function(func, wait, immediate) {
+        var timeout;
+        return function() {
+          var context = this, args = arguments;
+          var later = function() {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+          };
+          var callNow = immediate && !timeout;
+          clearTimeout(timeout);
+          timeout = setTimeout(later, wait);
+          if (callNow) func.apply(context, args);
+        };
+      };
+
         $('.js-popup-menu').jsPopupMenu();
 
         if ($('html').hasClass('no-placeholder')) {
@@ -10572,13 +10588,13 @@ return jQuery;
 
         if ($('body').hasClass('editmode')) {
             setTitlebox();
-            $(window).resize(setTitlebox);
+            $(window).resize(debounce(setTitlebox, 100));
         }
 
         if ($('body').hasClass('front-page')) {
             setFrontContent();
             $('.tbl').css('visibility', 'visible');
-            $(window).resize(setFrontContent);
+            $(window).resize(debounce(setFrontContent, 100));
         }
 
         if ($('.comment-form').hasClass('form_with_errors')) {
