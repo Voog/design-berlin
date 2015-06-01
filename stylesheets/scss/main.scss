@@ -452,13 +452,8 @@ label {
 }
 
 .topbar {
-  // position: absolute;
-  // z-index: 100;
-  // top: 0;
-  // left: 0;
   display: none;
   width: 100%;
-  // min-height: 90px;
   background: white;
 }
 
@@ -555,7 +550,6 @@ label {
 }
 
 .site-title {
-  // overflow: hidden;
   padding-top: 25px;
   font-family: $font-secondary;
   font-size: 36px;
@@ -571,9 +565,7 @@ label {
   .topbar & {
     min-height: 40px;
     margin-right: 80px;
-    // padding: 27px 0 0 30px;
     padding: 27px 0 23px 30px;
-    // white-space: nowrap;
   }
 }
 
@@ -985,14 +977,6 @@ $flags:
       display: none;
     }
   }
-
-  // TODO: Remove if decided to not use or add back if it is going to be used anyway.
-  // &.open {
-  //   .ico-popover-toggle {
-  //     top: -2px;
-  //     @include transform(rotate(180deg));
-  //   }
-  // }
 }
 
 .lang-menu-popover {
@@ -1371,7 +1355,6 @@ table {
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
-  // background-image: url('../images/front.jpg?1');
 }
 
 .js-bgpicker-cover-color {
@@ -1704,14 +1687,6 @@ table {
   }
 }
 
-// @media screen and (max-width: $break-middle) {
-//   .site-title {
-//     br {
-//       display: none;
-//     }
-//   }
-// }
-
 @media screen and (min-width: $break-small + 1px) and (max-width: $break-middle) {
   body {
     min-width: 0;
@@ -1727,14 +1702,12 @@ table {
 
   .main {
     margin-left: $side-width-small;
-    // padding-top: 90px;
   }
 
   .sidebar {
     width: $side-width-small;
 
     .sidebar-inner {
-      padding-top: 90px;
       padding-right: 20px;
       padding-left: 20px;
     }
