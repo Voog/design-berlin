@@ -21,27 +21,13 @@ module.exports = function(grunt) {
       }
     },
 
-    // Copys the standalone (not concatenated) javascript source files to the javascripts folder.
-    copy: {
-      javascripts: {
-        files: [
-          {
-            expand: true,
-            cwd: 'javascripts/src',
-            src: '*.js',
-            dest: 'javascripts/'
-          }
-        ]
-      }
-    },
-
     // Concatenates the javascript source files into the one file in "javascripts" folder.
     concat: {
       build: {
         src: [
-        'bower_components/jquery/dist/jquery.js',
-        'bower_components/overthrow/src/overthrow-polyfill.js',
-        'javascripts/src/concat/*.js'
+          'bower_components/jquery/dist/jquery.js',
+          'bower_components/overthrow/src/overthrow-polyfill.js',
+          'javascripts/src/concat/*.js'
         ],
         dest: 'javascripts/application.js'
       }
@@ -158,7 +144,6 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -168,7 +153,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-modernizr');
   grunt.loadNpmTasks('grunt-svgmin');
 
-  grunt.registerTask('default', ['modernizr', 'copy', 'concat', 'uglify', 'sass', 'cssmin', 'imagemin', 'svgmin']);
+  grunt.registerTask('default', ['modernizr', 'concat', 'uglify', 'sass', 'cssmin', 'imagemin', 'svgmin']);
 
   grunt.event.on('watch', function(action, filepath, target) {
     if (target == 'voog') {
