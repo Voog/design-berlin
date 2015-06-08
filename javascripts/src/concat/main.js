@@ -353,13 +353,4 @@
         }
     });
 
-    // Reduces opacity of the gallery images that are not under the cursor.
-    $('.edys-gallery').mouseover(function() {
-      $(this).find('.edys-gallery-item').addClass('inactive');
-    });
-
-    $('.edys-gallery').mouseout(function() {
-      $(this).find('.edys-gallery-item').removeClass('inactive');
-    });
-
 })(jQuery);

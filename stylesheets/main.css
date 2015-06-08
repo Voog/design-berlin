@@ -41,8 +41,6 @@ body {
   text-align: left;
   color: #222222;
   background: white;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-text-size-adjust: none;
 }
@@ -274,8 +272,6 @@ blockquote {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -1023,22 +1019,6 @@ label .form_control_indicator:before {
   line-height: 1em;
 }
 .formatted .edys-gallery-area .edys-gallery-item,
-.formatted .edy-gallery-area .edys-gallery-item {
-  -webkit-transition: opacity 0.3s ease-in;
-  -moz-transition: opacity 0.3s ease-in;
-  transition: opacity 0.3s ease-in;
-  -webkit-transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
-}
-.formatted .edys-gallery-area .edys-gallery-item.inactive,
-.formatted .edy-gallery-area .edys-gallery-item.inactive {
-  opacity: .6;
-}
-.formatted .edys-gallery-area .edys-gallery-item:hover,
-.formatted .edy-gallery-area .edys-gallery-item:hover {
-  opacity: 1;
-}
-.formatted .edys-gallery-area .edys-gallery-item,
 .formatted .edys-gallery-area .edy-gallery-item,
 .formatted .edys-gallery-area .edy-gallery-sortable-placeholder,
 .formatted .edy-gallery-area .edys-gallery-item,
@@ -1229,8 +1209,6 @@ table th {
   width: 280px;
   font-size: 11px;
   line-height: 1.6;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 .footer .footer-inner {

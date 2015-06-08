@@ -70,7 +70,7 @@ body {
   color: $main-color;
   background: white;
 
-  @include box-sizing(border-box);
+  box-sizing: border-box;
   -webkit-text-size-adjust: none;
 }
 
@@ -307,7 +307,7 @@ blockquote {
   outline: none;
   background: white;
   @include border-radius(0);
-  @include box-sizing(border-box);
+  box-sizing: border-box;
 }
 
 .form_field_textfield,
@@ -1078,20 +1078,6 @@ $flags:
     font-size: 0;
     line-height: 1em;
 
-    .edys-gallery-item {
-      @include transition(opacity 0.3s ease-in);
-      -webkit-transform-style: preserve-3d;
-      -webkit-backface-visibility: hidden;
-
-      &.inactive {
-        opacity: .6;
-      }
-
-      &:hover {
-        opacity: 1;
-      }
-    }
-
     .edys-gallery-item,
     .edy-gallery-item,
     .edy-gallery-sortable-placeholder {
@@ -1304,7 +1290,7 @@ table {
   width: $side-width;
   font-size: 11px;
   line-height: 1.6;
-  @include box-sizing(border-box);
+  box-sizing: border-box;
 
   .footer-inner {
     padding: 20px 30px;
