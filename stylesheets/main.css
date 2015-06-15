@@ -993,6 +993,22 @@ label .form_control_indicator:before {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+.formatted .edy-positionable-container-center:first-child,
+.formatted .edy-positionable-container-left-block:first-child,
+.formatted .edy-positionable-container-right-block:first-child,
+.formatted .edy-texteditor-container-wrapper-center:first-child,
+.formatted .edy-texteditor-container-wrapper-left-block:first-child,
+.formatted .edy-texteditor-container-wrapper-right-block:first-child {
+  margin-top: 0;
+}
+.formatted .edy-positionable-container-center:last-child,
+.formatted .edy-positionable-container-left-block:last-child,
+.formatted .edy-positionable-container-right-block:last-child,
+.formatted .edy-texteditor-container-wrapper-center:last-child,
+.formatted .edy-texteditor-container-wrapper-left-block:last-child,
+.formatted .edy-texteditor-container-wrapper-right-block:last-child {
+  margin-bottom: 0;
+}
 .formatted .edy-positionable-container-left,
 .formatted .edy-positionable-container-right {
   width: 45%;
