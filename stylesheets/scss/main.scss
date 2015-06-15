@@ -573,6 +573,7 @@ label {
 
 /* mainmenu */
 .main-menu {
+  @include hyphenate(true);
   padding-top: 50px;
 
   li {
@@ -2077,6 +2078,7 @@ table {
         }
 
         a {
+          @include hyphenate(true);
           font-size: 24px;
           line-height: 1.05; @include color(white, .5);
 

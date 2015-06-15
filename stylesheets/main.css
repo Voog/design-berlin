@@ -514,6 +514,11 @@ label .form_control_indicator:before {
 
 /* mainmenu */
 .main-menu {
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
   padding-top: 50px;
 }
 .main-menu li {
@@ -1932,6 +1937,11 @@ table th {
   }
   #mobile-menu .navigation-menu ul a,
   #mobile-menu .language-menu ul a {
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
     font-size: 24px;
     line-height: 1.05;
     color: white;
