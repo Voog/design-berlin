@@ -11205,7 +11205,6 @@ MMCQ = (function() {
 
     var toggleFlags = function() {
       $('.js-option-toggle-flags').on('click', function(event) {
-        console.log('test');
         event.stopPropagation();
 
         if ($(this).hasClass('js-flag-disable-btn')) {
@@ -11247,7 +11246,6 @@ MMCQ = (function() {
 
     // Checks the lightness sum of header background image and color and sets the lightness class depending on it's value.
     var handlefrontPageContentLightnessClass = function() {
-      console.log(frontPageContentCoverCombinedLightness);
       if (frontPageContentCoverCombinedLightness >= 0.5) {
         $('.js-background-type').addClass('light-background').removeClass('dark-background');
       } else {
