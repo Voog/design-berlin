@@ -1088,6 +1088,7 @@ label .form_control_indicator:before {
 
 .tbl {
   display: table;
+  table-layout: fixed;
   visibility: hidden;
   width: 100%;
   border-collapse: collapse;
