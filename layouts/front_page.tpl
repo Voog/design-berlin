@@ -17,7 +17,7 @@
     <div class="main">
       <div class="main-inner inner js-main-inner">
         <div class="cover-image js-bgpicker-cover-image"{{ cover_image_style }}>
-          <div class="cover color js-bgpicker-cover-color {{ cover_color_class }}"{{ cover_color_style }}>
+          <div class="cover-color js-bgpicker-cover-color {{ cover_color_class }}"{{ cover_color_style }}>
             {% if editmode %}<button class="bgpicker-btn js-front-page-content-cover-settings" {% unless front_page_content_cover_image == '' %}data-bg-image="{{ front_page_content_cover_image }}"{% endunless %} {% unless front_page_content_cover_image_sizes == '' %}data-bg-image-sizes="{{ front_page_content_cover_image_sizes_str | escape }}"{% endunless %} {% unless front_page_content_cover_color == nil or front_page_content_cover_color == 'rgba(255,255,255,0)' %}data-bg-color="{{ front_page_content_cover_color }}"{% endunless %} {% unless front_page_content_cover_color_data == nil %}data-bg-color-data="{{ front_page_content_cover_color_data_str | escape }}"{% endunless %}></button>{% endif %}
 
             <div class="container-wrap cfx">
