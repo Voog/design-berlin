@@ -146,7 +146,7 @@
 
     // Checks the lightness sum of header background image and color and sets the lightness class depending on it's value.
     var handlefrontPageContentLightnessClass = function() {
-      if (frontPageContentCoverCombinedLightness >= 0.5) {
+      if (frontPageContentCoverCombinedLightness >= 0.68) {
         $('.js-background-type').addClass('light-background').removeClass('dark-background');
       } else {
         $('.js-background-type').addClass('dark-background').removeClass('light-background');
@@ -169,6 +169,8 @@
 
       if (colorExtractImageUrl) {
         if (frontPageContentBgImageSizesContains(frontPageContentBgImageSizes, frontPageContentBgImagePrevious)) {
+          frontPageContentBg.frontPageContentBgImageColor = frontPageContentBg.frontPageContentBgImageColor ? frontPageContentBg.frontPageContentBgImageColor : 'rgba(224,210,207,1)';
+
           frontPageContentCoverCombinedLightness = getCombinedLightness(frontPageContentBg.frontPageContentBgImageColor, frontPageContentBgColor);
           handlefrontPageContentLightnessClass();
         } else {
@@ -182,7 +184,8 @@
           });
         };
       } else {
-        frontPageContentCoverCombinedLightness = getCombinedLightness('rgba(255,255,255,1)', frontPageContentBgColor);
+        frontPageContentBg.frontPageContentBgImageColor = 'rgba(255,255,255,1)'
+        frontPageContentCoverCombinedLightness = getCombinedLightness(frontPageContentBg.frontPageContentBgImageColor, frontPageContentBgColor);
         handlefrontPageContentLightnessClass();
       };
 

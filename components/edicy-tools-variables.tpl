@@ -23,14 +23,14 @@
   {% comment %}Sets the body background type.{% endcomment %}
   {% if front_page_content_cover %}
     {% if front_page_content_cover_combined_lightness %}
-      {% if front_page_content_cover_combined_lightness > 0.5 %}
+      {% if front_page_content_cover_combined_lightness >= 0.68 %}
         {% assign front_page_content_cover_type = 'light-background' %}
       {% else %}
         {% assign front_page_content_cover_type = 'dark-background' %}
       {% endif %}
     {% else %}
-      {% if front_page_content_cover_color_data.a >= 0.5 %}
-        {% if front_page_content_cover_color_data.lightness >= 0.5 %}
+      {% if front_page_content_cover_color_data.a >= 0.68 %}
+        {% if front_page_content_cover_color_data.lightness >= 0.68 %}
           {% assign front_page_content_cover_type = 'light-background' %}
         {% else %}
           {% assign front_page_content_cover_type = 'dark-background' %}
@@ -41,8 +41,8 @@
     {% endif %}
   {% else %}
     {% if fallback_cover_colorData != nil and front_page_content_cover_color_data == nil %}
-      {% if fallback_cover_colorData.a >= 0.5 %}
-        {% if fallback_cover_lightness >= 0.5 %}
+      {% if fallback_cover_colorData.a >= 0.68 %}
+        {% if fallback_cover_lightness >= 0.68 %}
           {% assign front_page_content_cover_type = 'light-background' %}
         {% else %}
           {% assign front_page_content_cover_type = 'dark-background' %}
