@@ -119,8 +119,10 @@
             clearTimeout(this.timeout);
             this.timeout = setTimeout($.proxy(function() {
 
+            var val = this.$input.val();
+
+            if (val.length >= this.options.minChars) {
                 var showLoader = true,
-                    val = this.$input.val(),
                     visibleClass = this.options.visibleClass ? this.options.visibleClass : 'voog-search-visible';
                 if (!$('body').hasClass(visibleClass)) {
                     $('body').addClass(visibleClass);
@@ -138,7 +140,7 @@
                 this.searcher.query({
                     q: val
                 });
-
+            };
             }, this), 400);
         },
 
