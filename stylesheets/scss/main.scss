@@ -519,12 +519,16 @@ label {
       h1,
       h2,
       h3 {
-        color: white;
+        color: $white;
       }
 
       .placeholder {
         color: rgba(255,255,255,.5);
       }
+    }
+
+    .light-background {
+      color: $main-color;
     }
   }
 }
