@@ -435,10 +435,10 @@ label .form_control_indicator:before {
   background: #e5e5e5;
 }
 .editmode .main {
-  margin-bottom: 40px;
+  padding-bottom: 40px;
 }
 .editmode.edy-bar-open .main {
-  margin-bottom: 150px;
+  padding-bottom: 150px;
 }
 @media screen and (min-width: 1500px) {
   .main {

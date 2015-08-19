@@ -483,11 +483,11 @@ label {
   background: $bg-color;
 
   .editmode & {
-    margin-bottom: 40px;
+    padding-bottom: 40px;
   }
 
   .editmode.edy-bar-open & {
-    margin-bottom: 150px;
+    padding-bottom: 150px;
   }
 
   @media screen and (min-width: $break-large) {
