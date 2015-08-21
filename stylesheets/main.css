@@ -1216,12 +1216,20 @@ table th {
 /* footer */
 .footer {
   position: absolute;
+  z-index: 6;
+  background: #ffffff;
   right: 100%;
   bottom: 0;
   width: 280px;
   font-size: 11px;
   line-height: 1.6;
   box-sizing: border-box;
+  word-break: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 .footer .footer-inner {
   padding: 20px 30px;
@@ -1229,6 +1237,14 @@ table th {
 @media screen and (min-width: 1500px) {
   .footer {
     width: 25%;
+  }
+}
+.editmode .footer {
+  padding-bottom: 40px;
+}
+@media screen and (min-width: 600px) {
+  .edy-bar-open .footer {
+    padding-bottom: 150px;
   }
 }
 

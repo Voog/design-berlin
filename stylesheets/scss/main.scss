@@ -1285,12 +1285,15 @@ table {
 /* footer */
 .footer {
   position: absolute;
+  z-index: 6;
+  background: $white;
   right: 100%;
   bottom: 0;
   width: $side-width;
   font-size: 11px;
   line-height: 1.6;
   box-sizing: border-box;
+  @include hyphenate(true);
 
   .footer-inner {
     padding: 20px 30px;
@@ -1298,6 +1301,16 @@ table {
 
   @media screen and (min-width: $break-large) {
     width: 25%;
+  }
+
+  .editmode & {
+    padding-bottom: 40px;
+  }
+
+  .edy-bar-open & {
+    @media screen and (min-width: $break-small) {
+      padding-bottom: 150px;
+    }
   }
 }
 
