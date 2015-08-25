@@ -31,7 +31,11 @@
 {% endif %}
 
 {% comment %}Open Graph description{% endcomment %}
-{% if article %}{% assign description = article.description %}{% else %}{% assign description = page.description %}{% endif %}
+{% if article %}
+  {% assign description = article.description | escape %}
+{% else %}
+  {% assign description = page.description | escape %}
+{% endif %}
 {% if description != nil and description != '' %}
   <meta property="og:description" content="{{ description }}">
   <meta name="description" content="{{ description }}">
