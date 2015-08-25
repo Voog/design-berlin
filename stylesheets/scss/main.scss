@@ -4,6 +4,11 @@
 /* FONTS */
 @include font-face('Montserrat', '../assets/montserrat-regular', 400);
 @include font-face('Montserrat', '../assets/montserrat-bold', 700);
+@include font-face('Lato', '../assets/lato-regular', 400);
+@include font-face('Lato', '../assets/lato-italic', 400, italic);
+@include font-face('Lato', '../assets/lato-bold', 700);
+@include font-face('Lato', '../assets/lato-bold-italic', 700, italic);
+
 
 $main-color: #222222;
 $secondary-color: #000000;

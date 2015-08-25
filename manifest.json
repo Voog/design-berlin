@@ -147,6 +147,126 @@
       "filename": "ico-flags.svg"
     },
     {
+      "content_type": "application/vnd.ms-fontobject",
+      "file": "assets/lato-bold.eot",
+      "kind": "assets",
+      "filename": "lato-bold.eot"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/lato-bold.svg",
+      "kind": "assets",
+      "filename": "lato-bold.svg"
+    },
+    {
+      "content_type": "application/x-font-truetype",
+      "file": "assets/lato-bold.ttf",
+      "kind": "assets",
+      "filename": "lato-bold.ttf"
+    },
+    {
+      "content_type": "application/font-woff",
+      "file": "assets/lato-bold.woff",
+      "kind": "assets",
+      "filename": "lato-bold.woff"
+    },
+    {
+      "content_type": "text/unknown",
+      "file": "assets/lato-bold.woff2",
+      "kind": "assets",
+      "filename": "lato-bold.woff2"
+    },
+    {
+      "content_type": "application/vnd.ms-fontobject",
+      "file": "assets/lato-bolditalic.eot",
+      "kind": "assets",
+      "filename": "lato-bolditalic.eot"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/lato-bolditalic.svg",
+      "kind": "assets",
+      "filename": "lato-bolditalic.svg"
+    },
+    {
+      "content_type": "application/x-font-truetype",
+      "file": "assets/lato-bolditalic.ttf",
+      "kind": "assets",
+      "filename": "lato-bolditalic.ttf"
+    },
+    {
+      "content_type": "application/font-woff",
+      "file": "assets/lato-bolditalic.woff",
+      "kind": "assets",
+      "filename": "lato-bolditalic.woff"
+    },
+    {
+      "content_type": "text/unknown",
+      "file": "assets/lato-bolditalic.woff2",
+      "kind": "assets",
+      "filename": "lato-bolditalic.woff2"
+    },
+    {
+      "content_type": "application/vnd.ms-fontobject",
+      "file": "assets/lato-italic.eot",
+      "kind": "assets",
+      "filename": "lato-italic.eot"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/lato-italic.svg",
+      "kind": "assets",
+      "filename": "lato-italic.svg"
+    },
+    {
+      "content_type": "application/x-font-truetype",
+      "file": "assets/lato-italic.ttf",
+      "kind": "assets",
+      "filename": "lato-italic.ttf"
+    },
+    {
+      "content_type": "application/font-woff",
+      "file": "assets/lato-italic.woff",
+      "kind": "assets",
+      "filename": "lato-italic.woff"
+    },
+    {
+      "content_type": "text/unknown",
+      "file": "assets/lato-italic.woff2",
+      "kind": "assets",
+      "filename": "lato-italic.woff2"
+    },
+    {
+      "content_type": "application/vnd.ms-fontobject",
+      "file": "assets/lato-regular.eot",
+      "kind": "assets",
+      "filename": "lato-regular.eot"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/lato-regular.svg",
+      "kind": "assets",
+      "filename": "lato-regular.svg"
+    },
+    {
+      "content_type": "application/x-font-truetype",
+      "file": "assets/lato-regular.ttf",
+      "kind": "assets",
+      "filename": "lato-regular.ttf"
+    },
+    {
+      "content_type": "application/font-woff",
+      "file": "assets/lato-regular.woff",
+      "kind": "assets",
+      "filename": "lato-regular.woff"
+    },
+    {
+      "content_type": "text/unknown",
+      "file": "assets/lato-regular.woff2",
+      "kind": "assets",
+      "filename": "lato-regular.woff2"
+    },
+    {
       "content_type": "image/svg+xml",
       "file": "assets/loader.svg",
       "kind": "assets",

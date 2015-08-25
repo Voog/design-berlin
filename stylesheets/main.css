@@ -11,6 +11,30 @@
   font-weight: 700;
   src: url("../assets/montserrat-bold.eot?#iefix") format("embedded-opentype"), url("../assets/montserrat-bold.woff2") format("woff2"), url("../assets/montserrat-bold.woff") format("woff"), url("../assets/montserrat-bold.ttf") format("truetype"), url("../assets/montserrat-bold.svg#Montserrat") format("svg");
 }
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/lato-regular.eot?#iefix") format("embedded-opentype"), url("../assets/lato-regular.woff2") format("woff2"), url("../assets/lato-regular.woff") format("woff"), url("../assets/lato-regular.ttf") format("truetype"), url("../assets/lato-regular.svg#Lato") format("svg");
+}
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../assets/lato-italic.eot?#iefix") format("embedded-opentype"), url("../assets/lato-italic.woff2") format("woff2"), url("../assets/lato-italic.woff") format("woff"), url("../assets/lato-italic.ttf") format("truetype"), url("../assets/lato-italic.svg#Lato") format("svg");
+}
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/lato-bold.eot?#iefix") format("embedded-opentype"), url("../assets/lato-bold.woff2") format("woff2"), url("../assets/lato-bold.woff") format("woff"), url("../assets/lato-bold.ttf") format("truetype"), url("../assets/lato-bold.svg#Lato") format("svg");
+}
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../assets/lato-bold-italic.eot?#iefix") format("embedded-opentype"), url("../assets/lato-bold-italic.woff2") format("woff2"), url("../assets/lato-bold-italic.woff") format("woff"), url("../assets/lato-bold-italic.ttf") format("truetype"), url("../assets/lato-bold-italic.svg#Lato") format("svg");
+}
 html,
 body, form, h1,
 h2,

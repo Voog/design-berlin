@@ -27,5 +27,3 @@
 
 {% if blog %}{{ blog.rss_link }}{% endif %}
 {{ site.stats_header }}
-
-<link href='https://fonts.googleapis.com/css?family=Lato:400,700,700italic,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
