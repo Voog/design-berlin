@@ -1,6 +1,11 @@
 @import '../../bower_components/bourbon/app/assets/stylesheets/bourbon';
 @import '_mixins';
 
+/* FONTS */
+@include font-face('Montserrat', '../assets/montserrat-regular', 400);
+@include font-face('Montserrat', '../assets/montserrat-bold', 700);
+
+
 $main-color: #222222;
 $secondary-color: #000000;
 
