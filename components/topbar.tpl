@@ -1,3 +1,3 @@
 <div class="topbar">
-  <div class="site-title">{% unless editmode %}{{ site.header }}{% endunless %}</div>
+  <div class="site-title">{% unless editmode %}{{ page.site_header }}{% endunless %}</div>
 </div>
