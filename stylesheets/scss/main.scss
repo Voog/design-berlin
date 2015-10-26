@@ -218,6 +218,26 @@ blockquote {
   }
 }
 
+.custom-btn {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 8px;
+  font: #{$font-size}/1.67 $font-main;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  background: #2b2b2b;
+
+  &,
+  &:hover {
+    @include color(white, .5);
+  }
+
+  &:hover {
+    @include bg(#2b2b2b, .8);
+  }
+}
+
 .bgpicker-btn {
   @extend %button;
   top: 0;
@@ -365,7 +385,7 @@ blockquote {
 
 .form_submit input,
 .submit {
-  height: 45px;
+  padding: 8px;
   font: #{$font-size}/1.67 $font-main;
   cursor: pointer;
   border: 0;

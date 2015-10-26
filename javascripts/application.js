@@ -11358,6 +11358,19 @@ MMCQ = (function() {
       handleFrontPageContentCoverColorScheme: handleFrontPageContentCoverColorScheme
     });
 
+  var editmode = function () {
+    return $('html').hasClass('editmode');
+  };
+
+  var bindCustomTexteditorStyles = function() {
+    window.edy = window.edy || [];
+    edy.push(['texteditorStyles', {name: 'Button', tagname:'a', attribute: {'href': '#'}, classname: 'custom-btn', toggle: true}]);
+  };
+
+  if (editmode()) {
+    bindCustomTexteditorStyles();
+  }
+
 })(jQuery);
 
 
