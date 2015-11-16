@@ -585,6 +585,7 @@ label {
 }
 
 .site-title {
+  @include hyphenate(true);
   padding-top: 25px;
   font-family: $font-secondary;
   font-size: 36px;

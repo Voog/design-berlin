@@ -555,6 +555,12 @@ label .form_control_indicator:before {
 }
 
 .site-title {
+  word-break: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
   padding-top: 25px;
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
   font-size: 36px;
