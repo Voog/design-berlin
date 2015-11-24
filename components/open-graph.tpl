@@ -9,7 +9,7 @@
 {% comment %}Open Graph image{% endcomment %}
 {% if page.image == nil and front_page %}
   {% if fallback_cover_image != nil and fallback_cover_image != '' and front_page_content_cover_image_sizes == nil %}
-    {% assign og_image = {{ fallback_cover_image }} %}
+    {% assign og_image = fallback_cover_image %}
   {% elsif front_page_content_cover_image_sizes != nil and front_page_content_cover_image_sizes != '' %}
     {% assign og_image = front_page_content_cover_image_sizes[0] %}
   {% endif %}
