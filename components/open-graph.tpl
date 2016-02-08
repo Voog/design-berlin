@@ -11,7 +11,13 @@
   {% if fallback_cover_image != nil and fallback_cover_image != '' and front_page_content_cover_image_sizes == nil %}
     {% assign og_image = fallback_cover_image %}
   {% elsif front_page_content_cover_image_sizes != nil and front_page_content_cover_image_sizes != '' %}
-    {% assign og_image = front_page_content_cover_image_sizes[2] %}
+    {% for size in front_page_content_cover_image_sizes reversed %}
+      {% if size.width <= 1280 %}
+        {% assign og_image = size %}
+      {% else %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
   {% endif %}
 {% else %}
   {% if article %}
