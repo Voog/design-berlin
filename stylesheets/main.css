@@ -3,37 +3,13 @@
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
-  src: url("../assets/montserrat-regular.eot?#iefix") format("embedded-opentype"), url("../assets/montserrat-regular.woff2") format("woff2"), url("../assets/montserrat-regular.woff") format("woff"), url("../assets/montserrat-regular.ttf") format("truetype"), url("../assets/montserrat-regular.svg#Montserrat") format("svg");
+  src: url("../assets/montserrat-light.eot?#iefix") format("embedded-opentype"), url("../assets/montserrat-light.woff2") format("woff2"), url("../assets/montserrat-light.woff") format("woff"), url("../assets/montserrat-light.ttf") format("truetype"), url("../assets/montserrat-light.svg#Montserrat") format("svg");
 }
 @font-face {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
-  src: url("../assets/montserrat-bold.eot?#iefix") format("embedded-opentype"), url("../assets/montserrat-bold.woff2") format("woff2"), url("../assets/montserrat-bold.woff") format("woff"), url("../assets/montserrat-bold.ttf") format("truetype"), url("../assets/montserrat-bold.svg#Montserrat") format("svg");
-}
-@font-face {
-  font-family: "Lato";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../assets/lato-regular.eot?#iefix") format("embedded-opentype"), url("../assets/lato-regular.woff2") format("woff2"), url("../assets/lato-regular.woff") format("woff"), url("../assets/lato-regular.ttf") format("truetype"), url("../assets/lato-regular.svg#Lato") format("svg");
-}
-@font-face {
-  font-family: "Lato";
-  font-style: italic;
-  font-weight: 400;
-  src: url("../assets/lato-italic.eot?#iefix") format("embedded-opentype"), url("../assets/lato-italic.woff2") format("woff2"), url("../assets/lato-italic.woff") format("woff"), url("../assets/lato-italic.ttf") format("truetype"), url("../assets/lato-italic.svg#Lato") format("svg");
-}
-@font-face {
-  font-family: "Lato";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../assets/lato-bold.eot?#iefix") format("embedded-opentype"), url("../assets/lato-bold.woff2") format("woff2"), url("../assets/lato-bold.woff") format("woff"), url("../assets/lato-bold.ttf") format("truetype"), url("../assets/lato-bold.svg#Lato") format("svg");
-}
-@font-face {
-  font-family: "Lato";
-  font-style: italic;
-  font-weight: 700;
-  src: url("../assets/lato-bold-italic.eot?#iefix") format("embedded-opentype"), url("../assets/lato-bold-italic.woff2") format("woff2"), url("../assets/lato-bold-italic.woff") format("woff"), url("../assets/lato-bold-italic.ttf") format("truetype"), url("../assets/lato-bold-italic.svg#Lato") format("svg");
+  src: url("../assets/montserrat-regular.eot?#iefix") format("embedded-opentype"), url("../assets/montserrat-regular.woff2") format("woff2"), url("../assets/montserrat-regular.woff") format("woff"), url("../assets/montserrat-regular.ttf") format("truetype"), url("../assets/montserrat-regular.svg#Montserrat") format("svg");
 }
 html,
 body, form, h1,
@@ -63,7 +39,7 @@ ol li, .lang-menu-btn {
 html,
 body {
   height: 100% !important;
-  font: 18px/1.67 "Lato", Helvetica, Arial, sans-serif;
+  font: 18px/1.67 "Montserrat", Helvetica, Arial, sans-serif;
 }
 @media screen and (min-width: 1500px) {
   html,
@@ -113,6 +89,7 @@ h1,
 h2,
 h3 {
   font: normal 36px/1.1 "Montserrat", Helvetica, Arial, sans-serif;
+  font-weight: 700;
   color: #222222;
 }
 
@@ -127,7 +104,7 @@ h2 {
 
 h3 {
   margin: 30px 0 20px;
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
   font-size: 18px;
   font-weight: bold;
 }
@@ -205,7 +182,7 @@ blockquote {
 }
 
 .font-size-small {
-  font: 18px/1.67 "Lato", Helvetica, Arial, sans-serif !important;
+  font: 18px/1.67 "Montserrat", Helvetica, Arial, sans-serif !important;
 }
 @media screen and (min-width: 1500px) {
   .font-size-small {
@@ -217,7 +194,7 @@ blockquote {
   display: inline-block;
   margin-bottom: 20px;
   padding: 8px;
-  font: 18px/1.67 "Lato", Helvetica, Arial, sans-serif;
+  font: 18px/1.67 "Montserrat", Helvetica, Arial, sans-serif;
   cursor: pointer;
   border: 0;
   outline: 0;
@@ -240,7 +217,7 @@ blockquote {
 /* select */
 .jq-select {
   position: relative;
-  font: 18px/1.67 "Lato", Helvetica, Arial, sans-serif;
+  font: 18px/1.67 "Montserrat", Helvetica, Arial, sans-serif;
   cursor: pointer;
   color: #222222;
   background: white;
@@ -255,7 +232,7 @@ blockquote {
   height: 100%;
   margin: 0;
   padding: 0;
-  font: 18px/1.67 "Lato", Helvetica, Arial, sans-serif;
+  font: 18px/1.67 "Montserrat", Helvetica, Arial, sans-serif;
   cursor: pointer;
   opacity: 0;
   color: #222222;
@@ -321,7 +298,7 @@ blockquote {
 .form_field_textarea {
   width: 30%;
   padding: 4px 5px;
-  font: 18px/1.67 "Lato", Helvetica, Arial, sans-serif;
+  font: 18px/1.67 "Montserrat", Helvetica, Arial, sans-serif;
   color: #222222;
   border: none;
   outline: none;
@@ -378,7 +355,7 @@ blockquote {
 .form_submit input,
 .submit {
   padding: 8px;
-  font: 18px/1.67 "Lato", Helvetica, Arial, sans-serif;
+  font: 18px/1.67 "Montserrat", Helvetica, Arial, sans-serif;
   cursor: pointer;
   border: 0;
   outline: 0;
@@ -503,6 +480,7 @@ label .form_control_indicator:before {
 }
 .front-page .main-inner {
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  font-weight: 700;
   font-size: 36px;
   line-height: 1.05;
   text-align: center;
@@ -559,6 +537,7 @@ label .form_control_indicator:before {
   hyphens: auto;
   padding-top: 25px;
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  font-weight: 700;
   font-size: 36px;
   line-height: 1.05;
   vertical-align: top;
@@ -602,6 +581,7 @@ label .form_control_indicator:before {
   min-height: 35px;
   padding: 30px 30px 15px 30px;
   font: 14px/1.1 "Montserrat", Helvetica, Arial, sans-serif;
+  font-weight: 700;
   text-align: right;
   word-wrap: break-word;
 }
@@ -1393,7 +1373,7 @@ table th {
   width: 100%;
   margin: 0;
   padding: 5px 0;
-  font: 18px/1.67 "Lato", Helvetica, Arial, sans-serif;
+  font: 18px/1.67 "Montserrat", Helvetica, Arial, sans-serif;
   color: #222222;
   border: none;
   outline: 0;

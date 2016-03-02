@@ -2,12 +2,8 @@
 @import '_mixins';
 
 /* FONTS */
-@include font-face('Montserrat', '../assets/montserrat-regular', 400);
-@include font-face('Montserrat', '../assets/montserrat-bold', 700);
-@include font-face('Lato', '../assets/lato-regular', 400);
-@include font-face('Lato', '../assets/lato-italic', 400, italic);
-@include font-face('Lato', '../assets/lato-bold', 700);
-@include font-face('Lato', '../assets/lato-bold-italic', 700, italic);
+@include font-face('Montserrat', '../assets/montserrat-light', 400);
+@include font-face('Montserrat', '../assets/montserrat-regular', 700);
 
 
 $main-color: #222222;
@@ -24,8 +20,7 @@ $blue: #0066BB;
 
 $font-size: 18px;
 $font-size-big: 22px;
-$font-main: 'Lato', Helvetica, Arial, sans-serif;
-$font-secondary: 'Montserrat', Helvetica, Arial, sans-serif;
+$font-family: 'Montserrat', Helvetica, Arial, sans-serif;
 
 $site-width: 1024px;
 $side-width: 280px;
@@ -65,7 +60,7 @@ html,
 body {
   @extend %nulling;
   height: 100% !important;
-  font: #{$font-size}/1.67 $font-main;
+  font: #{$font-size}/1.67 $font-family;
 
   @media screen and (min-width: $break-large) {
     font-size: $font-size-big;
@@ -119,7 +114,8 @@ h1,
 h2,
 h3 {
   @extend %nulling;
-  font: normal 36px/1.1 $font-secondary;
+  font: normal 36px/1.1 $font-family;
+  font-weight: 700;
   color: $main-color;
 }
 
@@ -134,7 +130,7 @@ h2 {
 
 h3 {
   margin: 30px 0 20px;
-  font-family: $font-main;
+  font-family: $font-family;
   font-size: 18px;
   font-weight: bold;
 }
@@ -211,7 +207,7 @@ blockquote {
 
 
 .font-size-small {
-  font: #{$font-size}/1.67 $font-main !important;
+  font: #{$font-size}/1.67 $font-family !important;
 
   @media screen and (min-width: $break-large) {
     font-size: $font-size-big !important;
@@ -222,7 +218,7 @@ blockquote {
   display: inline-block;
   margin-bottom: 20px;
   padding: 8px;
-  font: #{$font-size}/1.67 $font-main;
+  font: #{$font-size}/1.67 $font-family;
   cursor: pointer;
   border: 0;
   outline: 0;
@@ -247,7 +243,7 @@ blockquote {
 /* select */
 .jq-select {
   position: relative;
-  font: #{$font-size}/1.67 $font-main;
+  font: #{$font-size}/1.67 $font-family;
   cursor: pointer;
   color: $main-color;
   background: white;
@@ -262,7 +258,7 @@ blockquote {
     height: 100%;
     margin: 0;
     padding: 0;
-    font: #{$font-size}/1.67 $font-main;
+    font: #{$font-size}/1.67 $font-family;
     cursor: pointer;
     opacity: 0;
     color: $main-color;
@@ -330,7 +326,7 @@ blockquote {
 .form_field_textarea {
   width: 30%;
   padding: 4px 5px;
-  font: #{$font-size}/1.67 $font-main;
+  font: #{$font-size}/1.67 $font-family;
   color: $main-color;
   border: none;
   outline: none;
@@ -386,7 +382,7 @@ blockquote {
 .form_submit input,
 .submit {
   padding: 8px;
-  font: #{$font-size}/1.67 $font-main;
+  font: #{$font-size}/1.67 $font-family;
   cursor: pointer;
   border: 0;
   outline: 0;
@@ -527,7 +523,8 @@ label {
   position: relative;
 
   .front-page & {
-    font-family: $font-secondary;
+    font-family: $font-family;
+    font-weight: 700;
     font-size: 36px;
     line-height: 1.05;
     text-align: center;
@@ -587,7 +584,8 @@ label {
 .site-title {
   @include hyphenate(true);
   padding-top: 25px;
-  font-family: $font-secondary;
+  font-family: $font-family;
+  font-weight: 700;
   font-size: 36px;
   line-height: 1.05;
   vertical-align: top;
@@ -632,7 +630,8 @@ label {
 .sub-menu {
   min-height: 35px;
   padding: 30px 30px 15px 30px;
-  font: 14px/1.1 $font-secondary;
+  font: 14px/1.1 $font-family;
+  font-weight: 700;
   text-align: right;
   word-wrap: break-word;
 
@@ -1443,7 +1442,7 @@ table {
     width: 100%;
     margin: 0;
     padding: 5px 0;
-    font: #{$font-size}/1.67 $font-main;
+    font: #{$font-size}/1.67 $font-family;
     color: $main-color;
     border: none;
     outline: 0;
