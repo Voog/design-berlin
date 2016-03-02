@@ -326,8 +326,6 @@ blockquote {
   border: none;
   outline: none;
   background: white;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
   box-sizing: border-box;
 }
@@ -386,8 +384,6 @@ blockquote {
   outline: 0;
   background: #2b2b2b;
   -webkit-appearance: none;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
   color: white;
   color: rgba(255, 255, 255, 0.5);
@@ -1015,8 +1011,6 @@ label .form_control_indicator:before {
   line-height: 1;
   text-align: left;
   background: #ffffff;
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) ;
-  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) ;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) ;
 }
 .no-boxshadow .lang-menu-popover {
@@ -1339,8 +1333,6 @@ table th {
 
 .edy-gallery-image,
 .edys-gallery-item {
-  -webkit-border-radius: 96px;
-  -moz-border-radius: 96px;
   border-radius: 96px;
 }
 
@@ -1497,7 +1489,6 @@ table th {
   width: 0;
   height: 100%;
   margin-left: 280px;
-  -webkit-transition: opacity .1s ease-in, width .3s ease-in;
   transition: opacity .1s ease-in, width .3s ease-in;
   opacity: 0;
   background: #e5e5e5;
@@ -1529,8 +1520,6 @@ table th {
   display: block;
   width: 300px;
   opacity: 1;
-  -webkit-box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.05) ;
-  -moz-box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.05) ;
   box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.05) ;
 }
 
@@ -1859,8 +1848,6 @@ table th {
     height: 3px;
     content: '';
     background: #222222;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
     border-radius: 5px;
   }
   .mobile-menu-toggler span.flags-disabled .language-menu-btn, .mobile-menu-toggler span:before.flags-disabled .language-menu-btn, .mobile-menu-toggler span:after.flags-disabled .language-menu-btn {
@@ -1920,19 +1907,17 @@ table th {
     height: 3px;
     content: '';
     background: white;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
     border-radius: 3px;
   }
   #mobile-menu .mobile-menu-close:before {
     -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
   }
   #mobile-menu .mobile-menu-close:after {
     -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
   }
   #mobile-menu .language-menu-btn {
     position: absolute;
@@ -2057,19 +2042,17 @@ table th {
     height: 3px;
     content: '';
     background: #222222;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
     border-radius: 3px;
   }
   .mobilesearch-open .mobile-search-toggler:before {
     -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
   }
   .mobilesearch-open .mobile-search-toggler:after {
     -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
   }
 
   #mobile-search {
