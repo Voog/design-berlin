@@ -1,26 +1,26 @@
 @import '../../bower_components/bourbon/app/assets/stylesheets/bourbon';
-@import '_mixins';
+@import 'mixins';
 
 /* FONTS */
-@include font-face('Montserrat', '../assets/montserrat-light', 400);
-@include font-face('Montserrat', '../assets/montserrat-regular', 700);
+@include font-face("Montserrat", '../assets/montserrat-light', 400);
+@include font-face("Montserrat", '../assets/montserrat-regular', 700);
 
+$color-black: rgb(0, 0, 0);
+$color-white: rgb(255, 255, 255);
 
 $main-color: #222222;
-$secondary-color: #000000;
+$secondary-color: $color-black;
 
 $link-color: #0066bb;
 $third-color: #848484;
 $bg-color: #e5e5e5;
 $error-color: #c70909;
 $success-color: #409e13;
-$black: #000000;
-$white: #ffffff;
 $blue: #0066BB;
 
 $font-size: 18px;
 $font-size-big: 22px;
-$font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+$font-family: "Montserrat", Helvetica, Arial, sans-serif;
 
 $site-width: 1024px;
 $side-width: 280px;
@@ -72,7 +72,7 @@ body {
   min-width: $site-width;
   text-align: left;
   color: $main-color;
-  background: white;
+  background: $color-white;
 
   box-sizing: border-box;
   -webkit-text-size-adjust: none;
@@ -226,7 +226,7 @@ blockquote {
 
   &,
   &:hover {
-    @include color(white, .5);
+    @include color($color-white, .5);
   }
 
   &:hover {
@@ -246,7 +246,7 @@ blockquote {
   font: #{$font-size}/1.67 $font-family;
   cursor: pointer;
   color: $main-color;
-  background: white;
+  background: $color-white;
 
   select {
     position: absolute;
@@ -276,7 +276,7 @@ blockquote {
   width: 30px;
   height: 100%;
   border-left: 3px solid $bg-color;
-  background: white;
+  background: $color-white;
 
   &:before {
     position: absolute;
@@ -330,7 +330,7 @@ blockquote {
   color: $main-color;
   border: none;
   outline: none;
-  background: white;
+  background: $color-white;
   @include border-radius(0);
   box-sizing: border-box;
 }
@@ -389,7 +389,7 @@ blockquote {
   background: #2b2b2b;
   -webkit-appearance: none;
   @include border-radius(0);
-  @include color(white, .5);
+  @include color($color-white, .5);
 
   &:hover {
     @include bg(#2b2b2b, .8);
@@ -419,7 +419,7 @@ label {
 
   .form_field_checkbox {
     + .form_control_indicator:before {
-      background: white;
+      background: $color-white;
     }
 
     &:checked {
@@ -441,7 +441,7 @@ label {
     + .form_control_indicator:before {
       width: 9px;
       height: 9px;
-      border: 3px solid white;
+      border: 3px solid $color-white;
     }
 
     &:checked {
@@ -481,7 +481,7 @@ label {
 .topbar {
   display: none;
   width: 100%;
-  background: white;
+  background: $color-white;
 }
 
 .sidebar {
@@ -545,7 +545,7 @@ label {
       h1,
       h2,
       h3 {
-        color: $white;
+        color: $color-white;
       }
 
       .placeholder {
@@ -691,7 +691,7 @@ label {
 }
 
 .lang-flag:before {
-  @include bg($black);
+  @include bg($color-black);
 }
 
 .lang-flag:after {
@@ -824,7 +824,7 @@ $flags:
 }
 
 .lang-options {
-  @include bg($black, 0.09);
+  @include bg($color-black, 0.09);
 
   .menu {
     .menu-item {
@@ -847,7 +847,7 @@ $flags:
       }
 
       .menu-item {
-        @include color($white, .5);
+        @include color($color-white, .5);
       }
     }
   }
@@ -896,11 +896,11 @@ $flags:
   }
 
   @media screen and (max-width: $break-small) {
-    @include color($white);
+    @include color($color-white);
 
 
     &:hover {
-      @include color($white, .8);
+      @include color($color-white, .8);
     }
   }
 }
@@ -1026,8 +1026,8 @@ $flags:
   padding: 5px 0;
   line-height: 1;
   text-align: left;
-  background: #ffffff;
-  @include box-shadow(0,0,5px,rgba(0,0,0,.3));
+  background: $color-white;
+  @include box-shadow(0,0,5px,rgba($color-black,.3));
 
   .no-boxshadow & {
     border: 1px solid #eeeeee;
@@ -1124,7 +1124,7 @@ $flags:
 
 .blog-list {
   .post-wrap {
-    border-top: 2px solid white;
+    border-top: 2px solid $color-white;
   }
 
   .post {
@@ -1201,7 +1201,7 @@ $flags:
     width: 250px;
     height: 2px;
     content: '';
-    background: white;
+    background: $color-white;
   }
 
   h3 {
@@ -1315,7 +1315,7 @@ table {
 .footer {
   position: absolute;
   z-index: 6;
-  background: $white;
+  background: $color-white;
   right: 100%;
   bottom: 0;
   width: $side-width;
@@ -1390,8 +1390,8 @@ table {
 .js-bgpicker-cover-color {
   position: relative;
   z-index: 1;
-  color: white;
-  background: rgba(0,0,0,.2);
+  color: $color-white;
+  background: rgba($color-black,.2);
 }
 
 .rgba .js-bgpicker-cover-color {
@@ -1453,22 +1453,22 @@ table {
     }
     &::-webkit-input-placeholder {
       opacity: 1;
-      color: rgba(0,0,0,.3);
+      color: rgba($color-black,.3);
     }
 
     &:-moz-placeholder {
       opacity: 1;
-      color: rgba(0,0,0,.3);
+      color: rgba($color-black,.3);
     }
 
     &::-moz-placeholder {
       opacity: 1;
-      color: rgba(0,0,0,.3);
+      color: rgba($color-black,.3);
     }
 
     &:-ms-input-placeholder {
       opacity: 1;
-      color: rgba(0,0,0,.3);
+      color: rgba($color-black,.3);
     }
 
     #mobile-search & {
@@ -1582,7 +1582,7 @@ table {
     display: block;
     width: $search-width;
     opacity: 1;
-    @include box-shadow(10px, 0px, 10px, rgba(0,0,0,.05));
+    @include box-shadow(10px, 0, 10px, rgba($color-black,.05));
   }
 }
 
@@ -1617,7 +1617,6 @@ table {
 .voog-search-noresults {
   display: none;
   width: 100%;
-  height: 100%;
   height: 100%;
 
   div {
@@ -1739,7 +1738,7 @@ table {
 
   body {
     min-width: 320px;
-    background: white;
+    background: $color-white;
   }
 
   .wrap,
@@ -1790,7 +1789,7 @@ table {
     .front-page & {
       font-size: 22px;
       line-height: 1.05;
-      color: white;
+      color: $color-white;
 
       h1 {
         font-size: 22px * 1.5;
@@ -1905,7 +1904,7 @@ table {
     left: auto;
     display: block;
     width: auto;
-    background: white;
+    background: $color-white;
     .footer-inner {
       padding: 20px;
     }
@@ -1964,7 +1963,7 @@ table {
             .lang-title {
               display: inline-block;
               position: static;
-              color: $white;
+              color: $color-white;
             }
           }
         }
@@ -2015,7 +2014,7 @@ table {
         width: 20px;
         height: 3px;
         content: '';
-        background: white; @include border-radius(3px);
+        background: $color-white; @include border-radius(3px);
       }
 
       &:before {
@@ -2064,7 +2063,7 @@ table {
         display: inline-block;
         vertical-align: top;
         padding: 11px 9px 17px;
-        @include color($white);
+        @include color($color-white);
 
         &:before,
         &:after {
@@ -2078,7 +2077,7 @@ table {
         .lang-title {
           display: inline-block;
           position: static;
-          color: $white;
+          color: $color-white;
         }
       }
     }
@@ -2113,10 +2112,10 @@ table {
         a {
           @include hyphenate(true);
           font-size: 24px;
-          line-height: 1.05; @include color(white, .5);
+          line-height: 1.05; @include color($color-white, .5);
 
           &.active {
-            color: white;
+            color: $color-white;
           }
         }
       }
@@ -2206,23 +2205,23 @@ table {
 // EDITMODE
 .dark-background {
   .edy-empty-bordered {
-    border-color: $white;
-    border-color: rgba($white, .63);
+    border-color: $color-white;
+    border-color: rgba($color-white, .63);
 
     .edy-empty-header {
-      @include color($white, .63);
+      @include color($color-white, .63);
     }
   }
 
   .edy-content-element-hover {
-    @include border(all, 1px, solid, $white, .2);
+    @include border(all, 1px, solid, $color-white, .2);
   }
 
   .edy-texteditor-active {
-    outline: 1px solid rgba($white, .4);
+    outline: 1px solid rgba($color-white, .4);
 
     &:hover {
-      outline: 1px solid rgba($white, .63);
+      outline: 1px solid rgba($color-white, .63);
     }
   }
 }
