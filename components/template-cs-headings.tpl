@@ -9,7 +9,7 @@
     "scope": "global",
     "featured": true
   */
-  --h1-font-size: 30px;
+  --h1-font-size: 36px;
   /* VoogStyle
      "pathI18n": ["custom_styles.headings", "custom_styles.title"],
      "titleI18n": "custom_styles.line_height",

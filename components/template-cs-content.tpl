@@ -379,7 +379,7 @@
     "scope": "global",
     "featured": true
   */
-  --content-links-color: #818181;
+  --content-links-color: #0066bb;
  /* VoogStyle
   "pathI18n": ["custom_styles.content", "custom_styles.link", "custom_styles.hover"],
   "titleI18n": "custom_styles.color",
@@ -387,5 +387,5 @@
   "editor": "colorPicker",
   "scope": "global"
 */
-  --content-links-hover-color: rgba(129, 129, 129, 0.8);
+  --content-links-hover-color: rgba(0, 102, 187, 0.8);
 }

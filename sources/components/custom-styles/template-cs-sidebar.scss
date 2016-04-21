@@ -29,7 +29,7 @@
     "scope": "global",
     "featured": true
   */
-  --sidebar-site-title-font-size: $h2-size;
+  --sidebar-site-title-font-size: $h1-size;
 
   /* VoogStyle
      "pathI18n": ["custom_styles.sidebar", "custom_styles.title"],
@@ -41,7 +41,7 @@
      "unit": "em",
      "scope": "global"
   */
-  --sidebar-site-title-line-height: 1.3em;
+  --sidebar-site-title-line-height: 1.05em;
 
   /* VoogStyle
     "pathI18n": ["custom_styles.sidebar", "custom_styles.title"],
@@ -107,7 +107,7 @@
     "scope": "global",
     "featured": true
   */
-  --sidebar-site-title-color: rgba($color-black, .87);
+  --sidebar-site-title-color: $main-color;
 
   /* VoogStyle
     "pathI18n": ["custom_styles.sidebar", "custom_styles.main_menu", "custom_styles.normal"],
@@ -119,7 +119,7 @@
     "scope": "global",
     "featured": true
   */
-  --sidebar-mainmenu-font-size: $font-size-small;
+  --sidebar-mainmenu-font-size: $font-size - 4px;
 
   /* VoogStyle
      "pathI18n": ["custom_styles.sidebar", "custom_styles.main_menu", "custom_styles.normal"],
@@ -131,7 +131,7 @@
      "unit": "em",
      "scope": "global"
   */
-  --sidebar-mainmenu-line-height: 1.3em;
+  --sidebar-mainmenu-line-height: 1.05em;
 
   /* VoogStyle
     "pathI18n": ["custom_styles.sidebar", "custom_styles.main_menu", "custom_styles.normal"],
@@ -323,13 +323,9 @@
     "type": "button",
     "editor": "colorPicker",
     "scope": "global",
-    "featured": true,
-    "boundVariables": [
-      "--sidebar-mainmenu-hover-color",
-      "--sidebar-mainmenu-active-color"
-    ]
+    "featured": true
   */
-  --sidebar-mainmenu-color: rgba($color-black, .87);
+  --sidebar-mainmenu-color: $third-color;
 
    /* VoogStyle
     "pathI18n": ["custom_styles.sidebar", "custom_styles.main_menu", "custom_styles.hover"],
@@ -338,7 +334,7 @@
     "editor": "colorPicker",
     "scope": "global"
   */
-  --sidebar-mainmenu-hover-color: rgba($color-black, .87);
+  --sidebar-mainmenu-hover-color: $secondary-color;
 
    /* VoogStyle
     "pathI18n": ["custom_styles.sidebar", "custom_styles.main_menu", "custom_styles.active"],
@@ -347,7 +343,7 @@
     "editor": "colorPicker",
     "scope": "global"
   */
-  --sidebar-mainmenu-active-color: rgba($color-black, .87);
+  --sidebar-mainmenu-active-color: $secondary-color;
 
   // scss-lint:enable Comment, Indentation
 }

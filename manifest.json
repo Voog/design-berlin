@@ -148,13 +148,6 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/template-cs-focus-area.tpl",
-      "layout_name": "template-cs-focus-area",
-      "title": "template-cs-focus-area"
-    },
-    {
-      "content_type": "component",
-      "component": true,
       "file": "components/template-cs-footer.tpl",
       "layout_name": "template-cs-footer",
       "title": "template-cs-footer"
@@ -247,7 +240,7 @@
       "filename": "montserrat-light.woff"
     },
     {
-      "content_type": "application/font-woff",
+      "content_type": "text/unknown",
       "file": "assets/montserrat-light.woff2",
       "kind": "assets",
       "filename": "montserrat-light.woff2"
@@ -265,7 +258,7 @@
       "filename": "montserrat-regular.svg"
     },
     {
-      "content_type": "application/x-font-truetype",
+      "content_type": "application/font-sfnt",
       "file": "assets/montserrat-regular.ttf",
       "kind": "assets",
       "filename": "montserrat-regular.ttf"
@@ -341,12 +334,6 @@
       "file": "images/search.png",
       "kind": "images",
       "filename": "search.png"
-    },
-    {
-      "content_type": "application/javascript",
-      "file": "javascripts/application.js",
-      "kind": "javascripts",
-      "filename": "application.js"
     },
     {
       "content_type": "application/javascript",

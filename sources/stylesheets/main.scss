@@ -6,10 +6,6 @@
 @include font-face("Montserrat", '../assets/montserrat-light', 400);
 @include font-face("Montserrat", '../assets/montserrat-regular', 700);
 
-
-
-
-
 %nulling {
   margin: 0;
   padding: 0;
@@ -44,14 +40,13 @@ body {
 }
 
 body {
-  position: relative;
-  min-width: $site-width;
-  text-align: left;
-  color: $main-color;
-  background: $color-white;
-
-  box-sizing: border-box;
   -webkit-text-size-adjust: none;
+  background: $color-white;
+  box-sizing: border-box;
+  color: $main-color;
+  min-width: $site-width;
+  position: relative;
+  text-align: left;
 }
 
 a {
@@ -90,29 +85,30 @@ h1,
 h2,
 h3 {
   @extend %nulling;
-  font: normal 36px/1.1 $font-family;
-  font-weight: 700;
   color: $main-color;
+  font-weight: 700;
+  font: normal 36px/1.1 $font-family;
 }
 
 h1 {
-  margin-bottom: 20px;
+  font-size: $h1-size;
+  margin-bottom: 20px / $h1-size * 1em;
 }
 
 h2 {
-  margin: 30px 0 20px;
-  font-size: 24px;
+  font-size: $h2-size;
+  margin: 30px / $h2-size * 1em 0 20px / $h2-size * 1em;
 }
 
 h3 {
-  margin: 30px 0 20px;
   font-family: $font-family;
-  font-size: 18px;
+  font-size: $font-size;
   font-weight: bold;
+  margin: 30px / $font-size * 1em 0 20px / $font-size * 1em;
 }
 
 p {
-  margin: 20px 0;
+  margin: 20px / $font-size * 1em 0;
   padding: 0;
 }
 
@@ -604,10 +600,12 @@ label {
 
 /* submenu */
 .sub-menu {
-  min-height: 35px;
-  padding: 30px 30px 15px 30px;
-  font: 14px/1.1 $font-family;
+  font-family: $font-family;
+  font-size: $font-size - 4px;
   font-weight: 700;
+  line-height: 1.1;
+  min-height: 35px;
+  padding: 30px / $font-size * 1em 30px / $font-size * 1em 15px / $font-size * 1em;
   text-align: right;
   word-wrap: break-word;
 

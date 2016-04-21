@@ -9,7 +9,7 @@
     "scope": "global",
     "featured": true
   */
-  --sidebar-site-title-font-size: 24px;
+  --sidebar-site-title-font-size: 36px;
   /* VoogStyle
      "pathI18n": ["custom_styles.sidebar", "custom_styles.title"],
      "titleI18n": "custom_styles.line_height",
@@ -20,7 +20,7 @@
      "unit": "em",
      "scope": "global"
   */
-  --sidebar-site-title-line-height: 1.3em;
+  --sidebar-site-title-line-height: 1.05em;
   /* VoogStyle
     "pathI18n": ["custom_styles.sidebar", "custom_styles.title"],
     "titleI18n": "custom_styles.font_weight",
@@ -81,7 +81,7 @@
     "scope": "global",
     "featured": true
   */
-  --sidebar-site-title-color: rgba(0, 0, 0, 0.87);
+  --sidebar-site-title-color: #222222;
   /* VoogStyle
     "pathI18n": ["custom_styles.sidebar", "custom_styles.main_menu", "custom_styles.normal"],
     "titleI18n": "custom_styles.size",
@@ -103,7 +103,7 @@
      "unit": "em",
      "scope": "global"
   */
-  --sidebar-mainmenu-line-height: 1.3em;
+  --sidebar-mainmenu-line-height: 1.05em;
   /* VoogStyle
     "pathI18n": ["custom_styles.sidebar", "custom_styles.main_menu", "custom_styles.normal"],
     "titleI18n": "custom_styles.font_weight",
@@ -282,13 +282,9 @@
     "type": "button",
     "editor": "colorPicker",
     "scope": "global",
-    "featured": true,
-    "boundVariables": [
-      "--sidebar-mainmenu-hover-color",
-      "--sidebar-mainmenu-active-color"
-    ]
+    "featured": true
   */
-  --sidebar-mainmenu-color: rgba(0, 0, 0, 0.87);
+  --sidebar-mainmenu-color: #848484;
  /* VoogStyle
   "pathI18n": ["custom_styles.sidebar", "custom_styles.main_menu", "custom_styles.hover"],
   "titleI18n": "custom_styles.color",
@@ -296,7 +292,7 @@
   "editor": "colorPicker",
   "scope": "global"
 */
-  --sidebar-mainmenu-hover-color: rgba(0, 0, 0, 0.87);
+  --sidebar-mainmenu-hover-color: black;
  /* VoogStyle
   "pathI18n": ["custom_styles.sidebar", "custom_styles.main_menu", "custom_styles.active"],
   "titleI18n": "custom_styles.color",
@@ -304,5 +300,5 @@
   "editor": "colorPicker",
   "scope": "global"
 */
-  --sidebar-mainmenu-active-color: rgba(0, 0, 0, 0.87);
+  --sidebar-mainmenu-active-color: black;
 }
