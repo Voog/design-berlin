@@ -52,7 +52,7 @@ body {
   position: relative;
   min-width: 1024px;
   text-align: left;
-  color: #222222;
+  color: rgba(0, 0, 0, 0.87);
   background: white;
   box-sizing: border-box;
   -webkit-text-size-adjust: none;
@@ -60,11 +60,11 @@ body {
 
 a {
   text-decoration: none;
-  color: #0066bb;
+  color: #818181;
 }
 a:hover {
-  color: #0066bb;
-  color: rgba(0, 102, 187, 0.85);
+  color: #818181;
+  color: rgba(129, 129, 129, 0.85);
 }
 
 .cfx {
@@ -90,7 +90,7 @@ h2,
 h3 {
   font: normal 36px/1.1 "Montserrat", Helvetica, Arial, sans-serif;
   font-weight: 700;
-  color: #222222;
+  color: rgba(0, 0, 0, 0.87);
 }
 
 h1 {
@@ -219,7 +219,7 @@ blockquote {
   position: relative;
   font: 18px/1.67 "Montserrat", Helvetica, Arial, sans-serif;
   cursor: pointer;
-  color: #222222;
+  color: rgba(0, 0, 0, 0.87);
   background: white;
 }
 .jq-select select {
@@ -235,7 +235,7 @@ blockquote {
   font: 18px/1.67 "Montserrat", Helvetica, Arial, sans-serif;
   cursor: pointer;
   opacity: 0;
-  color: #222222;
+  color: rgba(0, 0, 0, 0.87);
   border: none;
   -webkit-appearance: none;
   filter: alpha(opacity=0);
@@ -248,7 +248,7 @@ blockquote {
   right: 0;
   width: 30px;
   height: 100%;
-  border-left: 3px solid #e5e5e5;
+  border-left: 3px solid #f6f6f6;
   background: white;
 }
 .jq-select-arrow:before {
@@ -263,7 +263,7 @@ blockquote {
   pointer-events: none;
   border: solid transparent;
   border-width: 6px;
-  border-top-color: #222222;
+  border-top-color: rgba(0, 0, 0, 0.87);
 }
 
 .jq-select-content {
@@ -299,7 +299,7 @@ blockquote {
   width: 30%;
   padding: 4px 5px;
   font: 18px/1.67 "Montserrat", Helvetica, Arial, sans-serif;
-  color: #222222;
+  color: rgba(0, 0, 0, 0.87);
   border: none;
   outline: none;
   background: white;
@@ -408,7 +408,7 @@ label .form_field_radio + .form_control_indicator:before {
   border: 3px solid white;
 }
 label .form_field_radio:checked + .form_control_indicator:before {
-  background-color: #222222;
+  background-color: rgba(0, 0, 0, 0.87);
 }
 label .form_control_indicator {
   position: relative;
@@ -461,7 +461,7 @@ label .form_control_indicator:before {
 .main {
   position: relative;
   margin-left: 280px;
-  background: #e5e5e5;
+  background: #f6f6f6;
 }
 .editmode .main {
   padding-bottom: 40px;
@@ -503,7 +503,7 @@ label .form_control_indicator:before {
   color: rgba(255, 255, 255, 0.5);
 }
 .front-page .main-inner .light-background {
-  color: #222222;
+  color: rgba(0, 0, 0, 0.87);
 }
 
 .inner {
@@ -542,10 +542,10 @@ label .form_control_indicator:before {
   line-height: 1.05;
   vertical-align: top;
   text-transform: uppercase;
-  color: #222222;
+  color: rgba(0, 0, 0, 0.87);
 }
 .site-title a {
-  color: #222222;
+  color: rgba(0, 0, 0, 0.87);
 }
 .topbar .site-title {
   min-height: 40px;
@@ -570,7 +570,7 @@ label .form_control_indicator:before {
   text-transform: uppercase;
 }
 .main-menu a {
-  color: #848484;
+  color: rgba(0, 0, 0, 0.36);
 }
 .main-menu a:hover, .main-menu a.active {
   color: black;
@@ -597,16 +597,16 @@ label .form_control_indicator:before {
   margin-top: 3px;
   margin-bottom: 11px;
   white-space: nowrap;
-  color: #848484;
+  color: rgba(0, 0, 0, 0.36);
 }
 .sub-menu a:hover {
-  color: #222222;
+  color: rgba(0, 0, 0, 0.87);
 }
 .sub-menu a.active {
   margin-bottom: 4px;
   padding-bottom: 4px;
-  color: #222222;
-  border-bottom: 3px solid #222222;
+  color: rgba(0, 0, 0, 0.87);
+  border-bottom: 3px solid rgba(0, 0, 0, 0.87);
 }
 .sub-menu a.edy-cbtn {
   padding: 0;
@@ -836,7 +836,7 @@ label .form_control_indicator:before {
     text-align: right;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   .lang-options {
     background-color: transparent;
   }
@@ -881,7 +881,7 @@ label .form_control_indicator:before {
 .option-btn .enable-text:first-letter {
   text-transform: capitalize;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   .option-btn {
     color: white;
   }
@@ -1109,7 +1109,7 @@ label .form_control_indicator:before {
 
 .post-date {
   display: inline;
-  color: #848484;
+  color: rgba(0, 0, 0, 0.36);
 }
 
 .post-content {
@@ -1216,7 +1216,7 @@ label .form_control_indicator:before {
 }
 .comment .comment-info {
   font-size: 14px;
-  color: #848484;
+  color: rgba(0, 0, 0, 0.36);
 }
 .comment .comment-info .edy-site-btn-removecomment {
   vertical-align: -1px;
@@ -1234,8 +1234,8 @@ table {
 table td,
 table th {
   padding: 10px;
-  border: 1px solid #848484;
-  border-color: rgba(132, 132, 132, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.36);
+  border-color: rgba(0, 0, 0, 0.9);
 }
 table th {
   font-weight: bold;
@@ -1278,7 +1278,7 @@ table th {
 .editmode .footer {
   padding-bottom: 40px;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 500px) {
   .edy-bar-open .footer {
     padding-bottom: 150px;
   }
@@ -1360,7 +1360,7 @@ table th {
   position: relative;
   overflow: hidden;
   padding: 0 40px 0 10px;
-  background: #e5e5e5;
+  background: #f6f6f6;
 }
 .search .search-box.search-box-focus {
   background-color: #f9ec5a;
@@ -1374,7 +1374,7 @@ table th {
   margin: 0;
   padding: 5px 0;
   font: 18px/1.67 "Montserrat", Helvetica, Arial, sans-serif;
-  color: #222222;
+  color: rgba(0, 0, 0, 0.87);
   border: none;
   outline: 0;
   background: none;
@@ -1427,9 +1427,9 @@ table th {
   border: solid transparent;
   border-width: 18px;
   border-color: rgba(229, 229, 229, 0);
-  border-right-color: #e5e5e5;
+  border-right-color: #f6f6f6;
 }
-@media screen and (min-width: 601px) and (max-width: 1024px) {
+@media screen and (min-width: 501px) and (max-width: 1024px) {
   .search:after {
     right: -20px;
   }
@@ -1471,14 +1471,14 @@ table th {
   margin-left: 280px;
   transition: opacity .1s ease-in, width .3s ease-in;
   opacity: 0;
-  background: #e5e5e5;
+  background: #f6f6f6;
 }
 @media screen and (min-width: 1500px) {
   .voog-search-container {
     margin-left: 20%;
   }
 }
-@media screen and (min-width: 601px) and (max-width: 1024px) {
+@media screen and (min-width: 501px) and (max-width: 1024px) {
   .voog-search-container {
     top: 90px;
     margin-left: 200px;
@@ -1538,7 +1538,7 @@ table th {
   padding: 40px;
   text-align: center;
   vertical-align: middle;
-  color: #848484;
+  color: rgba(0, 0, 0, 0.36);
 }
 .voog-search-noresults.voog-search-noresults-visible {
   display: table;
@@ -1555,11 +1555,11 @@ table th {
   font-size: 16px;
 }
 .voog-search-result .voog-search-result-link {
-  color: #222222;
+  color: rgba(0, 0, 0, 0.87);
 }
 .voog-search-result .voog-search-result-link:hover {
-  color: #222222;
-  color: rgba(34, 34, 34, 0.8);
+  color: rgba(0, 0, 0, 0.87);
+  color: rgba(0, 0, 0, 0.8);
 }
 .voog-search-result .voog-search-result-content {
   margin: 0;
@@ -1570,7 +1570,7 @@ table th {
   background: #f9ec5a;
 }
 
-@media screen and (min-width: 601px) and (max-width: 1024px) {
+@media screen and (min-width: 501px) and (max-width: 1024px) {
   body {
     min-width: 0;
   }
@@ -1626,7 +1626,7 @@ table th {
     padding: 20px;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   body,
   html {
     font-size: 16px;
@@ -1704,7 +1704,7 @@ table th {
   }
 
   .container {
-    background: #e5e5e5;
+    background: #f6f6f6;
   }
   .front-page .container {
     background: none;
@@ -1826,7 +1826,7 @@ table th {
     width: 20px;
     height: 3px;
     content: '';
-    background: #222222;
+    background: rgba(0, 0, 0, 0.87);
     border-radius: 5px;
   }
   .mobile-menu-toggler span.flags-disabled .language-menu-btn, .mobile-menu-toggler span:before.flags-disabled .language-menu-btn, .mobile-menu-toggler span:after.flags-disabled .language-menu-btn {
@@ -1913,12 +1913,12 @@ table th {
     left: 11px;
   }
 }
-@media screen and (max-width: 600px) and (max-width: 600px) {
+@media screen and (max-width: 500px) and (max-width: 500px) {
   #mobile-menu .language-menu-btn .lang-menu-btn {
     position: static;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   #mobile-menu.flags-enabled .language-menu-btn .lang-title {
     display: none;
   }
@@ -2020,7 +2020,7 @@ table th {
     width: 20px;
     height: 3px;
     content: '';
-    background: #222222;
+    background: rgba(0, 0, 0, 0.87);
     border-radius: 3px;
   }
   .mobilesearch-open .mobile-search-toggler:before {
@@ -2043,7 +2043,7 @@ table th {
     left: 0;
     display: none;
     overflow: auto;
-    background: #e5e5e5;
+    background: #f6f6f6;
     -webkit-overflow-scrolling: touch;
   }
   .mobilesearch-open #mobile-search {

@@ -1,28 +1,17 @@
 :root {
   /* VoogStyle
-    "pathI18n": ["custom_styles.footer", "custom_styles.text"],
+    "pathI18n": ["custom_styles.button"],
     "titleI18n": "custom_styles.size",
     "editor": "rangePicker",
     "min": 8,
-    "max": 60,
+    "max": 100,
     "unit": "px",
     "scope": "global",
     "featured": true
   */
-  --footer-font-size: 14px;
+  --content-button-font-size: 18px;
   /* VoogStyle
-     "pathI18n": ["custom_styles.footer", "custom_styles.text"],
-     "titleI18n": "custom_styles.line_height",
-     "editor": "rangePicker",
-     "min": 0.8,
-     "max": 3,
-     "step": 0.1,
-     "unit": "em",
-     "scope": "global"
-  */
-  --footer-line-height: 1.7em;
-  /* VoogStyle
-    "pathI18n": ["custom_styles.footer", "custom_styles.text"],
+    "pathI18n": ["custom_styles.button"],
     "titleI18n": "custom_styles.font_weight",
     "type": "button",
     "editor": "toggleIcon",
@@ -33,9 +22,9 @@
     "icon": "bold",
     "scope": "global"
   */
-  --footer-font-weight: 400;
+  --content-button-font-weight: 400;
   /* VoogStyle
-    "pathI18n": ["custom_styles.footer", "custom_styles.text"],
+    "pathI18n": ["custom_styles.button"],
     "titleI18n": "custom_styles.font_style",
     "type": "button",
     "editor": "toggleIcon",
@@ -46,9 +35,22 @@
     "icon": "italic",
     "scope": "global"
   */
-  --footer-font-style: normal;
+  --content-button-font-style: normal;
   /* VoogStyle
-    "pathI18n": ["custom_styles.footer", "custom_styles.text"],
+    "pathI18n": ["custom_styles.button"],
+    "titleI18n": "custom_styles.text_decoration",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "underline",
+      "off": "none"
+    },
+    "icon": "underline",
+    "scope": "global"
+  */
+  --content-button-text-decoration: none;
+  /* VoogStyle
+    "pathI18n": ["custom_styles.button"],
     "titleI18n": "custom_styles.text_transform",
     "type": "button",
     "editor": "toggleIcon",
@@ -59,5 +61,5 @@
     "icon": "uppercase",
     "scope": "global"
   */
-  --footer-text-transform: none;
+  --content-button-text-transform: uppercase;
 }

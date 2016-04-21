@@ -134,9 +134,9 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/template-cs-blog-list.tpl",
-      "layout_name": "template-cs-blog-list",
-      "title": "template-cs-blog-list"
+      "file": "components/template-cs-button.tpl",
+      "layout_name": "template-cs-button",
+      "title": "template-cs-button"
     },
     {
       "content_type": "component",
@@ -148,23 +148,16 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/template-cs-focus-area.tpl",
+      "layout_name": "template-cs-focus-area",
+      "title": "template-cs-focus-area"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/template-cs-footer.tpl",
       "layout_name": "template-cs-footer",
       "title": "template-cs-footer"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/template-cs-form.tpl",
-      "layout_name": "template-cs-form",
-      "title": "template-cs-form"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/template-cs-header.tpl",
-      "layout_name": "template-cs-header",
-      "title": "template-cs-header"
     },
     {
       "content_type": "component",
@@ -179,6 +172,13 @@
       "file": "components/template-cs-main-styles.tpl",
       "layout_name": "template-cs-main-styles",
       "title": "template-cs-main-styles"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-cs-sidebar.tpl",
+      "layout_name": "template-cs-sidebar",
+      "title": "template-cs-sidebar"
     },
     {
       "content_type": "component",

@@ -64,7 +64,26 @@ $break-small: 500px;
 
 $header-inner-height: 28px;
 
-$pad-50: 50px;
+///
 
+$bg-color: #f6f6f6;
+$bg-color: rgb(246,246,246);
+
+$main-color: rgba($color-black, .87);
+$second-color: $color-black;
+$third-color: rgba($color-black, .36);
+
+$font-size-xs: 10px;
+$font-size-xl: 24px;
+$font-size-small: 14px;
+$h1-size: 30px;
+$h2-size: 24px;
+$h3-size: 18px;
+$line-height-tiny: 18px;
+$line-height-xs: 24px;
+$line-height: 32px;
+$line-height-headings: 1.1em;
+$font-secondary: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-primary: "Montserrat", Helvetica, Arial, sans-serif;
 
 

@@ -1,37 +1,13 @@
 @import '../../bower_components/bourbon/app/assets/stylesheets/bourbon';
 @import 'mixins';
+@import 'modules/variables';
 
 /* FONTS */
 @include font-face("Montserrat", '../assets/montserrat-light', 400);
 @include font-face("Montserrat", '../assets/montserrat-regular', 700);
 
-$color-black: rgb(0, 0, 0);
-$color-white: rgb(255, 255, 255);
 
-$main-color: #222222;
-$secondary-color: $color-black;
 
-$link-color: #0066bb;
-$third-color: #848484;
-$bg-color: #e5e5e5;
-$error-color: #c70909;
-$success-color: #409e13;
-$blue: #0066BB;
-
-$font-size: 18px;
-$font-size-big: 22px;
-$font-family: "Montserrat", Helvetica, Arial, sans-serif;
-
-$site-width: 1024px;
-$side-width: 280px;
-$side-width-small: 200px;
-$content-width: $site-width - $side-width;
-
-$search-width: 300px;
-
-$break-small: 600px;
-$break-middle: 1024px;
-$break-large: 1500px;
 
 
 %nulling {

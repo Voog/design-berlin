@@ -23,18 +23,17 @@
 
 {% customstyle %}
   {% include "template-cs-main-styles" %}
-  {% include "template-cs-header" %}
+  {% include "template-cs-sidebar" %}
   {% include "template-cs-headings" %}
-  {% if html-head == "blog_listing_page" %}
-    {% include "template-cs-blog-list" %}
-  {% else %}
-    {% include "template-cs-content" %}
-  {% endif %}
-  {% comment %}{% include "template-cs-list" %}{% endcomment %}
+  {% include "template-cs-content" %}
   {% include "template-cs-table" %}
-  {% include "template-cs-form" %}
-  {% include "template-cs-footer" %}
+  {% include "template-cs-button" %}
+  {% if front_page %}
+    {% include "template-cs-footer" %}
+  {% endif %}
+  {% comment %}
   {% include "template-cs-style-rules" %}
+  {% endcomment %}
 {% endcustomstyle %}
 
 {% comment %}MODERNIZR - HTML5 SUPPORT FOR OLDER BROWSERS, SVG SUPPORT DETECTION ETC{% endcomment %}
