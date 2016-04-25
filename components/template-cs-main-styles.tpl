@@ -27,7 +27,7 @@
      "scope": "global",
      "featured": true
   */
-  --color-secondary: black;
+  --color-third: #848484;
   /* VoogStyle
      "pathI18n": ["custom_styles.main_styles", "custom_styles.colors"],
      "titleI18n": "custom_styles.third_color",
@@ -35,13 +35,5 @@
      "scope": "global",
      "featured": true
   */
-  --color-third: #848484;
-  /* VoogStyle
-     "pathI18n": ["custom_styles.main_styles", "custom_styles.colors"],
-     "titleI18n": "custom_styles.fourth_color",
-     "editor": "colorPicker",
-     "scope": "global",
-     "featured": true
-  */
-  --color-light: white;
+  --color-white: white;
 }

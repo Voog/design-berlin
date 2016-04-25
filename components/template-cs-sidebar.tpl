@@ -300,7 +300,7 @@
   "editor": "colorPicker",
   "scope": "global"
 */
-  --sidebar-mainmenu-hover-color: black;
+  --sidebar-mainmenu-hover-color: #222222;
  /* VoogStyle
   "pathI18n": ["custom_styles.sidebar", "custom_styles.main_menu", "custom_styles.active"],
   "titleI18n": "custom_styles.color",
@@ -308,5 +308,5 @@
   "editor": "colorPicker",
   "scope": "global"
 */
-  --sidebar-mainmenu-active-color: black;
+  --sidebar-mainmenu-active-color: #222222;
 }

@@ -148,8 +148,8 @@ code {
 }
 .light-background pre, .light-background
 code {
-  background-color: black;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: #222222;
+  background-color: rgba(34, 34, 34, 0.3);
 }
 
 pre {
@@ -573,7 +573,7 @@ label .form_control_indicator:before {
   color: #848484;
 }
 .main-menu a:hover, .main-menu a.active {
-  color: black;
+  color: #222222;
 }
 
 /* submenu */
@@ -1071,11 +1071,11 @@ label .form_control_indicator:before {
   margin-left: 2em;
 }
 .formatted .edy-image-container-with-title:after {
+  content: attr(data-title);
   display: block;
-  padding: 4px;
   font-size: 16px;
   line-height: 1.3em;
-  content: attr(data-title);
+  padding: 4px;
 }
 
 /* articles */
@@ -1088,30 +1088,30 @@ label .form_control_indicator:before {
   border-top: 2px solid white;
 }
 .blog-list .post {
-  padding: 30px 30px;
+  padding: 30px;
 }
 .blog-list .post-title {
-  margin: 0;
-  padding: 0;
   font-size: 24px;
   line-height: 1.1;
+  margin: 0;
+  padding: 0;
   word-wrap: break-word;
 }
 .blog-list .post-title a {
-  color: black;
+  color: #222222;
 }
 .blog-list .post-title a:hover {
-  color: black;
-  color: rgba(0, 0, 0, 0.75);
+  color: #222222;
+  color: rgba(34, 34, 34, 0.75);
 }
 
 .post-header {
-  padding: 0 30px 0;
+  padding: 0 30px;
 }
 
 .post-date {
-  display: inline;
   color: #848484;
+  display: inline;
 }
 
 .post-content {
@@ -1128,11 +1128,11 @@ label .form_control_indicator:before {
 }
 
 .tbl {
+  border-collapse: collapse;
   display: table;
   table-layout: fixed;
   visibility: hidden;
   width: 100%;
-  border-collapse: collapse;
 }
 .tbl .tbl-row {
   display: table-row;
@@ -1146,18 +1146,18 @@ label .form_control_indicator:before {
 
 /* comments */
 .comments {
-  position: relative;
   padding: 0 30px 30px;
+  position: relative;
 }
 .comments:before {
+  background: white;
+  content: '';
+  display: block;
+  height: 2px;
+  left: 0;
   position: absolute;
   top: 0;
-  left: 0;
-  display: block;
   width: 250px;
-  height: 2px;
-  content: '';
-  background: white;
 }
 .comments h3 {
   margin: 0;
@@ -1189,9 +1189,9 @@ label .form_control_indicator:before {
 }
 .comment-form .comment-name-field input,
 .comment-form .comment-email-field input {
-  width: 100% !important;
-  border-bottom: 1px solid #cecece;
   background: none;
+  border-bottom: 1px solid #cecece;
+  width: 100% !important;
 }
 .comment-form .comment-name-field {
   margin-right: 20px;
@@ -1200,10 +1200,10 @@ label .form_control_indicator:before {
   padding-top: 20px;
 }
 .comment-form .form_field_with_errors .form_field_textfield {
-  border-bottom: 1px solid #c70909;
-  border-bottom: 1px solid rgba(199, 9, 9, 0.3);
   color: #c70909;
   color: rgba(199, 9, 9, 0.8);
+  border-bottom: 1px solid #c70909;
+  border-bottom: 1px solid rgba(199, 9, 9, 0.3);
 }
 .comment-form.form_with_errors .comment-form-focus-input {
   display: none;
@@ -1217,8 +1217,8 @@ label .form_control_indicator:before {
   word-wrap: break-word;
 }
 .comment .comment-info {
-  font-size: 14px;
   color: #848484;
+  font-size: 14px;
 }
 .comment .comment-info .edy-site-btn-removecomment {
   vertical-align: -1px;

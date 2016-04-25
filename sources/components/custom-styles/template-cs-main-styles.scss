@@ -49,7 +49,7 @@
      "scope": "global",
      "featured": true
   */
-  --color-secondary: $secondary-color;
+  --color-third: $third-color;
 
   /* VoogStyle
      "pathI18n": ["custom_styles.main_styles", "custom_styles.colors"],
@@ -58,15 +58,6 @@
      "scope": "global",
      "featured": true
   */
-  --color-third: $third-color;
-
-  /* VoogStyle
-     "pathI18n": ["custom_styles.main_styles", "custom_styles.colors"],
-     "titleI18n": "custom_styles.fourth_color",
-     "editor": "colorPicker",
-     "scope": "global",
-     "featured": true
-  */
-  --color-light: $color-white;
+  --color-white: $color-white;
 
 }

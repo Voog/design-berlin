@@ -1,3 +1,7 @@
+.front-page .main-inner .light-background {
+  color: var(--color-main);
+}
+
 .light-background {
   color: var(--color-main);
 }
@@ -11,9 +15,7 @@
 .light-background .formatted h1,
 .light-background .formatted h2,
 .light-background .formatted h3,
-.light-background .formatted h4,
-.light-background .formatted p,
-.light-background .formatted input {
+.light-background .formatted h4 {
   color: var(--color-main);
 }
 .light-background .formatted .form_submit input,
@@ -38,42 +40,34 @@
   color: var(--content-links-hover-color);
 }
 .light-background .formatted a:hover.custom-btn {
-  border-color: var(--color-light);
-  color: var(--color-light);
+  border-color: var(--color-white);
+  color: var(--color-white);
   text-transform: var(--content-button-text-transform);
 }
 .light-background .formatted table th,
 .light-background .formatted table td {
-  border-color: var(--color-main);
+  border-color: var(--color-third);
 }
 
 .dark-background {
-  color: var(--color-light);
+  color: var(--color-white);
 }
 .dark-background h1,
 .dark-background h2,
 .dark-background h3 {
-  color: var(--color-light);
+  color: var(--color-white);
 }
 .dark-background h1 .placeholder,
 .dark-background h2 .placeholder,
 .dark-background h3 .placeholder {
-  color: var(--color-light);
+  color: var(--color-white);
   opacity: .5;
-}
-.dark-background .sub-menu a {
-  color: var(--color-light);
-  opacity: .42;
-}
-.dark-background .sub-menu a:hover {
-  color: var(--color-light);
-  opacity: 1;
 }
 .dark-background .placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
 .dark-background .post-title a {
-  color: var(--color-light);
+  color: var(--color-white);
 }
 .dark-background .post-title a:hover {
   opacity: .75;
@@ -82,7 +76,7 @@
   color: rgba(255, 255, 255, 0.36);
 }
 .dark-background .formatted {
-  color: var(--color-light);
+  color: var(--color-white);
 }
 .dark-background .formatted h1,
 .dark-background .formatted h2,
@@ -91,12 +85,12 @@
 .dark-background .formatted p,
 .dark-background .formatted b,
 .dark-background .formatted input {
-  color: var(--color-light);
+  color: var(--color-white);
 }
 .dark-background .formatted .form_submit input,
 .dark-background .formatted .submit {
-  border-color: var(--color-light);
-  color: var(--color-light);
+  border-color: var(--color-white);
+  color: var(--color-white);
   font-size: var(--content-button-font-size);
   font-style: var(--content-button-font-style);
   font-weight: var(--content-button-font-weight);
@@ -109,8 +103,8 @@
 }
 .dark-background .formatted a.custom-btn,
 .dark-background .formatted a:hover.custom-btn {
-  border-color: var(--color-light);
-  color: var(--color-light);
+  border-color: var(--color-white);
+  color: var(--color-white);
   text-transform: var(--content-button-text-transform);
 }
 .dark-background .formatted table th,
@@ -118,14 +112,13 @@
   border-color: var(--color-main);
 }
 .dark-background .custom-btn {
-  border-color: var(--color-light);
-  color: var(--color-light);
+  border-color: var(--color-white);
+  color: var(--color-white);
 }
 
 .post-date,
 .comment .comment-info {
-  color: var(--color-main);
-  opacity: .36;
+  color: var(--color-third);
 }
 
 .blog-list .post-title a {
@@ -137,7 +130,7 @@
   opacity: .75;
 }
 .blog-list .post-wrap {
-  border-top-color: var(--color-light);
+  border-top-color: var(--color-white);
 }
 
 .lang-flag::before {
@@ -148,7 +141,7 @@
 label .form_field_checkbox + .form_control_indicator::before,
 .form_field_textfield,
 .form_field_textarea {
-  background-color: var(--color-light);
+  background-color: var(--color-white);
 }
 
 body,
@@ -175,7 +168,7 @@ h3,
 }
 
 label .form_field_radio + .form_control_indicator::before {
-  border-color: var(--color-light);
+  border-color: var(--color-white);
 }
 
 .lang-menu-btn .lang-title {
@@ -184,46 +177,46 @@ label .form_field_radio + .form_control_indicator::before {
 
 @media screen and (max-width: 600px) {
   .lang-options .menu .menu-item {
-    color: var(--color-light);
+    color: var(--color-white);
     opacity: .5;
   }
 
   .option-btn {
-    color: var(--color-light);
+    color: var(--color-white);
   }
 
   .option-btn:hover {
-    color: var(--color-light);
+    color: var(--color-white);
     opacity: .8;
   }
 
   .front-page .main-inner {
-    color: var(--color-light);
+    color: var(--color-white);
   }
 
   .footer {
-    background: var(--color-light);
+    background: var(--color-white);
   }
 
   .mobile-menu-toggler span.flags-disabled .language-menu-btn .lang-title,
   .mobile-menu-toggler span:before.flags-disabled .language-menu-btn .lang-title,
   .mobile-menu-toggler span:after.flags-disabled .language-menu-btn .lang-title {
-    color: var(--color-light);
+    color: var(--color-white);
   }
 
   #mobile-menu .mobile-menu-close:before, #mobile-menu .mobile-menu-close:after {
-    background: var(--color-light);
+    background: var(--color-white);
   }
 
   #mobile-menu .navigation-menu ul a,
   #mobile-menu .language-menu ul a {
-    color: var(--color-light);
+    color: var(--color-white);
     opacity: .5;
   }
 
   #mobile-menu .navigation-menu ul a.active,
   #mobile-menu .language-menu ul a.active {
-    color: var(--color-light);
+    color: var(--color-white);
   }
 
   .mobile-menu-toggler span, .mobile-menu-toggler span:before, .mobile-menu-toggler span:after {
@@ -272,7 +265,7 @@ h3,
 }
 
 .main-menu ul a {
-  color: var(--color-main);
+  color: var(--color-third);
   font-family: var(--sidebar-mainmenu-font-family);
   font-size: var(--sidebar-mainmenu-font-size);
   font-style: var(--sidebar-mainmenu-font-style);
@@ -282,12 +275,14 @@ h3,
   text-transform: var(--sidebar-mainmenu-text-transform);
 }
 .main-menu ul a:hover {
+  color: var(--color-main);
   font-style: var(--sidebar-mainmenu-hover-font-style);
   font-weight: var(--sidebar-mainmenu-hover-font-weight);
   text-decoration: var(--sidebar-mainmenu-hover-text-decoration);
   text-transform: var(--sidebar-mainmenu-hover-text-transform);
 }
 .main-menu ul a.active {
+  color: var(--color-main);
   font-style: var(--sidebar-mainmenu-active-font-style);
   font-weight: var(--sidebar-mainmenu-active-font-weight);
   text-decoration: var(--sidebar-mainmenu-active-text-decoration);
@@ -295,48 +290,44 @@ h3,
 }
 
 .sub-menu a {
-  color: var(--color-main);
-  color: var(--third-color);
+  border-bottom-color: var(--color-third);
+  border-bottom-style: var(--content-submenu-text-decoration);
+  border-bottom-width: 3px;
+  color: var(--color-third);
   font-family: var(--content-submenu-font-family);
   font-size: var(--content-submenu-font-size);
   font-style: var(--content-submenu-font-style);
   font-weight: var(--content-submenu-font-weight);
-  opacity: .36;
-  border-bottom-style: var(--content-submenu-text-decoration);
   text-transform: var(--content-submenu-text-transform);
-  border-bottom-width: 3px;
-}
-.dark-background .sub-menu a {
-  color: var(--color-light);
-}
-.light-background .sub-menu a {
-  color: var(--color-main);
 }
 .sub-menu a:hover {
+  border-bottom-color: var(--color-main);
+  border-bottom-style: var(--content-submenu-hover-text-decoration);
+  border-bottom-width: 3px;
   color: var(--color-main);
   font-style: var(--content-submenu-hover-font-style);
   font-weight: var(--content-submenu-hover-font-weight);
-  opacity: 1;
-  border-bottom-style: var(--content-submenu-hover-text-decoration);
   text-transform: var(--content-submenu-hover-text-transform);
-  border-bottom-width: 3px;
 }
 .sub-menu a.active {
+  border-bottom-color: var(--color-main);
+  border-bottom-style: var(--content-submenu-active-text-decoration);
+  border-bottom-width: 3px;
   color: var(--color-main);
   font-style: var(--content-submenu-active-font-style);
   font-weight: var(--content-submenu-active-font-weight);
-  opacity: 1;
-  border-bottom-style: var(--content-submenu-active-text-decoration);
   text-transform: var(--content-submenu-active-text-transform);
-  border-bottom-width: 3px;
-}
-.dark-background .sub-menu a.active {
-  color: var(--color-light);
-  border-bottom-color: var(--color-light);
-}
-.light-background .sub-menu a.active {
-  color: var(--color-main);
-  border-bottom-color: var(--color-main);
+      /*
+      .dark-background & {
+        color: var(--color-white);
+        border-bottom-color: var(--color-white);
+      }
+
+      .light-background & {
+        color: var(--color-main);
+        border-bottom-color: var(--color-main);
+      }
+      */
 }
 
 .formatted h1 {
@@ -410,6 +401,7 @@ h3,
 .main .post-content table th {
   padding: var(--table-cell-padding);
   border-style: var(--table-border-style);
+  border-color: var(--color-third);
 }
 
 .main .formatted a,
@@ -467,20 +459,30 @@ h3,
   font-size: var(--footer-font-size);
 }
 .footer-row .light-background .custom-btn:hover {
-  color: var(--color-light);
-  border-color: var(--color-light);
+  color: var(--color-white);
+  border-color: var(--color-white);
 }
 .footer-row .light-background .custom-btn:hover:hover a {
-  color: var(--color-light);
+  color: var(--color-white);
 }
 .footer-row .dark-background {
-  color: var(--color-light);
+  color: var(--color-white);
 }
 .footer-row .dark-background .custom-btn {
-  color: var(--color-light);
-  border: 1px solid var(--color-light);
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
 }
 
-main {
+.jq-select,
+.jq-select select {
   color: var(--color-main);
+}
+
+.custom-btn {
+  background-color: var(--color-main);
+}
+
+.custom-btn:hover {
+  background-color: var(--color-main);
+  opacity: 0.8;
 }
