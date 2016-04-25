@@ -27,6 +27,7 @@
   {% include "template-cs-headings" %}
   {% include "template-cs-content" %}
   {% include "template-cs-table" %}
+  {% include "template-cs-form" %}
   {% include "template-cs-button" %}
   {% include "template-cs-style-rules" %}
   {% comment %}

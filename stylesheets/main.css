@@ -304,7 +304,7 @@ blockquote {
   color: #222;
   font: 18px/1.67 "Lato", Helvetica, Arial, sans-serif;
   outline: none;
-  padding: 4px 5px;
+  padding: .3em .5em;
   width: 30%;
 }
 
@@ -538,7 +538,7 @@ label .form_control_indicator:before {
   color: #222;
   font-family: "Lato", Helvetica, Arial, sans-serif;
   font-size: 36px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.05;
   padding-top: 25px;
   text-transform: uppercase;

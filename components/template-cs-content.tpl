@@ -8,6 +8,17 @@
   */
   --content-background-color: #e5e5e5;
   /* VoogStyle
+     "pathI18n": ["custom_styles.content"],
+     "titleI18n": "custom_styles.maximum_width",
+     "editor": "rangePicker",
+     "min": 600,
+     "max": 1250,
+     "step": 10,
+     "unit": "px",
+     "scope": "global"
+  */
+  --content-width: 744px;
+  /* VoogStyle
     "pathI18n": ["custom_styles.content", "custom_styles.sub_menu", "custom_styles.normal"],
     "titleI18n": "custom_styles.size",
     "editor": "rangePicker",

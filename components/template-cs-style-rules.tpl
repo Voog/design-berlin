@@ -27,7 +27,7 @@
 label .form_field_checkbox + .form_control_indicator::before,
 .form_field_textfield,
 .form_field_textarea {
-  background-color: var(--color-white);
+  background-color: var(--form-field-background-color);
 }
 
 body,
@@ -41,8 +41,6 @@ body,
 h1,
 h2,
 h3,
-.form_field_textfield,
-.form_field_textarea,
 .search .search-input {
   color: var(--color-main);
 }
@@ -55,7 +53,7 @@ h3,
 }
 
 label .form_field_radio + .form_control_indicator::before {
-  border-color: var(--color-white);
+  border-color: var(--form-field-background-color);
 }
 
 .lang-menu-btn .lang-title {
@@ -137,19 +135,24 @@ h3,
 .sidebar {
   background-color: var(--sidebar-background-color);
 }
-.sidebar .site-title {
-  color: var(--color-main);
-  font-size: var(--sidebar-site-title-font-size);
+
+.site-title {
+  color: var(--sidebar-site-title-color);
   font-style: var(--sidebar-site-title-font-style);
   font-weight: var(--sidebar-site-title-font-weight);
   line-height: var(--sidebar-site-title-line-height);
   text-decoration: var(--sidebar-site-title-text-decoration);
   text-transform: var(--sidebar-site-title-text-transform);
 }
-.sidebar .site-title a {
+.site-title a {
   color: var(--sidebar-site-title-color);
 }
 
+@media screen and (min-width: 601px) {
+  .site-title {
+    font-size: var(--sidebar-site-title-font-size);
+  }
+}
 .main-menu ul a {
   color: var(--sidebar-mainmenu-color);
   font-family: var(--sidebar-mainmenu-font-family);
@@ -203,17 +206,6 @@ h3,
   font-style: var(--content-submenu-active-font-style);
   font-weight: var(--content-submenu-active-font-weight);
   text-transform: var(--content-submenu-active-text-transform);
-      /*
-      .dark-background & {
-        color: var(--color-white);
-        border-bottom-color: var(--color-white);
-      }
-
-      .light-background & {
-        color: var(--color-main);
-        border-bottom-color: var(--color-main);
-      }
-      */
 }
 
 .formatted h1 {
@@ -353,4 +345,21 @@ h3,
 
 .main .custom-btn:hover {
   opacity: 0.8;
+}
+
+.form_field_textfield,
+.form_field_textarea {
+  background: var(--form-field-background-color);
+  color: var(--form-field-text-color);
+  font-size: var(--form-field-text-font-size);
+  font-style: var(--form-field-text-font-style);
+  font-weight: var(--form-field-text-font-weight);
+  line-height: var(--form-field-text-line-height);
+  text-decoration: var(--form-field-text-decoration);
+  text-transform: var(--form-field-text-transform);
+}
+
+.inner {
+  max-width: var(--content-width);
+  width: 100%;
 }

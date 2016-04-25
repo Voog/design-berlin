@@ -21,7 +21,8 @@
         "--sidebar-footer-color",
         "--content-button-background-color",
         "--content-submenu-hover-color",
-        "--content-submenu-active-color"
+        "--content-submenu-active-color",
+        "--form-field-text-color"
       ]
   */
   --color-main: #222;
@@ -45,7 +46,8 @@
      "featured": true,
      "boundVariables": [
       "--sidebar-background-color",
-      "--content-button-color"
+      "--content-button-color",
+      "--form-field-background-color"
     ]
   */
   --color-white: white;

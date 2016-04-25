@@ -41,7 +41,7 @@
     "icon": "bold",
     "scope": "global"
   */
-  --sidebar-site-title-font-weight: 400;
+  --sidebar-site-title-font-weight: 600;
   /* VoogStyle
     "pathI18n": ["custom_styles.sidebar", "custom_styles.title"],
     "titleI18n": "custom_styles.font_style",
