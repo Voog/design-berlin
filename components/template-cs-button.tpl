@@ -1,5 +1,13 @@
 :root {
   /* VoogStyle
+     "pathI18n": ["custom_styles.button"],
+     "titleI18n": "custom_styles.background_color",
+     "editor": "colorPicker",
+     "scope": "global",
+     "featured": true
+  */
+  --content-button-background-color: #222;
+  /* VoogStyle
     "pathI18n": ["custom_styles.button"],
     "titleI18n": "custom_styles.size",
     "editor": "rangePicker",
@@ -61,5 +69,14 @@
     "icon": "uppercase",
     "scope": "global"
   */
-  --content-button-text-transform: uppercase;
+  --content-button-text-transform: none;
+  /* VoogStyle
+     "pathI18n": ["custom_styles.button"],
+     "titleI18n": "custom_styles.color",
+     "editor": "colorPicker",
+     "scope": "global",
+     "featured": true,
+     "type": "button"
+  */
+  --content-button-color: white;
 }

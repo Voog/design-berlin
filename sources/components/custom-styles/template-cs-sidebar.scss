@@ -343,7 +343,7 @@
     "editor": "colorPicker",
     "scope": "global"
   */
-  --sidebar-mainmenu-hover-color: $secondary-color;
+  --sidebar-mainmenu-hover-color: $main-color;
 
    /* VoogStyle
     "pathI18n": ["custom_styles.sidebar", "custom_styles.main_menu", "custom_styles.active"],
@@ -352,7 +352,40 @@
     "editor": "colorPicker",
     "scope": "global"
   */
-  --sidebar-mainmenu-active-color: $secondary-color;
+  --sidebar-mainmenu-active-color: $main-color;
+
+  /* VoogStyle
+    "pathI18n": ["custom_styles.sidebar", "custom_styles.footer", "custom_styles.text"],
+    "titleI18n": "custom_styles.color",
+    "editor": "colorPicker",
+    "scope": "global",
+    "featured": "true"
+  */
+  --sidebar-footer-color: $main-color;
+
+  /* VoogStyle
+    "pathI18n": ["custom_styles.sidebar", "custom_styles.footer", "custom_styles.text"],
+    "titleI18n": "custom_styles.size",
+    "editor": "rangePicker",
+    "min": 8,
+    "max": 60,
+    "unit": "px",
+    "scope": "global",
+    "featured": true
+  */
+  --sidebar-footer-font-size: $font-size - 7px;
+
+  /* VoogStyle
+     "pathI18n": ["custom_styles.sidebar", "custom_styles.footer", "custom_styles.text"],
+     "titleI18n": "custom_styles.line_height",
+     "editor": "rangePicker",
+     "min": 0.8,
+     "max": 3,
+     "step": 0.1,
+     "unit": "em",
+     "scope": "global"
+  */
+  --sidebar-footer-line-height: 1.6em;
 
   // scss-lint:enable Comment, Indentation
 }

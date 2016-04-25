@@ -193,9 +193,9 @@ blockquote {
   cursor: pointer;
   display: inline-block;
   font: #{$font-size}/1.67 $font-family;
-  margin-bottom: 20px;
+  margin-bottom: 1.1em;
   outline: 0;
-  padding: 8px;
+  padding: 0.44em;
 
   &,
   &:hover {
@@ -559,7 +559,7 @@ label {
   color: $main-color;
   font-family: $font-family;
   font-size: 36px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.05;
   padding-top: 25px;
   text-transform: uppercase;
@@ -1292,16 +1292,16 @@ table {
 
 /* footer */
 .footer {
-  position: absolute;
-  z-index: 6;
+  @include hyphenate(true);
   background: $color-white;
-  right: 100%;
   bottom: 0;
-  width: $side-width;
+  box-sizing: border-box;
   font-size: 11px;
   line-height: 1.6;
-  box-sizing: border-box;
-  @include hyphenate(true);
+  position: absolute;
+  right: 100%;
+  width: $side-width;
+  z-index: 6;
 
   .footer-inner {
     padding: 20px 30px;
@@ -1322,7 +1322,7 @@ table {
   }
 }
 
-.voog-reference {
+.main .voog-reference {
   display: none;
   padding-top: 10px;
 
@@ -1884,6 +1884,7 @@ table {
     display: block;
     width: auto;
     background: $color-white;
+
     .footer-inner {
       padding: 20px;
     }

@@ -2,120 +2,6 @@
   color: var(--color-main);
 }
 
-.light-background {
-  color: var(--color-main);
-}
-.light-background .post-title a,
-.light-background .custom-btn {
-  color: var(--color-main);
-}
-.light-background .formatted {
-  color: var(--color-main);
-}
-.light-background .formatted h1,
-.light-background .formatted h2,
-.light-background .formatted h3,
-.light-background .formatted h4 {
-  color: var(--color-main);
-}
-.light-background .formatted .form_submit input,
-.light-background .formatted .submit {
-  border-color: var(--color-main);
-  color: var(--color-main);
-  font-size: var(--content-button-font-size);
-  font-style: var(--content-button-font-style);
-  font-weight: var(--content-button-font-weight);
-  text-decoration: var(--content-button-text-decoration);
-  text-transform: var(--content-button-text-transform);
-}
-.light-background .formatted a, .light-background .formatted a:hover {
-  color: var(--content-links-color);
-}
-.light-background .formatted a.custom-btn, .light-background .formatted a:hover.custom-btn {
-  border-color: var(--color-main);
-  color: var(--color-main);
-  text-transform: var(--content-button-text-transform);
-}
-.light-background .formatted a:hover {
-  color: var(--content-links-hover-color);
-}
-.light-background .formatted a:hover.custom-btn {
-  border-color: var(--color-white);
-  color: var(--color-white);
-  text-transform: var(--content-button-text-transform);
-}
-.light-background .formatted table th,
-.light-background .formatted table td {
-  border-color: var(--color-third);
-}
-
-.dark-background {
-  color: var(--color-white);
-}
-.dark-background h1,
-.dark-background h2,
-.dark-background h3 {
-  color: var(--color-white);
-}
-.dark-background h1 .placeholder,
-.dark-background h2 .placeholder,
-.dark-background h3 .placeholder {
-  color: var(--color-white);
-  opacity: .5;
-}
-.dark-background .placeholder {
-  color: rgba(255, 255, 255, 0.5);
-}
-.dark-background .post-title a {
-  color: var(--color-white);
-}
-.dark-background .post-title a:hover {
-  opacity: .75;
-}
-.dark-background .post-date {
-  color: rgba(255, 255, 255, 0.36);
-}
-.dark-background .formatted {
-  color: var(--color-white);
-}
-.dark-background .formatted h1,
-.dark-background .formatted h2,
-.dark-background .formatted h3,
-.dark-background .formatted h4,
-.dark-background .formatted p,
-.dark-background .formatted b,
-.dark-background .formatted input {
-  color: var(--color-white);
-}
-.dark-background .formatted .form_submit input,
-.dark-background .formatted .submit {
-  border-color: var(--color-white);
-  color: var(--color-white);
-  font-size: var(--content-button-font-size);
-  font-style: var(--content-button-font-style);
-  font-weight: var(--content-button-font-weight);
-  text-decoration: var(--content-button-text-decoration);
-  text-transform: var(--content-button-text-transform);
-}
-.dark-background .formatted a,
-.dark-background .formatted a:hover {
-  color: var(--content-links-color);
-}
-.dark-background .formatted a.custom-btn,
-.dark-background .formatted a:hover.custom-btn {
-  border-color: var(--color-white);
-  color: var(--color-white);
-  text-transform: var(--content-button-text-transform);
-}
-.dark-background .formatted table th,
-.dark-background .formatted table td {
-  border-color: var(--color-main);
-}
-.dark-background .custom-btn {
-  border-color: var(--color-white);
-  color: var(--color-white);
-}
-
 .post-date,
 .comment .comment-info {
   color: var(--color-third);
@@ -146,7 +32,8 @@ label .form_field_checkbox + .form_control_indicator::before,
 
 body,
 .footer,
-.topbar {
+.topbar,
+.sidebar {
   background-color: var(--sidebar-background-color);
 }
 
@@ -195,7 +82,7 @@ label .form_field_radio + .form_control_indicator::before {
   }
 
   .footer {
-    background: var(--color-white);
+    background: var(--sidebar-background-color);
   }
 
   .mobile-menu-toggler span.flags-disabled .language-menu-btn .lang-title,
@@ -240,7 +127,6 @@ h3,
 .main-menu,
 .sub-menu,
 .content-inner,
-.footer-row .content-inner,
 .search .search-input,
 #mobile-menu,
 .form_submit input,
@@ -265,7 +151,7 @@ h3,
 }
 
 .main-menu ul a {
-  color: var(--color-third);
+  color: var(--sidebar-mainmenu-color);
   font-family: var(--sidebar-mainmenu-font-family);
   font-size: var(--sidebar-mainmenu-font-size);
   font-style: var(--sidebar-mainmenu-font-style);
@@ -275,45 +161,45 @@ h3,
   text-transform: var(--sidebar-mainmenu-text-transform);
 }
 .main-menu ul a:hover {
-  color: var(--color-main);
+  color: var(--sidebar-mainmenu-hover-color);
   font-style: var(--sidebar-mainmenu-hover-font-style);
   font-weight: var(--sidebar-mainmenu-hover-font-weight);
   text-decoration: var(--sidebar-mainmenu-hover-text-decoration);
   text-transform: var(--sidebar-mainmenu-hover-text-transform);
 }
 .main-menu ul a.active {
-  color: var(--color-main);
+  color: var(--sidebar-mainmenu-active-color);
   font-style: var(--sidebar-mainmenu-active-font-style);
   font-weight: var(--sidebar-mainmenu-active-font-weight);
   text-decoration: var(--sidebar-mainmenu-active-text-decoration);
   text-transform: var(--sidebar-mainmenu-active-text-transform);
 }
 
-.sub-menu a {
+.main .sub-menu a {
   border-bottom-color: var(--color-third);
   border-bottom-style: var(--content-submenu-text-decoration);
   border-bottom-width: 3px;
-  color: var(--color-third);
+  color: var(--content-submenu-color);
   font-family: var(--content-submenu-font-family);
   font-size: var(--content-submenu-font-size);
   font-style: var(--content-submenu-font-style);
   font-weight: var(--content-submenu-font-weight);
   text-transform: var(--content-submenu-text-transform);
 }
-.sub-menu a:hover {
-  border-bottom-color: var(--color-main);
+.main .sub-menu a:hover {
+  border-bottom-color: var(--content-submenu-hover-color);
   border-bottom-style: var(--content-submenu-hover-text-decoration);
   border-bottom-width: 3px;
-  color: var(--color-main);
+  color: var(--content-submenu-hover-color);
   font-style: var(--content-submenu-hover-font-style);
   font-weight: var(--content-submenu-hover-font-weight);
   text-transform: var(--content-submenu-hover-text-transform);
 }
-.sub-menu a.active {
-  border-bottom-color: var(--color-main);
+.main .sub-menu a.active {
+  border-bottom-color: var(--content-submenu-active-color);
   border-bottom-style: var(--content-submenu-active-text-decoration);
   border-bottom-width: 3px;
-  color: var(--color-main);
+  color: var(--content-submenu-active-color);
   font-style: var(--content-submenu-active-font-style);
   font-weight: var(--content-submenu-active-font-weight);
   text-transform: var(--content-submenu-active-text-transform);
@@ -377,6 +263,9 @@ h3,
   text-transform: var(--h3-text-transform);
 }
 
+.main {
+  background-color: var(--content-background-color);
+}
 .main .formatted,
 .main .post-content {
   font-size: var(--content-font-size);
@@ -387,14 +276,6 @@ h3,
   text-decoration: var(--content-text-decoration);
   text-transform: var(--content-text-transform);
 }
-.main .formatted .custom-btn, .main .formatted .custom-btn:hover,
-.main .post-content .custom-btn,
-.main .post-content .custom-btn:hover {
-  font-size: var(--content-button-font-size);
-  font-style: var(--content-button-font-style);
-  font-weight: var(--content-button-font-weight);
-  text-decoration: var(--content-button-text-decoration);
-}
 .main .formatted table td,
 .main .formatted table th,
 .main .post-content table td,
@@ -403,74 +284,35 @@ h3,
   border-style: var(--table-border-style);
   border-color: var(--color-third);
 }
-
-.main .formatted a,
-.main .post-content a,
-.main .footer a {
+.main .footer {
+  color: var(--sidebar-footer-color);
+  font-size: var(--sidebar-footer-font-size);
+  line-height: var(--sidebar-footer-line-height);
+}
+.main a {
   color: var(--content-links-color);
   font-style: var(--content-links-font-style);
   font-weight: var(--content-links-font-weight);
   text-decoration: var(--content-links-text-decoration);
   text-transform: var(--content-links-text-transform);
 }
-.main .formatted a:hover,
-.main .post-content a:hover,
-.main .footer a:hover {
+.main a:hover {
   color: var(--content-links-hover-color);
   font-style: var(--content-links-hover-font-style);
   font-weight: var(--content-links-hover-font-weight);
   text-decoration: var(--content-links-hover-text-decoration);
   text-transform: var(--content-links-hover-text-transform);
 }
-
-.main .footer-row .formatted {
-  font-size: var(--footer-font-size);
-  font-style: var(--footer-font-style);
-  font-weight: var(--footer-font-weight);
-  line-height: var(--footer-line-height);
-  text-transform: var(--footer-text-transform);
+.main .main-inner .dark-background {
+  color: var(--color-white);
 }
-.main .footer-row .formatted a:not(.custom-btn) {
-  color: var(--content-links-color);
+.main .main-inner .dark-background h1,
+.main .main-inner .dark-background h2,
+.main .main-inner .dark-background h3 {
+  color: var(--color-white);
 }
-.main .footer-row .formatted a:not(.custom-btn):hover {
-  color: var(--content-links-hover-color);
-}
-.main .footer-row .formatted a, .main .footer-row .formatted a:hover {
-  font-style: var(--footer-font-style);
-  font-weight: var(--footer-font-weight);
-  line-height: var(--footer-line-height);
-  text-transform: var(--footer-text-transform);
-}
-.main .footer-row .formatted a.custom-btn {
-  font-size: var(--footer-font-size);
-  text-decoration: none;
-}
-
-.footer-row .light-background {
+.main .main-inner .light-background {
   color: var(--color-main);
-}
-.footer-row .light-background b {
-  color: var(--color-main);
-}
-.footer-row .light-background .custom-btn {
-  color: var(--color-main);
-  border: 1px solid var(--color-main);
-  font-size: var(--footer-font-size);
-}
-.footer-row .light-background .custom-btn:hover {
-  color: var(--color-white);
-  border-color: var(--color-white);
-}
-.footer-row .light-background .custom-btn:hover:hover a {
-  color: var(--color-white);
-}
-.footer-row .dark-background {
-  color: var(--color-white);
-}
-.footer-row .dark-background .custom-btn {
-  color: var(--color-white);
-  border: 1px solid var(--color-white);
 }
 
 .jq-select,
@@ -478,11 +320,37 @@ h3,
   color: var(--color-main);
 }
 
-.custom-btn {
-  background-color: var(--color-main);
+.main .custom-btn,
+.main .form_submit input,
+.main .submit {
+  background-color: var(--content-button-background-color);
+  color: var(--content-button-color);
+  font-size: var(--content-button-font-size);
+  font-style: var(--content-button-font-style);
+  font-weight: var(--content-button-font-weight);
+  text-decoration: var(--content-button-text-decoration);
+  text-transform: var(--content-button-text-transform);
+}
+.main .custom-btn, .main .custom-btn:hover,
+.main .custom-btn a,
+.main .custom-btn a:hover,
+.main .form_submit input,
+.main .form_submit input:hover,
+.main .form_submit input a,
+.main .form_submit input a:hover,
+.main .submit,
+.main .submit:hover,
+.main .submit a,
+.main .submit a:hover {
+  background-color: var(--content-button-background-color);
+  color: var(--content-button-color);
+  font-size: var(--content-button-font-size);
+  font-style: var(--content-button-font-style);
+  font-weight: var(--content-button-font-weight);
+  text-decoration: var(--content-button-text-decoration);
+  text-transform: var(--content-button-text-transform);
 }
 
-.custom-btn:hover {
-  background-color: var(--color-main);
+.main .custom-btn:hover {
   opacity: 0.8;
 }

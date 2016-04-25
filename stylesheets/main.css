@@ -52,7 +52,7 @@ body {
   -webkit-text-size-adjust: none;
   background: white;
   box-sizing: border-box;
-  color: #222222;
+  color: #222;
   min-width: 1024px;
   position: relative;
   text-align: left;
@@ -88,7 +88,7 @@ img {
 h1,
 h2,
 h3 {
-  color: #222222;
+  color: #222;
   font: normal 36px/1.1 "Lato", Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
@@ -148,7 +148,7 @@ code {
 }
 .light-background pre, .light-background
 code {
-  background-color: #222222;
+  background-color: #222;
   background-color: rgba(34, 34, 34, 0.3);
 }
 
@@ -192,21 +192,21 @@ blockquote {
 }
 
 .custom-btn {
-  background: #222222;
+  background: #222;
   border: 0;
   cursor: pointer;
   display: inline-block;
   font: 18px/1.67 "Lato", Helvetica, Arial, sans-serif;
-  margin-bottom: 20px;
+  margin-bottom: 1.1em;
   outline: 0;
-  padding: 8px;
+  padding: 0.44em;
 }
 .custom-btn, .custom-btn:hover {
   color: white;
   color: rgba(255, 255, 255, 0.5);
 }
 .custom-btn:hover {
-  background-color: #222222;
+  background-color: #222;
   background-color: rgba(34, 34, 34, 0.8);
 }
 
@@ -218,7 +218,7 @@ blockquote {
 /* select */
 .jq-select {
   background: white;
-  color: #222222;
+  color: #222;
   cursor: pointer;
   font: 18px/1.67 "Lato", Helvetica, Arial, sans-serif;
   position: relative;
@@ -227,7 +227,7 @@ blockquote {
   -moz-opacity: .0;
   -webkit-appearance: none;
   border: 0;
-  color: #222222;
+  color: #222;
   cursor: pointer;
   display: block;
   filter: alpha(opacity=0);
@@ -253,7 +253,7 @@ blockquote {
   width: 30px;
 }
 .jq-select-arrow:before {
-  border-top-color: #222222;
+  border-top-color: #222;
   border-width: 6px;
   border: solid transparent;
   content: ' ';
@@ -301,7 +301,7 @@ blockquote {
   background: white;
   border: 0;
   box-sizing: border-box;
-  color: #222222;
+  color: #222;
   font: 18px/1.67 "Lato", Helvetica, Arial, sans-serif;
   outline: none;
   padding: 4px 5px;
@@ -408,7 +408,7 @@ label .form_field_radio + .form_control_indicator:before {
   width: 9px;
 }
 label .form_field_radio:checked + .form_control_indicator:before {
-  background-color: #222222;
+  background-color: #222;
 }
 label .form_control_indicator {
   display: inline-block;
@@ -503,7 +503,7 @@ label .form_control_indicator:before {
   color: rgba(255, 255, 255, 0.5);
 }
 .front-page .main-inner .light-background {
-  color: #222222;
+  color: #222;
 }
 
 .inner {
@@ -535,17 +535,17 @@ label .form_control_indicator:before {
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
-  color: #222222;
+  color: #222;
   font-family: "Lato", Helvetica, Arial, sans-serif;
   font-size: 36px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.05;
   padding-top: 25px;
   text-transform: uppercase;
   vertical-align: top;
 }
 .site-title a {
-  color: #222222;
+  color: #222;
 }
 .topbar .site-title {
   min-height: 40px;
@@ -573,7 +573,7 @@ label .form_control_indicator:before {
   color: #848484;
 }
 .main-menu a:hover, .main-menu a.active {
-  color: #222222;
+  color: #222;
 }
 
 /* submenu */
@@ -602,13 +602,13 @@ label .form_control_indicator:before {
   color: #848484;
 }
 .sub-menu a:hover {
-  color: #222222;
+  color: #222;
 }
 .sub-menu a.active {
   margin-bottom: 4px;
   padding-bottom: 4px;
-  color: #222222;
-  border-bottom: 3px solid #222222;
+  color: #222;
+  border-bottom: 3px solid #222;
 }
 .sub-menu a.edy-cbtn {
   padding: 0;
@@ -1098,10 +1098,10 @@ label .form_control_indicator:before {
   word-wrap: break-word;
 }
 .blog-list .post-title a {
-  color: #222222;
+  color: #222;
 }
 .blog-list .post-title a:hover {
-  color: #222222;
+  color: #222;
   color: rgba(34, 34, 34, 0.75);
 }
 
@@ -1253,21 +1253,21 @@ table th {
 
 /* footer */
 .footer {
-  position: absolute;
-  z-index: 6;
-  background: white;
-  right: 100%;
-  bottom: 0;
-  width: 280px;
-  font-size: 11px;
-  line-height: 1.6;
-  box-sizing: border-box;
   word-break: break-word;
   word-wrap: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
+  background: white;
+  bottom: 0;
+  box-sizing: border-box;
+  font-size: 11px;
+  line-height: 1.6;
+  position: absolute;
+  right: 100%;
+  width: 280px;
+  z-index: 6;
 }
 .footer .footer-inner {
   padding: 20px 30px;
@@ -1286,14 +1286,14 @@ table th {
   }
 }
 
-.voog-reference {
+.main .voog-reference {
   display: none;
   padding-top: 10px;
 }
-.voog-reference a {
+.main .voog-reference a {
   color: #acacac;
 }
-.front-page .voog-reference {
+.front-page .main .voog-reference {
   display: block;
 }
 
@@ -1376,7 +1376,7 @@ table th {
   margin: 0;
   padding: 5px 0;
   font: 18px/1.67 "Lato", Helvetica, Arial, sans-serif;
-  color: #222222;
+  color: #222;
   border: 0;
   outline: 0;
   background: none;
@@ -1557,10 +1557,10 @@ table th {
   font-size: 16px;
 }
 .voog-search-result .voog-search-result-link {
-  color: #222222;
+  color: #222;
 }
 .voog-search-result .voog-search-result-link:hover {
-  color: #222222;
+  color: #222;
   color: rgba(34, 34, 34, 0.8);
 }
 .voog-search-result .voog-search-result-content {
@@ -1828,7 +1828,7 @@ table th {
     width: 20px;
     height: 3px;
     content: '';
-    background: #222222;
+    background: #222;
     border-radius: 5px;
   }
   .mobile-menu-toggler span.flags-disabled .language-menu-btn, .mobile-menu-toggler span:before.flags-disabled .language-menu-btn, .mobile-menu-toggler span:after.flags-disabled .language-menu-btn {
@@ -2016,7 +2016,7 @@ table th {
   }
   .mobilesearch-open .mobile-search-toggler:before, .mobilesearch-open .mobile-search-toggler:after {
     border-radius: 3px;
-    background: #222222;
+    background: #222;
     content: '';
     display: block;
     height: 3px;

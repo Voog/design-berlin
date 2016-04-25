@@ -23,145 +23,6 @@
   color: var(--color-main);
 }
 
-.light-background {
-  color: var(--color-main);
-
-  .post-title a,
-  .custom-btn {
-    color: var(--color-main);
-  }
-
-  .formatted {
-    color: var(--color-main);
-
-    // p,
-    // input,
-    h1,
-    h2,
-    h3,
-    h4 {
-      color: var(--color-main);
-    }
-
-    .form_submit input,
-    .submit {
-      border-color: var(--color-main);
-      color: var(--color-main);
-      font-size: var(--content-button-font-size);
-      font-style: var(--content-button-font-style);
-      font-weight: var(--content-button-font-weight);
-      text-decoration: var(--content-button-text-decoration);
-      text-transform: var(--content-button-text-transform);
-    }
-
-    a, a:hover {
-      color: var(--content-links-color);
-
-      &.custom-btn {
-        border-color: var(--color-main);
-        color: var(--color-main);
-        text-transform: var(--content-button-text-transform);
-      }
-    }
-
-    a:hover {
-      color: var(--content-links-hover-color);
-
-      &.custom-btn {
-        border-color: var(--color-white);
-        color: var(--color-white);
-        text-transform: var(--content-button-text-transform);
-      }
-    }
-
-    table {
-      th,
-      td {
-        border-color: var(--color-third);
-      }
-    }
-  }
-}
-
-.dark-background {
-  color: var(--color-white);
-
-  h1,
-  h2,
-  h3 {
-    color: var(--color-white);
-
-    .placeholder {
-      color: var(--color-white);
-      opacity: .5;
-    }
-  }
-
-  .placeholder {
-    color: rgba($color-white, .5);
-  }
-
-  .post-title a {
-    color: var(--color-white);
-
-    &:hover {
-      opacity: .75;
-    }
-  }
-
-  .post-date {
-    color: rgba($color-white, .36);
-  }
-
-  .formatted {
-    color: var(--color-white);
-
-    h1,
-    h2,
-    h3,
-    h4,
-    p,
-    b,
-    input {
-      color: var(--color-white);
-    }
-
-    .form_submit input,
-    .submit {
-      border-color: var(--color-white);
-      color: var(--color-white);
-      font-size: var(--content-button-font-size);
-      font-style: var(--content-button-font-style);
-      font-weight: var(--content-button-font-weight);
-      text-decoration: var(--content-button-text-decoration);
-      text-transform: var(--content-button-text-transform);
-    }
-
-    a,
-    a:hover {
-      color: var(--content-links-color);
-
-      &.custom-btn {
-        border-color: var(--color-white);
-        color: var(--color-white);
-        text-transform: var(--content-button-text-transform);
-      }
-    }
-
-    table {
-      th,
-      td {
-        border-color: var(--color-main);
-      }
-    }
-  }
-
-  .custom-btn {
-    border-color: var(--color-white);
-    color: var(--color-white);
-  }
-}
-
 .post-date,
 .comment .comment-info {
   color: var(--color-third);
@@ -198,7 +59,8 @@ label .form_field_checkbox + .form_control_indicator::before,
 
 body,
 .footer,
-.topbar {
+.topbar,
+.sidebar {
   background-color: var(--sidebar-background-color);
 }
 
@@ -248,7 +110,7 @@ label .form_field_radio + .form_control_indicator::before {
   }
 
   .footer {
-    background: var(--color-white);
+    background: var(--sidebar-background-color);
   }
 
   .mobile-menu-toggler span.flags-disabled .language-menu-btn .lang-title,
@@ -295,7 +157,6 @@ h3,
 .main-menu,
 .sub-menu,
 .content-inner,
-.footer-row .content-inner,
 .search .search-input,
 #mobile-menu,
 .form_submit input,
@@ -328,7 +189,7 @@ h3,
 .main-menu {
   ul {
     a {
-      color: var(--color-third);
+      color: var(--sidebar-mainmenu-color);
       font-family: var(--sidebar-mainmenu-font-family);
       font-size: var(--sidebar-mainmenu-font-size);
       font-style: var(--sidebar-mainmenu-font-style);
@@ -338,7 +199,7 @@ h3,
       text-transform: var(--sidebar-mainmenu-text-transform);
 
       &:hover {
-        color: var(--color-main);
+        color: var(--sidebar-mainmenu-hover-color);
         font-style: var(--sidebar-mainmenu-hover-font-style);
         font-weight: var(--sidebar-mainmenu-hover-font-weight);
         text-decoration: var(--sidebar-mainmenu-hover-text-decoration);
@@ -346,7 +207,7 @@ h3,
       }
 
       &.active {
-        color: var(--color-main);
+        color: var(--sidebar-mainmenu-active-color);
         font-style: var(--sidebar-mainmenu-active-font-style);
         font-weight: var(--sidebar-mainmenu-active-font-weight);
         text-decoration: var(--sidebar-mainmenu-active-text-decoration);
@@ -357,12 +218,12 @@ h3,
 }
 
 // Submenu
-.sub-menu {
+.main .sub-menu {
   a {
     border-bottom-color: var(--color-third);
     border-bottom-style: var(--content-submenu-text-decoration);
     border-bottom-width: 3px;
-    color: var(--color-third);
+    color: var(--content-submenu-color);
     font-family: var(--content-submenu-font-family);
     font-size: var(--content-submenu-font-size);
     font-style: var(--content-submenu-font-style);
@@ -374,20 +235,20 @@ h3,
 
 
     &:hover {
-      border-bottom-color: var(--color-main);
+      border-bottom-color: var(--content-submenu-hover-color);
       border-bottom-style: var(--content-submenu-hover-text-decoration);
       border-bottom-width: 3px;
-      color: var(--color-main);
+      color: var(--content-submenu-hover-color);
       font-style: var(--content-submenu-hover-font-style);
       font-weight: var(--content-submenu-hover-font-weight);
       text-transform: var(--content-submenu-hover-text-transform);
     }
 
     &.active {
-      border-bottom-color: var(--color-main);
+      border-bottom-color: var(--content-submenu-active-color);
       border-bottom-style: var(--content-submenu-active-text-decoration);
       border-bottom-width: 3px;
-      color: var(--color-main);
+      color: var(--content-submenu-active-color);
       font-style: var(--content-submenu-active-font-style);
       font-weight: var(--content-submenu-active-font-weight);
       text-transform: var(--content-submenu-active-text-transform);
@@ -464,36 +325,35 @@ h3,
   }
 }
 
-.main .formatted, 
-.main .post-content {
-  font-size: var(--content-font-size);
-  font-style: var(--content-font-style);
-  font-weight: var(--content-font-weight);
-  line-height: var(--content-line-height);
-  text-align: var(--content-alignment);
-  text-decoration: var(--content-text-decoration);
-  text-transform: var(--content-text-transform);
+.main {
+  background-color: var(--content-background-color);
 
-  .custom-btn, .custom-btn:hover {
-    font-size: var(--content-button-font-size);
-    font-style: var(--content-button-font-style);
-    font-weight: var(--content-button-font-weight);
-    text-decoration: var(--content-button-text-decoration);
-  }
+  .formatted, 
+  .post-content {
+    font-size: var(--content-font-size);
+    font-style: var(--content-font-style);
+    font-weight: var(--content-font-weight);
+    line-height: var(--content-line-height);
+    text-align: var(--content-alignment);
+    text-decoration: var(--content-text-decoration);
+    text-transform: var(--content-text-transform);
 
-  table {
-    td,
-    th {
-      padding: var(--table-cell-padding);
-      border-style: var(--table-border-style);
-      border-color: var(--color-third);
+    table {
+      td,
+      th {
+        padding: var(--table-cell-padding);
+        border-style: var(--table-border-style);
+        border-color: var(--color-third);
+      }
     }
   }
-}
 
-.main .formatted,
-.main .post-content,
-.main .footer {
+  .footer {
+    color: var(--sidebar-footer-color);
+    font-size: var(--sidebar-footer-font-size);
+    line-height: var(--sidebar-footer-line-height);
+  }
+
   a {
     color: var(--content-links-color);
     font-style: var(--content-links-font-style);
@@ -509,83 +369,57 @@ h3,
       text-transform: var(--content-links-hover-text-transform);
     }
   }
-}
 
-.main .footer-row .formatted {
-  font-size: var(--footer-font-size);
-  font-style: var(--footer-font-style);
-  font-weight: var(--footer-font-weight);
-  line-height: var(--footer-line-height);
-  text-transform: var(--footer-text-transform);
-
-  a:not(.custom-btn) {
-    color: var(--content-links-color);
-
-    &:hover {
-      color: var(--content-links-hover-color);
-    }
-  }
-
-  a, a:hover {
-    font-style: var(--footer-font-style);
-    font-weight: var(--footer-font-weight);
-    line-height: var(--footer-line-height);
-    text-transform: var(--footer-text-transform);
-  }
-
-  a.custom-btn {
-    font-size: var(--footer-font-size);
-    text-decoration: none;
-  }
-}
-
-.footer-row {
-  .light-background {
-    color: var(--color-main);
-
-    b {
-      color: var(--color-main);
-    }
-
-    .custom-btn {
-      color: var(--color-main);
-      border: 1px solid var(--color-main);
-      font-size: var(--footer-font-size);
-    }
-
-    .custom-btn:hover {
+  .main-inner {
+    .dark-background {
       color: var(--color-white);
-      border-color: var(--color-white);
 
-      &:hover a {
-        color: var(--color-white);
+      h1,
+      h2,
+      h3 {
+        color: var(--color-white);   
       }
     }
-  }
 
-  .dark-background {
-    color: var(--color-white);
-
-    .custom-btn {
-      color: var(--color-white);
-      border: 1px solid var(--color-white);
+    .light-background {
+      color: var(--color-main);
     }
   }
 }
 
 // COLORS BERLIN
-
 .jq-select,
 .jq-select select
  {
   color: var(--color-main);
 }
 
-.custom-btn {
-  background-color: var(--color-main);
+.main .custom-btn,
+.main .form_submit input,
+.main .submit
+ {
+  background-color: var(--content-button-background-color);
+  color: var(--content-button-color);
+  font-size: var(--content-button-font-size);
+  font-style: var(--content-button-font-style);
+  font-weight: var(--content-button-font-weight);
+  text-decoration: var(--content-button-text-decoration);
+  text-transform: var(--content-button-text-transform);
+
+  &,
+  &:hover,
+  a,
+  a:hover {
+    background-color: var(--content-button-background-color);
+    color: var(--content-button-color);
+    font-size: var(--content-button-font-size);
+    font-style: var(--content-button-font-style);
+    font-weight: var(--content-button-font-weight);
+    text-decoration: var(--content-button-text-decoration);
+    text-transform: var(--content-button-text-transform);
+  }
 }
 
-.custom-btn:hover {
-  background-color: var(--color-main);
+.main .custom-btn:hover {
   opacity: .8
 }
