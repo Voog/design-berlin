@@ -129,15 +129,11 @@
     "type": "button",
     "editor": "toggleIcon",
     "states": {
-      "on": "underline",
+      "on": "solid",
       "off": "none"
     },
     "icon": "underline",
-    "scope": "global",
-    "boundVariables": [
-      "--content-submenu-hover-text-decoration",
-      "--content-submenu-active-text-decoration"
-    ]
+    "scope": "global"
   */
   --content-submenu-text-decoration: none;
 
@@ -147,13 +143,27 @@
     "type": "button",
     "editor": "toggleIcon",
     "states": {
-      "on": "underline",
+      "on": "solid",
       "off": "none"
     },
     "icon": "underline",
     "scope": "global"
   */
   --content-submenu-hover-text-decoration: none;
+
+  /* VoogStyle
+    "pathI18n": ["custom_styles.content", "custom_styles.sub_menu", "custom_styles.active"],
+    "titleI18n": "custom_styles.text_transform",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "solid",
+      "off": "none"
+    },
+    "icon": "underline",
+    "scope": "global"
+  */
+  --content-submenu-active-text-decoration: solid;
 
   /* VoogStyle
     "pathI18n": ["custom_styles.content", "custom_styles.sub_menu", "custom_styles.normal"],
@@ -228,15 +238,6 @@
      "scope": "global"
   */
   --content-line-height: 1.7em;
-
-  /* VoogStyle
-     "pathI18n": ["custom_styles.content", "custom_styles.text"],
-     "titleI18n": "custom_styles.alignment",
-     "editor": "listPicker",
-     "list": {{ base_alignment_set }},
-     "scope": "global"
-  */
-  --content-alignment: left;
 
   /* VoogStyle
     "pathI18n": ["custom_styles.content", "custom_styles.link", "custom_styles.normal"],
@@ -377,7 +378,8 @@
     "titleI18n": "custom_styles.color",
     "type": "button",
     "editor": "colorPicker",
-    "scope": "global"
+    "scope": "global",
+    "featured": "true"
   */
   --content-links-hover-color: rgba($link-color, .8);
 

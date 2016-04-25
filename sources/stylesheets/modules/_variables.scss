@@ -1,17 +1,22 @@
 $color-black: rgb(0, 0, 0);
 $color-white: rgb(255, 255, 255);
 
-$main-color: #222222;
+$main-color: #222;
+$main-color: rgb(34, 34, 34);
+
 $secondary-color: $color-black;
 
-$link-color: #0066bb;
 $third-color: #848484;
+$third-color: rgb(132, 132, 132);
+
 $bg-color: #e5e5e5;
+$bg-color: rgb(229, 229, 229);
+
+$link-color: #06b;
 $error-color: #c70909;
 $success-color: #409e13;
-$blue: #0066BB;
 
-$font-family: "Lato", "Montserrat", Helvetica, Arial, sans-serif;
+$font-family: "Lato", Helvetica, Arial, sans-serif;
 $font-size: 18px;
 $font-size-big: 22px;
 $h1-size: 36px;

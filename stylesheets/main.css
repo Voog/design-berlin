@@ -22,24 +22,24 @@ ol li, .lang-menu-btn {
 }
 
 .bgpicker-btn, .lang-menu-btn {
+  background: none;
+  border: 0;
+  cursor: pointer;
   margin: 0;
   padding: 0;
-  cursor: pointer;
-  border: none;
-  background: none;
 }
 .bgpicker-btn:focus, .lang-menu-btn:focus {
   outline: none;
 }
 .bgpicker-btn::-moz-focus-inner, .lang-menu-btn::-moz-focus-inner {
+  border: 0;
   padding: 0;
-  border: none;
 }
 
 html,
 body {
+  font: 18px/1.67 "Lato", Helvetica, Arial, sans-serif;
   height: 100% !important;
-  font: 18px/1.67 "Lato", "Montserrat", Helvetica, Arial, sans-serif;
 }
 @media screen and (min-width: 1500px) {
   html,
@@ -59,38 +59,38 @@ body {
 }
 
 a {
+  color: #06b;
   text-decoration: none;
-  color: #0066bb;
 }
 a:hover {
-  color: #0066bb;
+  color: #06b;
   color: rgba(0, 102, 187, 0.85);
 }
 
 .cfx {
-  zoom: 1;
   min-height: 1px;
+  zoom: 1;
 }
 .cfx:after {
-  display: block;
-  visibility: hidden;
   clear: both;
-  height: 0;
-  font-size: 0;
-  line-height: 0;
   content: '.';
+  display: block;
+  font-size: 0;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
 }
 
 img {
-  border: none;
+  border: 0;
 }
 
 h1,
 h2,
 h3 {
   color: #222222;
+  font: normal 36px/1.1 "Lato", Helvetica, Arial, sans-serif;
   font-weight: 700;
-  font: normal 36px/1.1 "Lato", "Montserrat", Helvetica, Arial, sans-serif;
 }
 
 h1 {
@@ -104,7 +104,7 @@ h2 {
 }
 
 h3 {
-  font-family: "Lato", "Montserrat", Helvetica, Arial, sans-serif;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
   font-size: 18px;
   font-weight: bold;
   margin: 1.66667em 0 1.11111em;
@@ -123,8 +123,8 @@ ol {
 input[type=submit],
 input[type=text],
 textarea {
-  border-radius: 0;
   -webkit-appearance: none;
+  border-radius: 0;
 }
 
 pre,
@@ -142,9 +142,9 @@ form {
 
 pre,
 code {
-  font-size: 14px;
   background-color: white;
   background-color: rgba(255, 255, 255, 0.3);
+  font-size: 14px;
 }
 .light-background pre, .light-background
 code {
@@ -157,22 +157,22 @@ pre {
   padding: 10px;
 }
 pre code {
-  display: inline;
-  padding: 0;
-  line-height: inherit;
-  white-space: pre;
-  background-color: transparent;
   overflow-wrap: normal;
   word-wrap: normal;
   word-break: normal;
+  background-color: transparent;
+  display: inline;
+  line-height: inherit;
+  padding: 0;
+  white-space: pre;
 }
 
 code {
-  display: inline-block;
-  padding: 5px;
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-all;
+  display: inline-block;
+  padding: 5px;
 }
 
 blockquote {
@@ -183,7 +183,7 @@ blockquote {
 }
 
 .font-size-small {
-  font: 18px/1.67 "Lato", "Montserrat", Helvetica, Arial, sans-serif !important;
+  font: 18px / 1.67 "Lato", Helvetica, Arial, sans-serif !important;
 }
 @media screen and (min-width: 1500px) {
   .font-size-small {
@@ -192,86 +192,86 @@ blockquote {
 }
 
 .custom-btn {
-  display: inline-block;
-  margin-bottom: 20px;
-  padding: 8px;
-  font: 18px/1.67 "Lato", "Montserrat", Helvetica, Arial, sans-serif;
-  cursor: pointer;
+  background: #222222;
   border: 0;
+  cursor: pointer;
+  display: inline-block;
+  font: 18px/1.67 "Lato", Helvetica, Arial, sans-serif;
+  margin-bottom: 20px;
   outline: 0;
-  background: #2b2b2b;
+  padding: 8px;
 }
 .custom-btn, .custom-btn:hover {
   color: white;
   color: rgba(255, 255, 255, 0.5);
 }
 .custom-btn:hover {
-  background-color: #2b2b2b;
-  background-color: rgba(43, 43, 43, 0.8);
+  background-color: #222222;
+  background-color: rgba(34, 34, 34, 0.8);
 }
 
 .bgpicker-btn {
-  top: 0;
   left: 0;
+  top: 0;
 }
 
 /* select */
 .jq-select {
-  position: relative;
-  font: 18px/1.67 "Lato", "Montserrat", Helvetica, Arial, sans-serif;
-  cursor: pointer;
-  color: #222222;
   background: white;
+  color: #222222;
+  cursor: pointer;
+  font: 18px/1.67 "Lato", Helvetica, Arial, sans-serif;
+  position: relative;
 }
 .jq-select select {
-  position: absolute;
-  z-index: 10;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font: 18px/1.67 "Lato", "Montserrat", Helvetica, Arial, sans-serif;
-  cursor: pointer;
-  opacity: 0;
-  color: #222222;
-  border: none;
-  -webkit-appearance: none;
-  filter: alpha(opacity=0);
   -moz-opacity: .0;
+  -webkit-appearance: none;
+  border: 0;
+  color: #222222;
+  cursor: pointer;
+  display: block;
+  filter: alpha(opacity=0);
+  font: 18px/1.67 "Lato", Helvetica, Arial, sans-serif;
+  height: 100%;
+  left: 0;
+  margin: 0;
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
 }
 
 .jq-select-arrow {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 30px;
-  height: 100%;
-  border-left: 3px solid #e5e5e5;
   background: white;
+  border-left: 3px solid #e5e5e5;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
 }
 .jq-select-arrow:before {
+  border-top-color: #222222;
+  border-width: 6px;
+  border: solid transparent;
+  content: ' ';
+  height: 0;
+  left: 50%;
+  margin-left: -6px;
+  margin-top: -2px;
+  pointer-events: none;
   position: absolute;
   top: 50%;
-  left: 50%;
   width: 0;
-  height: 0;
-  margin-top: -2px;
-  margin-left: -6px;
-  content: ' ';
-  pointer-events: none;
-  border: solid transparent;
-  border-width: 6px;
-  border-top-color: #222222;
 }
 
 .jq-select-content {
+  padding-right: 48px;
+  padding: 4px 38px 4px 5px;
   position: relative;
   z-index: 5;
-  padding: 4px 38px 4px 5px;
-  padding-right: 48px;
 }
 
 .jq-select-inner {
@@ -297,15 +297,15 @@ blockquote {
 
 .form_field_textfield,
 .form_field_textarea {
-  width: 30%;
-  padding: 4px 5px;
-  font: 18px/1.67 "Lato", "Montserrat", Helvetica, Arial, sans-serif;
-  color: #222222;
-  border: none;
-  outline: none;
-  background: white;
   border-radius: 0;
+  background: white;
+  border: 0;
   box-sizing: border-box;
+  color: #222222;
+  font: 18px/1.67 "Lato", Helvetica, Arial, sans-serif;
+  outline: none;
+  padding: 4px 5px;
+  width: 30%;
 }
 
 .form_field_textfield,
@@ -329,9 +329,8 @@ blockquote {
 
 .form_error,
 .form_notice {
-  padding: 0;
-  padding: 0 0 20px;
   font-weight: bold;
+  padding: 0 0 20px;
 }
 
 .form_error {
@@ -343,8 +342,8 @@ blockquote {
 }
 
 .form_field_error {
-  display: none;
   color: #c70909;
+  display: none;
 }
 
 .form_field_with_errors input,
@@ -355,16 +354,16 @@ blockquote {
 
 .form_submit input,
 .submit {
-  padding: 8px;
-  font: 18px/1.67 "Lato", "Montserrat", Helvetica, Arial, sans-serif;
-  cursor: pointer;
-  border: 0;
-  outline: 0;
-  background: #2b2b2b;
   -webkit-appearance: none;
   border-radius: 0;
   color: white;
   color: rgba(255, 255, 255, 0.5);
+  background: #2b2b2b;
+  border: 0;
+  cursor: pointer;
+  font: 18px/1.67 "Lato", Helvetica, Arial, sans-serif;
+  outline: 0;
+  padding: 8px;
 }
 .form_submit input:hover,
 .submit:hover {
@@ -404,30 +403,30 @@ label .form_field_checkbox:checked + .form_control_indicator:before {
   background-size: 17px 18px;
 }
 label .form_field_radio + .form_control_indicator:before {
-  width: 9px;
-  height: 9px;
   border: 3px solid white;
+  height: 9px;
+  width: 9px;
 }
 label .form_field_radio:checked + .form_control_indicator:before {
   background-color: #222222;
 }
 label .form_control_indicator {
-  position: relative;
   display: inline-block;
   display: none\9;
-  width: 18px;
   height: 18px;
   margin-right: 7px;
+  position: relative;
   vertical-align: 0;
+  width: 18px;
 }
 label .form_control_indicator:before {
-  position: absolute;
   bottom: 0;
-  left: 0;
-  display: block;
-  width: 15px;
-  height: 15px;
   content: '';
+  display: block;
+  height: 15px;
+  left: 0;
+  position: absolute;
+  width: 15px;
 }
 
 /* layout */
@@ -453,16 +452,16 @@ label .form_control_indicator:before {
   }
 }
 .sidebar .sidebar-inner {
-  padding: 55px 30px 180px 30px;
+  padding: 55px 30px 180px;
 }
 .search-enabled .sidebar .sidebar-inner {
   padding-bottom: 230px;
 }
 
 .main {
-  position: relative;
-  margin-left: 280px;
   background: #e5e5e5;
+  margin-left: 280px;
+  position: relative;
 }
 .editmode .main {
   padding-bottom: 40px;
@@ -480,9 +479,9 @@ label .form_control_indicator:before {
   position: relative;
 }
 .front-page .main-inner {
-  font-family: "Lato", "Montserrat", Helvetica, Arial, sans-serif;
-  font-weight: 700;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
   font-size: 36px;
+  font-weight: 700;
   line-height: 1.05;
   text-align: center;
 }
@@ -536,14 +535,14 @@ label .form_control_indicator:before {
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
-  padding-top: 25px;
-  font-family: "Lato", "Montserrat", Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.05;
-  vertical-align: top;
-  text-transform: uppercase;
   color: #222222;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.05;
+  padding-top: 25px;
+  text-transform: uppercase;
+  vertical-align: top;
 }
 .site-title a {
   color: #222222;
@@ -579,7 +578,7 @@ label .form_control_indicator:before {
 
 /* submenu */
 .sub-menu {
-  font-family: "Lato", "Montserrat", Helvetica, Arial, sans-serif;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: 700;
   line-height: 1.1;
@@ -857,19 +856,19 @@ label .form_control_indicator:before {
   margin: 0;
   padding: 0;
   background: none;
-  border: none;
+  border: 0;
   cursor: pointer;
   font-family: inherit;
   font-size: inherit;
   color: #0066bb;
 }
 .option-btn:hover {
-  color: #0066BB;
+  color: #06b;
   color: rgba(0, 102, 187, 0.8);
 }
 .option-btn::-moz-focus-inner {
   padding: 0;
-  border: none;
+  border: 0;
 }
 .option-btn:focus {
   outline: none;
@@ -960,7 +959,7 @@ label .form_control_indicator:before {
   font-size: 12px;
   cursor: pointer;
   vertical-align: middle;
-  border: none;
+  border: 0;
   background: none;
 }
 .flags-enabled .lang-menu-btn {
@@ -1376,9 +1375,9 @@ table th {
   width: 100%;
   margin: 0;
   padding: 5px 0;
-  font: 18px/1.67 "Lato", "Montserrat", Helvetica, Arial, sans-serif;
+  font: 18px/1.67 "Lato", Helvetica, Arial, sans-serif;
   color: #222222;
-  border: none;
+  border: 0;
   outline: 0;
   background: none;
 }
@@ -1451,7 +1450,7 @@ table th {
   height: 40px;
   cursor: pointer;
   opacity: .5;
-  border: none;
+  border: 0;
   outline: 0;
   background: url("../images/search.png") no-repeat center center;
   background-size: 16px 16px;
@@ -2016,15 +2015,15 @@ table th {
     background: none !important;
   }
   .mobilesearch-open .mobile-search-toggler:before, .mobilesearch-open .mobile-search-toggler:after {
+    border-radius: 3px;
+    background: #222222;
+    content: '';
+    display: block;
+    height: 3px;
+    left: 7px;
     position: absolute;
     top: 20px;
-    left: 7px;
-    display: block;
     width: 20px;
-    height: 3px;
-    content: '';
-    background: #222222;
-    border-radius: 3px;
   }
   .mobilesearch-open .mobile-search-toggler:before {
     -webkit-transform: rotate(45deg);
@@ -2062,7 +2061,6 @@ table th {
   }
 }
 .dark-background .edy-empty-bordered {
-  border-color: white;
   border-color: rgba(255, 255, 255, 0.63);
 }
 .dark-background .edy-empty-bordered .edy-empty-header {

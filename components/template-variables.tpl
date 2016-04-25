@@ -20,7 +20,7 @@
         },
         {
           "title": "Lato",
-          "value": "\"Lato\", \"Helvetica Neue\", Helvetica, Arial, sans-serif"
+          "value": "\"Lato\", Helvetica, Arial, sans-serif"
         },
         {
           "title": "Montserrat",
@@ -120,5 +120,25 @@
     ]
   {% endcapture %}
 
+  {% capture base_border_style_set %}
+    [
+      {
+        "title": "Solid",
+        "value": "solid"
+      },
+      {
+        "title": "Dotted",
+        "value": "dotted"
+      },
+      {
+        "title": "Dashed",
+        "value": "dashed"
+      },
+      {
+        "title": "None",
+        "value": "hidden"
+      }
+    ]
+  {% endcapture %}
 
 {% endcapture %}

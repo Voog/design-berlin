@@ -21,23 +21,13 @@
 
   /* VoogStyle
      "pathI18n": ["custom_styles.main_styles"],
-     "titleI18n": "custom_styles.font_primary",
+     "titleI18n": "custom_styles.font",
      "editor": "listPicker",
      "list": {{ base_font_set }},
      "featured": true,
      "scope": "global"
   */
   --font-primary: $font-family;
-
-  /* VoogStyle
-     "pathI18n": ["custom_styles.main_styles"],
-     "titleI18n": "custom_styles.font_secondary",
-     "editor": "listPicker",
-     "list": {{ base_font_set }},
-     "featured": true,
-     "scope": "global"
-  */
-  --font-secondary: $font-family;
 
   /* VoogStyle
      "pathI18n": ["custom_styles.main_styles", "custom_styles.colors"],
@@ -50,11 +40,29 @@
       "--sidebar-mainmenu-color"
       ]
   */
-  --color-dark: $main-color;
+  --color-main: $main-color;
 
   /* VoogStyle
      "pathI18n": ["custom_styles.main_styles", "custom_styles.colors"],
      "titleI18n": "custom_styles.secondary_color",
+     "editor": "colorPicker",
+     "scope": "global",
+     "featured": true
+  */
+  --color-secondary: $secondary-color;
+
+  /* VoogStyle
+     "pathI18n": ["custom_styles.main_styles", "custom_styles.colors"],
+     "titleI18n": "custom_styles.third_color",
+     "editor": "colorPicker",
+     "scope": "global",
+     "featured": true
+  */
+  --color-third: $third-color;
+
+  /* VoogStyle
+     "pathI18n": ["custom_styles.main_styles", "custom_styles.colors"],
+     "titleI18n": "custom_styles.fourth_color",
      "editor": "colorPicker",
      "scope": "global",
      "featured": true

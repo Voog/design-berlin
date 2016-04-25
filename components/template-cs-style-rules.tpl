@@ -1,12 +1,12 @@
 .light-background {
-  color: var(--color-dark);
+  color: var(--color-main);
 }
 .light-background .post-title a,
 .light-background .custom-btn {
-  color: var(--color-dark);
+  color: var(--color-main);
 }
 .light-background .formatted {
-  color: var(--color-dark);
+  color: var(--color-main);
 }
 .light-background .formatted h1,
 .light-background .formatted h2,
@@ -14,19 +14,24 @@
 .light-background .formatted h4,
 .light-background .formatted p,
 .light-background .formatted input {
-  color: var(--color-dark);
+  color: var(--color-main);
 }
 .light-background .formatted .form_submit input,
 .light-background .formatted .submit {
-  color: var(--color-dark);
-  border-color: var(--color-dark);
+  border-color: var(--color-main);
+  color: var(--color-main);
+  font-size: var(--content-button-font-size);
+  font-style: var(--content-button-font-style);
+  font-weight: var(--content-button-font-weight);
+  text-decoration: var(--content-button-text-decoration);
+  text-transform: var(--content-button-text-transform);
 }
 .light-background .formatted a, .light-background .formatted a:hover {
   color: var(--content-links-color);
 }
 .light-background .formatted a.custom-btn, .light-background .formatted a:hover.custom-btn {
-  border-color: var(--color-dark);
-  color: var(--color-dark);
+  border-color: var(--color-main);
+  color: var(--color-main);
   text-transform: var(--content-button-text-transform);
 }
 .light-background .formatted a:hover {
@@ -37,8 +42,9 @@
   color: var(--color-light);
   text-transform: var(--content-button-text-transform);
 }
-.light-background .formatted table th, .light-background .formatted table td {
-  border-color: var(--color-dark);
+.light-background .formatted table th,
+.light-background .formatted table td {
+  border-color: var(--color-main);
 }
 
 .dark-background {
@@ -48,7 +54,6 @@
 .dark-background h2,
 .dark-background h3 {
   color: var(--color-light);
-  opacity: .87;
 }
 .dark-background h1 .placeholder,
 .dark-background h2 .placeholder,
@@ -90,19 +95,27 @@
 }
 .dark-background .formatted .form_submit input,
 .dark-background .formatted .submit {
-  color: var(--color-light);
   border-color: var(--color-light);
+  color: var(--color-light);
+  font-size: var(--content-button-font-size);
+  font-style: var(--content-button-font-style);
+  font-weight: var(--content-button-font-weight);
+  text-decoration: var(--content-button-text-decoration);
+  text-transform: var(--content-button-text-transform);
 }
-.dark-background .formatted a, .dark-background .formatted a:hover {
+.dark-background .formatted a,
+.dark-background .formatted a:hover {
   color: var(--content-links-color);
 }
-.dark-background .formatted a.custom-btn, .dark-background .formatted a:hover.custom-btn {
+.dark-background .formatted a.custom-btn,
+.dark-background .formatted a:hover.custom-btn {
   border-color: var(--color-light);
   color: var(--color-light);
   text-transform: var(--content-button-text-transform);
 }
-.dark-background .formatted table th, .dark-background .formatted table td {
-  border-color: var(--color-dark);
+.dark-background .formatted table th,
+.dark-background .formatted table td {
+  border-color: var(--color-main);
 }
 .dark-background .custom-btn {
   border-color: var(--color-light);
@@ -111,16 +124,16 @@
 
 .post-date,
 .comment .comment-info {
-  color: var(--color-dark);
+  color: var(--color-main);
   opacity: .36;
 }
 
 .blog-list .post-title a {
-  color: var(--color-dark);
+  color: var(--color-main);
   opacity: 1;
 }
 .blog-list .post-title a:hover {
-  color: var(--color-dark);
+  color: var(--color-main);
   opacity: .75;
 }
 .blog-list .post-wrap {
@@ -128,17 +141,20 @@
 }
 
 .lang-flag::before {
-  background-color: var(--color-dark);
+  background-color: var(--color-main);
 }
 
-body,
-.topbar,
-.footer,
 .comments:before,
 label .form_field_checkbox + .form_control_indicator::before,
 .form_field_textfield,
 .form_field_textarea {
   background-color: var(--color-light);
+}
+
+body,
+.footer,
+.topbar {
+  background-color: var(--sidebar-background-color);
 }
 
 body,
@@ -148,18 +164,22 @@ h3,
 .form_field_textfield,
 .form_field_textarea,
 .search .search-input {
-  color: var(--color-dark);
+  color: var(--color-main);
 }
 
 .site-title {
-  color: var(--color-dark);
+  color: var(--color-main);
 }
 .site-title a {
-  color: var(--color-dark);
+  color: var(--color-main);
 }
 
 label .form_field_radio + .form_control_indicator::before {
   border-color: var(--color-light);
+}
+
+.lang-menu-btn .lang-title {
+  color: var(--color-main);
 }
 
 @media screen and (max-width: 600px) {
@@ -185,7 +205,9 @@ label .form_field_radio + .form_control_indicator::before {
     background: var(--color-light);
   }
 
-  .mobile-menu-toggler span.flags-disabled .language-menu-btn .lang-title, .mobile-menu-toggler span:before.flags-disabled .language-menu-btn .lang-title, .mobile-menu-toggler span:after.flags-disabled .language-menu-btn .lang-title {
+  .mobile-menu-toggler span.flags-disabled .language-menu-btn .lang-title,
+  .mobile-menu-toggler span:before.flags-disabled .language-menu-btn .lang-title,
+  .mobile-menu-toggler span:after.flags-disabled .language-menu-btn .lang-title {
     color: var(--color-light);
   }
 
@@ -205,22 +227,21 @@ label .form_field_radio + .form_control_indicator::before {
   }
 
   .mobile-menu-toggler span, .mobile-menu-toggler span:before, .mobile-menu-toggler span:after {
-    background-color: var(--color-dark);
+    background-color: var(--color-main);
   }
 }
 body,
-h3,
 .font-size-small,
 .jq-select,
 .jq-select select,
 .form_field_textfield,
-.form_field_textarea,
-.form_submit input {
+.form_field_textarea {
   font-family: var(--font-primary);
 }
 
 h1,
 h2,
+h3,
 .front-page .main-inner,
 .site-title,
 .main-menu,
@@ -228,7 +249,9 @@ h2,
 .content-inner,
 .footer-row .content-inner,
 .search .search-input,
-#mobile-menu {
+#mobile-menu,
+.form_submit input,
+.custom-btn {
   font-family: var(--font-primary);
 }
 
@@ -236,7 +259,7 @@ h2,
   background-color: var(--sidebar-background-color);
 }
 .sidebar .site-title {
-  color: var(--sidebar-site-title-color);
+  color: var(--color-main);
   font-size: var(--sidebar-site-title-font-size);
   font-style: var(--sidebar-site-title-font-style);
   font-weight: var(--sidebar-site-title-font-weight);
@@ -249,7 +272,7 @@ h2,
 }
 
 .main-menu ul a {
-  color: var(--sidebar-mainmenu-color);
+  color: var(--color-main);
   font-family: var(--sidebar-mainmenu-font-family);
   font-size: var(--sidebar-mainmenu-font-size);
   font-style: var(--sidebar-mainmenu-font-style);
@@ -259,14 +282,12 @@ h2,
   text-transform: var(--sidebar-mainmenu-text-transform);
 }
 .main-menu ul a:hover {
-  color: var(--sidebar-mainmenu-hover-color);
   font-style: var(--sidebar-mainmenu-hover-font-style);
   font-weight: var(--sidebar-mainmenu-hover-font-weight);
   text-decoration: var(--sidebar-mainmenu-hover-text-decoration);
   text-transform: var(--sidebar-mainmenu-hover-text-transform);
 }
 .main-menu ul a.active {
-  color: var(--sidebar-mainmenu-active-color);
   font-style: var(--sidebar-mainmenu-active-font-style);
   font-weight: var(--sidebar-mainmenu-active-font-weight);
   text-decoration: var(--sidebar-mainmenu-active-text-decoration);
@@ -274,30 +295,48 @@ h2,
 }
 
 .sub-menu a {
-  color: var(--color-dark);
+  color: var(--color-main);
+  color: var(--third-color);
   font-family: var(--content-submenu-font-family);
   font-size: var(--content-submenu-font-size);
   font-style: var(--content-submenu-font-style);
   font-weight: var(--content-submenu-font-weight);
   opacity: .36;
-  text-decoration: var(--content-submenu-text-decoration);
+  border-bottom-style: var(--content-submenu-text-decoration);
   text-transform: var(--content-submenu-text-transform);
+  border-bottom-width: 3px;
+}
+.dark-background .sub-menu a {
+  color: var(--color-light);
+}
+.light-background .sub-menu a {
+  color: var(--color-main);
 }
 .sub-menu a:hover {
-  color: var(--color-dark);
+  color: var(--color-main);
   font-style: var(--content-submenu-hover-font-style);
   font-weight: var(--content-submenu-hover-font-weight);
-  opacity: .87;
-  text-decoration: var(--content-submenu-hover-text-decoration);
+  opacity: 1;
+  border-bottom-style: var(--content-submenu-hover-text-decoration);
   text-transform: var(--content-submenu-hover-text-transform);
+  border-bottom-width: 3px;
 }
 .sub-menu a.active {
-  color: var(--color-dark);
+  color: var(--color-main);
   font-style: var(--content-submenu-active-font-style);
   font-weight: var(--content-submenu-active-font-weight);
-  opacity: .87;
-  text-decoration: var(--content-submenu-active-text-decoration);
+  opacity: 1;
+  border-bottom-style: var(--content-submenu-active-text-decoration);
   text-transform: var(--content-submenu-active-text-transform);
+  border-bottom-width: 3px;
+}
+.dark-background .sub-menu a.active {
+  color: var(--color-light);
+  border-bottom-color: var(--color-light);
+}
+.light-background .sub-menu a.active {
+  color: var(--color-main);
+  border-bottom-color: var(--color-main);
 }
 
 .formatted h1 {
@@ -412,18 +451,19 @@ h2,
   text-transform: var(--footer-text-transform);
 }
 .main .footer-row .formatted a.custom-btn {
-  font-size: calc(var(--footer-font-size) - 4px);
+  font-size: var(--footer-font-size);
+  text-decoration: none;
 }
 
 .footer-row .light-background {
-  color: var(--color-dark);
+  color: var(--color-main);
 }
 .footer-row .light-background b {
-  color: var(--color-dark);
+  color: var(--color-main);
 }
 .footer-row .light-background .custom-btn {
-  color: var(--color-dark);
-  border: 1px solid var(--color-dark);
+  color: var(--color-main);
+  border: 1px solid var(--color-main);
   font-size: var(--footer-font-size);
 }
 .footer-row .light-background .custom-btn:hover {
@@ -439,4 +479,8 @@ h2,
 .footer-row .dark-background .custom-btn {
   color: var(--color-light);
   border: 1px solid var(--color-light);
+}
+
+main {
+  color: var(--color-main);
 }
