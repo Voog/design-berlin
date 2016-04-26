@@ -8,17 +8,6 @@
   */
   --content-background-color: #e5e5e5;
   /* VoogStyle
-     "pathI18n": ["content"],
-     "titleI18n": "maximum_width",
-     "editor": "rangePicker",
-     "min": 600,
-     "max": 1250,
-     "step": 10,
-     "unit": "px",
-     "scope": "global"
-  */
-  --content-width: 744px;
-  /* VoogStyle
     "pathI18n": ["content", "sub_menu", "normal"],
     "titleI18n": "size",
     "editor": "rangePicker",
