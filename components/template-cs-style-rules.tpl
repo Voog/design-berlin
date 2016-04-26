@@ -272,6 +272,10 @@ h3,
   text-decoration: var(--content-text-decoration);
   text-transform: var(--content-text-transform);
 }
+.main .formatted table,
+.main .post-content table {
+  max-width: 99%;
+}
 .main .formatted table td,
 .main .formatted table th,
 .main .post-content table td,

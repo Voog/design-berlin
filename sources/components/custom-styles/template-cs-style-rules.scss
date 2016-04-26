@@ -334,6 +334,8 @@ h3,
     text-transform: var(--content-text-transform);
 
     table {
+      max-width: 99%;
+
       td,
       th {
         padding: var(--table-cell-padding);
