@@ -89,6 +89,10 @@ label .form_field_radio + .form_control_indicator::before {
 }
 
 @media screen and (max-width: 600px) {
+  .container {
+    background: none;
+  }
+
   .lang-options .menu .menu-item {
     color: var(--color-white);
     opacity: .5;
@@ -343,6 +347,10 @@ h3,
     color: var(--sidebar-footer-color);
     font-size: var(--sidebar-footer-font-size);
     line-height: var(--sidebar-footer-line-height);
+
+    .voog-reference a {
+      font-size: 11px;
+    }
   }
 
   a {
@@ -411,10 +419,13 @@ h3,
   }
 }
 
-.main .custom-btn:hover {
+.main .custom-btn:hover,
+.main .form_submit input:hover,
+.main .submit:hover {
   opacity: .8
 }
 
+.form_field_select,
 .form_field_textfield,
 .form_field_textarea {
   background: var(--form-field-background-color);
@@ -427,8 +438,12 @@ h3,
   text-transform: var(--form-field-text-transform);
 }
 
-.inner {
+.main .container {
   max-width: var(--content-width);
   width: 100%;
 }
 
+#mobile-menu {
+  background-color: var(--color-main);
+  opacity: .9;
+}

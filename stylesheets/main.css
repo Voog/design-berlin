@@ -1855,17 +1855,17 @@ table th {
   }
 
   #mobile-menu {
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    overflow: auto;
+    -webkit-overflow-scrolling: touch;
     background-color: #2b2b2b;
     background-color: rgba(43, 43, 43, 0.9);
-    -webkit-overflow-scrolling: touch;
+    bottom: 0;
+    display: none;
+    left: 0;
+    overflow: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
   }
   .mobilemenu-open #mobile-menu {
     display: block;

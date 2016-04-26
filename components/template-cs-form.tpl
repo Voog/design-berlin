@@ -59,7 +59,7 @@
     "icon": "underline",
     "scope": "global"
   */
-  --form-field-text-text-decoration: none;
+  --form-field-text-decoration: none;
   /* VoogStyle
     "pathI18n": ["form", "text"],
     "titleI18n": "text_transform",
