@@ -1,15 +1,15 @@
 :root {
   /* VoogStyle
-     "pathI18n": ["custom_styles.button"],
-     "titleI18n": "custom_styles.background_color",
+     "pathI18n": ["button"],
+     "titleI18n": "background_color",
      "editor": "colorPicker",
      "scope": "global",
      "featured": true
   */
   --content-button-background-color: #222;
   /* VoogStyle
-    "pathI18n": ["custom_styles.button"],
-    "titleI18n": "custom_styles.size",
+    "pathI18n": ["button"],
+    "titleI18n": "size",
     "editor": "rangePicker",
     "min": 8,
     "max": 100,
@@ -19,8 +19,8 @@
   */
   --content-button-font-size: 18px;
   /* VoogStyle
-    "pathI18n": ["custom_styles.button"],
-    "titleI18n": "custom_styles.font_weight",
+    "pathI18n": ["button"],
+    "titleI18n": "font_weight",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -32,8 +32,8 @@
   */
   --content-button-font-weight: 400;
   /* VoogStyle
-    "pathI18n": ["custom_styles.button"],
-    "titleI18n": "custom_styles.font_style",
+    "pathI18n": ["button"],
+    "titleI18n": "font_style",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -45,8 +45,8 @@
   */
   --content-button-font-style: normal;
   /* VoogStyle
-    "pathI18n": ["custom_styles.button"],
-    "titleI18n": "custom_styles.text_decoration",
+    "pathI18n": ["button"],
+    "titleI18n": "text_decoration",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -58,8 +58,8 @@
   */
   --content-button-text-decoration: none;
   /* VoogStyle
-    "pathI18n": ["custom_styles.button"],
-    "titleI18n": "custom_styles.text_transform",
+    "pathI18n": ["button"],
+    "titleI18n": "text_transform",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -71,8 +71,8 @@
   */
   --content-button-text-transform: none;
   /* VoogStyle
-     "pathI18n": ["custom_styles.button"],
-     "titleI18n": "custom_styles.color",
+     "pathI18n": ["button"],
+     "titleI18n": "color",
      "editor": "colorPicker",
      "scope": "global",
      "featured": true,
