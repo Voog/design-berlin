@@ -1,38 +1,10 @@
 @import '../../bower_components/bourbon/app/assets/stylesheets/bourbon';
-@import '_mixins';
+@import 'mixins';
+@import 'modules/variables';
 
 /* FONTS */
-@include font-face('Montserrat', '../assets/montserrat-light', 400);
-@include font-face('Montserrat', '../assets/montserrat-regular', 700);
-
-
-$main-color: #222222;
-$secondary-color: #000000;
-
-$link-color: #0066bb;
-$third-color: #848484;
-$bg-color: #e5e5e5;
-$error-color: #c70909;
-$success-color: #409e13;
-$black: #000000;
-$white: #ffffff;
-$blue: #0066BB;
-
-$font-size: 18px;
-$font-size-big: 22px;
-$font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-
-$site-width: 1024px;
-$side-width: 280px;
-$side-width-small: 200px;
-$content-width: $site-width - $side-width;
-
-$search-width: 300px;
-
-$break-small: 600px;
-$break-middle: 1024px;
-$break-large: 1500px;
-
+@include font-face("Montserrat", '../assets/montserrat-light', 400);
+@include font-face("Montserrat", '../assets/montserrat-regular', 700);
 
 %nulling {
   margin: 0;
@@ -40,27 +12,27 @@ $break-large: 1500px;
 }
 
 %button {
+  background: none;
+  border: 0;
+  cursor: pointer;
   margin: 0;
   padding: 0;
-  cursor: pointer;
-  border: none;
-  background: none;
 
   &:focus {
     outline: none;
   }
 
   &::-moz-focus-inner {
+    border: 0;
     padding: 0;
-    border: none;
   }
 }
 
 html,
 body {
   @extend %nulling;
-  height: 100% !important;
   font: #{$font-size}/1.67 $font-family;
+  height: 100% !important;
 
   @media screen and (min-width: $break-large) {
     font-size: $font-size-big;
@@ -68,19 +40,18 @@ body {
 }
 
 body {
-  position: relative;
-  min-width: $site-width;
-  text-align: left;
-  color: $main-color;
-  background: white;
-
-  box-sizing: border-box;
   -webkit-text-size-adjust: none;
+  background: $color-white;
+  box-sizing: border-box;
+  color: $main-color;
+  min-width: $site-width;
+  position: relative;
+  text-align: left;
 }
 
 a {
-  text-decoration: none;
   color: $link-color;
+  text-decoration: none;
 
   &:hover {
     @include color($link-color, .85);
@@ -88,22 +59,22 @@ a {
 }
 
 .cfx {
-  zoom: 1;
   min-height: 1px;
+  zoom: 1;
 
   &:after {
-    display: block;
-    visibility: hidden;
     clear: both;
-    height: 0;
-    font-size: 0;
-    line-height: 0;
     content: '.';
+    display: block;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
   }
 }
 
 img {
-  border: none;
+  border: 0;
 }
 
 form {
@@ -114,29 +85,30 @@ h1,
 h2,
 h3 {
   @extend %nulling;
-  font: normal 36px/1.1 $font-family;
-  font-weight: 700;
   color: $main-color;
+  font: normal 36px / 1.1 $font-family;
+  font-weight: 700;
 }
 
 h1 {
-  margin-bottom: 20px;
+  font-size: $h1-size;
+  margin-bottom: 20px / $h1-size * 1em;
 }
 
 h2 {
-  margin: 30px 0 20px;
-  font-size: 24px;
+  font-size: $h2-size;
+  margin: 30px / $h2-size * 1em 0 20px / $h2-size * 1em;
 }
 
 h3 {
-  margin: 30px 0 20px;
   font-family: $font-family;
-  font-size: 18px;
+  font-size: $font-size;
   font-weight: bold;
+  margin: 30px / $font-size * 1em 0 20px / $font-size * 1em;
 }
 
 p {
-  margin: 20px 0;
+  margin: 20px / $font-size * 1em 0;
   padding: 0;
 }
 
@@ -153,8 +125,8 @@ ol {
 input[type=submit],
 input[type=text],
 textarea {
-  border-radius: 0;
   -webkit-appearance: none;
+  border-radius: 0;
 }
 
 // Disables hyphenation for the elements that shouldn't hyphenate.
@@ -168,11 +140,12 @@ form {
 
 pre,
 code {
-  font-size: 14px;
   @include bg(white, .3);
+  font-size: 14px;
 
   .light-background & {
-    @include bg($secondary-color, .2);
+    // @include bg($secondary-color, .2);
+    @include bg($main-color, .3);
   }
 }
 
@@ -181,20 +154,19 @@ pre {
   padding: 10px;
 
   code {
-    display: inline;
-    padding: 0;
-    line-height: inherit;
-    white-space: pre;
-    background-color: transparent;
     @include word-wrap(normal);
+    background-color: transparent;
+    display: inline;
+    line-height: inherit;
+    padding: 0;
+    white-space: pre;
   }
 }
 
 code {
+  @include word-wrap(break-word);
   display: inline-block;
   padding: 5px;
-
-  @include word-wrap(break-word);
 }
 
 blockquote {
@@ -207,7 +179,7 @@ blockquote {
 
 
 .font-size-small {
-  font: #{$font-size}/1.67 $font-family !important;
+  font: #{$font-size} / 1.67 $font-family !important;
 
   @media screen and (min-width: $break-large) {
     font-size: $font-size-big !important;
@@ -215,90 +187,91 @@ blockquote {
 }
 
 .custom-btn {
-  display: inline-block;
-  margin-bottom: 20px;
-  padding: 8px;
-  font: #{$font-size}/1.67 $font-family;
-  cursor: pointer;
+  // background: #2b2b2b;
+  background: $main-color;
   border: 0;
+  cursor: pointer;
+  display: inline-block;
+  font: #{$font-size}/1.67 $font-family;
+  margin-bottom: 1.1em;
   outline: 0;
-  background: #2b2b2b;
+  padding: 0.44em;
 
   &,
   &:hover {
-    @include color(white, .5);
+    @include color($color-white, .5);
   }
 
   &:hover {
-    @include bg(#2b2b2b, .8);
+    @include bg($main-color, .8);
   }
 }
 
 .bgpicker-btn {
   @extend %button;
-  top: 0;
   left: 0;
+  top: 0;
 }
 
 /* select */
 .jq-select {
-  position: relative;
-  font: #{$font-size}/1.67 $font-family;
-  cursor: pointer;
+  background: $color-white;
   color: $main-color;
-  background: white;
+  cursor: pointer;
+  font: #{$font-size}/1.67 $font-family;
+  position: relative;
 
   select {
-    position: absolute;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font: #{$font-size}/1.67 $font-family;
-    cursor: pointer;
-    opacity: 0;
-    color: $main-color;
-    border: none;
-    -webkit-appearance: none;
-    filter: alpha(opacity=0);
     -moz-opacity: .0;
+    -webkit-appearance: none;
+    border: 0;
+    color: $main-color;
+    cursor: pointer;
+    display: block;
+    filter: alpha(opacity = 0);
+    font: #{$font-size}/1.67 $font-family;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
   }
 }
 
 .jq-select-arrow {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 30px;
-  height: 100%;
+  background: $color-white;
   border-left: 3px solid $bg-color;
-  background: white;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
 
-  &:before {
+  &::before {
+    border: solid transparent;
+    border-top-color: $main-color;
+    border-width: 6px;
+    content: '';
+    height: 0;
+    left: 50%;
+    margin-left: -6px;
+    margin-top: -2px;
+    pointer-events: none;
     position: absolute;
     top: 50%;
-    left: 50%;
     width: 0;
-    height: 0;
-    margin-top: -2px;
-    margin-left: -6px;
-    content: ' ';
-    pointer-events: none;
-    border: solid transparent;
-    border-width: 6px;
-    border-top-color: $main-color;
   }
 }
 
 .jq-select-content {
+  padding-right: 48px;
+  padding: 4px 38px 4px 5px;
   position: relative;
   z-index: 5;
-  padding: 4px 38px 4px 5px;
-  padding-right: 48px;
 }
 
 .jq-select-inner {
@@ -324,15 +297,15 @@ blockquote {
 
 .form_field_textfield,
 .form_field_textarea {
-  width: 30%;
-  padding: 4px 5px;
-  font: #{$font-size}/1.67 $font-family;
-  color: $main-color;
-  border: none;
-  outline: none;
-  background: white;
   @include border-radius(0);
+  background: $color-white;
+  border: 0;
   box-sizing: border-box;
+  color: $main-color;
+  font: #{$font-size}/1.67 $font-family;
+  outline: none;
+  padding: .3em .5em;
+  width: 30%;
 }
 
 .form_field_textfield,
@@ -356,9 +329,8 @@ blockquote {
 
 .form_error,
 .form_notice {
-  padding: 0;
-  padding: 0 0 20px;
   font-weight: bold;
+  padding: 0 0 20px;
 }
 
 .form_error {
@@ -370,8 +342,8 @@ blockquote {
 }
 
 .form_field_error {
-  display: none;
   color: $error-color;
+  display: none;
 }
 
 .form_field_with_errors input,
@@ -381,15 +353,15 @@ blockquote {
 
 .form_submit input,
 .submit {
-  padding: 8px;
-  font: #{$font-size}/1.67 $font-family;
-  cursor: pointer;
-  border: 0;
-  outline: 0;
-  background: #2b2b2b;
   -webkit-appearance: none;
   @include border-radius(0);
-  @include color(white, .5);
+  @include color($color-white, .5);
+  background: #2b2b2b;
+  border: 0;
+  cursor: pointer;
+  font: #{$font-size}/1.67 $font-family;
+  outline: 0;
+  padding: 8px;
 
   &:hover {
     @include bg(#2b2b2b, .8);
@@ -419,7 +391,7 @@ label {
 
   .form_field_checkbox {
     + .form_control_indicator:before {
-      background: white;
+      background: $color-white;
     }
 
     &:checked {
@@ -439,9 +411,9 @@ label {
 
   .form_field_radio {
     + .form_control_indicator:before {
-      width: 9px;
+      border: 3px solid $color-white;
       height: 9px;
-      border: 3px solid white;
+      width: 9px;
     }
 
     &:checked {
@@ -452,23 +424,23 @@ label {
   }
 
   .form_control_indicator {
-    position: relative;
     display: inline-block;
     display: none\9;
-    width: 18px;
     height: 18px;
     margin-right: 7px;
+    position: relative;
     vertical-align: 0;
+    width: 18px;
   }
 
   .form_control_indicator:before {
-    position: absolute;
     bottom: 0;
-    left: 0;
-    display: block;
-    width: 15px;
-    height: 15px;
     content: '';
+    display: block;
+    height: 15px;
+    left: 0;
+    position: absolute;
+    width: 15px;
   }
 }
 
@@ -481,7 +453,7 @@ label {
 .topbar {
   display: none;
   width: 100%;
-  background: white;
+  background: $color-white;
 }
 
 .sidebar {
@@ -494,7 +466,7 @@ label {
   }
 
   .sidebar-inner {
-    padding: 55px 30px 180px 30px;
+    padding: 55px 30px 180px;
 
     .search-enabled & {
       padding-bottom: 230px;
@@ -503,9 +475,9 @@ label {
 }
 
 .main {
-  position: relative;
-  margin-left: $side-width;
   background: $bg-color;
+  margin-left: $side-width;
+  position: relative;
 
   .editmode & {
     padding-bottom: 40px;
@@ -519,13 +491,14 @@ label {
     margin-left: 20%;
   }
 }
+
 .main-inner {
   position: relative;
 
   .front-page & {
     font-family: $font-family;
-    font-weight: 700;
     font-size: 36px;
+    font-weight: 700;
     line-height: 1.05;
     text-align: center;
 
@@ -545,11 +518,11 @@ label {
       h1,
       h2,
       h3 {
-        color: $white;
+        color: $color-white;
       }
 
       .placeholder {
-        color: rgba(255,255,255,.5);
+        color: rgba($color-white,.5);
       }
     }
 
@@ -583,14 +556,14 @@ label {
 
 .site-title {
   @include hyphenate(true);
-  padding-top: 25px;
-  font-family: $font-family;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.05;
-  vertical-align: top;
-  text-transform: uppercase;
   color: $main-color;
+  font-family: $font-family;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.05;
+  padding-top: 25px;
+  text-transform: uppercase;
+  vertical-align: top;
 
 
   a {
@@ -621,17 +594,20 @@ label {
 
     &:hover,
     &.active {
-      color: $secondary-color;
+      // color: $secondary-color;
+      color: $main-color;
     }
   }
 }
 
 /* submenu */
 .sub-menu {
-  min-height: 35px;
-  padding: 30px 30px 15px 30px;
-  font: 14px/1.1 $font-family;
+  font-family: $font-family;
+  font-size: $font-size - 4px;
   font-weight: 700;
+  line-height: 1.1;
+  min-height: 35px;
+  padding: 30px / $font-size * 1em 30px / $font-size * 1em 15px / $font-size * 1em;
   text-align: right;
   word-wrap: break-word;
 
@@ -691,7 +667,7 @@ label {
 }
 
 .lang-flag:before {
-  @include bg($black);
+  @include bg($color-black);
 }
 
 .lang-flag:after {
@@ -824,7 +800,7 @@ $flags:
 }
 
 .lang-options {
-  @include bg($black, 0.09);
+  @include bg($color-black, 0.09);
 
   .menu {
     .menu-item {
@@ -847,7 +823,7 @@ $flags:
       }
 
       .menu-item {
-        @include color($white, .5);
+        @include color($color-white, .5);
       }
     }
   }
@@ -857,19 +833,19 @@ $flags:
   margin: 0;
   padding: 0;
   background: none;
-  border: none;
+  border: 0;
   cursor: pointer;
   font-family: inherit;
   font-size: inherit;
-  @include color($blue);
+  @include color($link-color);
 
   &:hover {
-    @include color($blue, .8);
+    @include color($link-color, .8);
   }
 
   &::-moz-focus-inner {
     padding: 0;
-    border: none;
+    border: 0;
   }
 
   &:focus {
@@ -896,11 +872,11 @@ $flags:
   }
 
   @media screen and (max-width: $break-small) {
-    @include color($white);
+    @include color($color-white);
 
 
     &:hover {
-      @include color($white, .8);
+      @include color($color-white, .8);
     }
   }
 }
@@ -985,7 +961,7 @@ $flags:
   font-size: 12px;
   cursor: pointer;
   vertical-align: middle;
-  border: none;
+  border: 0;
   background: none;
 
   .flags-enabled & {
@@ -1026,8 +1002,8 @@ $flags:
   padding: 5px 0;
   line-height: 1;
   text-align: left;
-  background: #ffffff;
-  @include box-shadow(0,0,5px,rgba(0,0,0,.3));
+  background: $color-white;
+  @include box-shadow(0,0,5px,rgba($color-black,.3));
 
   .no-boxshadow & {
     border: 1px solid #eeeeee;
@@ -1107,11 +1083,11 @@ $flags:
   // Content area image title
   .edy-image-container-with-title {
     &:after {
+      content: attr(data-title);
       display: block;
-      padding: 4px;
       font-size: 16px;
       line-height: 1.3em;
-      content: attr(data-title);
+      padding: 4px;
     }
   }
 }
@@ -1124,37 +1100,39 @@ $flags:
 
 .blog-list {
   .post-wrap {
-    border-top: 2px solid white;
+    border-top: 2px solid $color-white;
   }
 
   .post {
-    padding: 30px 30px;
+    padding: 30px;
   }
 
   .post-title {
-    margin: 0;
-    padding: 0;
     font-size: 24px;
     line-height: 1.1;
+    margin: 0;
+    padding: 0;
     word-wrap: break-word;
 
     a {
-      color: $secondary-color;
+      // color: $secondary-color;
+      color: $main-color;
     }
 
     a:hover {
-      @include color($secondary-color, .75);
+      // @include color($secondary-color, .75);
+      @include color($main-color, .75);
     }
   }
 }
 
 .post-header {
-  padding: 0 30px 0;
+  padding: 0 30px;
 }
 
 .post-date {
-  display: inline;
   color: $third-color;
+  display: inline;
 }
 
 .post-content {
@@ -1165,16 +1143,17 @@ $flags:
 .post-body {
   padding: 20px 0 0;
 }
+
 .post-tags {
   padding: 20px 0 0;
 }
 
 .tbl {
+  border-collapse: collapse;
   display: table;
   table-layout: fixed;
   visibility: hidden;
   width: 100%;
-  border-collapse: collapse;
 
   .tbl-row {
     display: table-row;
@@ -1190,18 +1169,18 @@ $flags:
 
 /* comments */
 .comments {
-  position: relative;
   padding: 0 30px 30px;
+  position: relative;
 
   &:before {
+    background: $color-white;
+    content: '';
+    display: block;
+    height: 2px;
+    left: 0;
     position: absolute;
     top: 0;
-    left: 0;
-    display: block;
     width: 250px;
-    height: 2px;
-    content: '';
-    background: white;
   }
 
   h3 {
@@ -1237,9 +1216,9 @@ $flags:
     width: 250px;
 
     input {
-      width: 100% !important;
-      border-bottom: 1px solid #cecece;
       background: none;
+      border-bottom: 1px solid #cecece;
+      width: 100% !important;
     }
   }
 
@@ -1252,9 +1231,9 @@ $flags:
   }
 
   .form_field_with_errors .form_field_textfield {
+    @include color($error-color, .8);
     border-bottom: 1px solid $error-color;
     border-bottom: 1px solid rgba($error-color, .3);
-    @include color($error-color, .8);
   }
 
   &.form_with_errors {
@@ -1273,8 +1252,8 @@ $flags:
   word-wrap: break-word;
 
   .comment-info {
-    font-size: 14px;
     color: $third-color;
+    font-size: 14px;
 
     .edy-site-btn-removecomment {
       vertical-align: -1px;
@@ -1313,16 +1292,16 @@ table {
 
 /* footer */
 .footer {
-  position: absolute;
-  z-index: 6;
-  background: $white;
-  right: 100%;
+  @include hyphenate(true);
+  background: $color-white;
   bottom: 0;
-  width: $side-width;
+  box-sizing: border-box;
   font-size: 11px;
   line-height: 1.6;
-  box-sizing: border-box;
-  @include hyphenate(true);
+  position: absolute;
+  right: 100%;
+  width: $side-width;
+  z-index: 6;
 
   .footer-inner {
     padding: 20px 30px;
@@ -1343,7 +1322,7 @@ table {
   }
 }
 
-.voog-reference {
+.main .voog-reference {
   display: none;
   padding-top: 10px;
 
@@ -1390,8 +1369,8 @@ table {
 .js-bgpicker-cover-color {
   position: relative;
   z-index: 1;
-  color: white;
-  background: rgba(0,0,0,.2);
+  color: $color-white;
+  background: rgba($color-black,.2);
 }
 
 .rgba .js-bgpicker-cover-color {
@@ -1444,7 +1423,7 @@ table {
     padding: 5px 0;
     font: #{$font-size}/1.67 $font-family;
     color: $main-color;
-    border: none;
+    border: 0;
     outline: 0;
     background: none;
 
@@ -1453,22 +1432,22 @@ table {
     }
     &::-webkit-input-placeholder {
       opacity: 1;
-      color: rgba(0,0,0,.3);
+      color: rgba($color-black,.3);
     }
 
     &:-moz-placeholder {
       opacity: 1;
-      color: rgba(0,0,0,.3);
+      color: rgba($color-black,.3);
     }
 
     &::-moz-placeholder {
       opacity: 1;
-      color: rgba(0,0,0,.3);
+      color: rgba($color-black,.3);
     }
 
     &:-ms-input-placeholder {
       opacity: 1;
-      color: rgba(0,0,0,.3);
+      color: rgba($color-black,.3);
     }
 
     #mobile-search & {
@@ -1526,7 +1505,7 @@ table {
     height: 40px;
     cursor: pointer;
     opacity: .5;
-    border: none;
+    border: 0;
     outline: 0;
     background: url('../images/search.png') no-repeat center center;
     background-size: 16px 16px;
@@ -1582,7 +1561,7 @@ table {
     display: block;
     width: $search-width;
     opacity: 1;
-    @include box-shadow(10px, 0px, 10px, rgba(0,0,0,.05));
+    @include box-shadow(10px, 0, 10px, rgba($color-black,.05));
   }
 }
 
@@ -1617,7 +1596,6 @@ table {
 .voog-search-noresults {
   display: none;
   width: 100%;
-  height: 100%;
   height: 100%;
 
   div {
@@ -1739,7 +1717,7 @@ table {
 
   body {
     min-width: 320px;
-    background: white;
+    background: $color-white;
   }
 
   .wrap,
@@ -1790,7 +1768,7 @@ table {
     .front-page & {
       font-size: 22px;
       line-height: 1.05;
-      color: white;
+      color: $color-white;
 
       h1 {
         font-size: 22px * 1.5;
@@ -1905,7 +1883,8 @@ table {
     left: auto;
     display: block;
     width: auto;
-    background: white;
+    background: $color-white;
+
     .footer-inner {
       padding: 20px;
     }
@@ -1964,7 +1943,7 @@ table {
             .lang-title {
               display: inline-block;
               position: static;
-              color: $white;
+              color: $color-white;
             }
           }
         }
@@ -1983,15 +1962,16 @@ table {
   }
 
   #mobile-menu {
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    overflow: auto;@include bg(#2b2b2b, .9);
     -webkit-overflow-scrolling: touch;
+    @include bg(#2b2b2b, .9);
+    bottom: 0;
+    display: none;
+    left: 0;
+    overflow: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
 
     .mobilemenu-open & {
       display: block;
@@ -2015,7 +1995,7 @@ table {
         width: 20px;
         height: 3px;
         content: '';
-        background: white; @include border-radius(3px);
+        background: $color-white; @include border-radius(3px);
       }
 
       &:before {
@@ -2064,7 +2044,7 @@ table {
         display: inline-block;
         vertical-align: top;
         padding: 11px 9px 17px;
-        @include color($white);
+        @include color($color-white);
 
         &:before,
         &:after {
@@ -2078,7 +2058,7 @@ table {
         .lang-title {
           display: inline-block;
           position: static;
-          color: $white;
+          color: $color-white;
         }
       }
     }
@@ -2113,10 +2093,10 @@ table {
         a {
           @include hyphenate(true);
           font-size: 24px;
-          line-height: 1.05; @include color(white, .5);
+          line-height: 1.05; @include color($color-white, .5);
 
           &.active {
-            color: white;
+            color: $color-white;
           }
         }
       }
@@ -2157,14 +2137,15 @@ table {
 
       &:before,
       &:after {
+        @include border-radius(3px);
+        background: $main-color;
+        content: '';
+        display: block;
+        height: 3px;
+        left: 7px;
         position: absolute;
         top: 20px;
-        left: 7px;
-        display: block;
         width: 20px;
-        height: 3px;
-        content: '';
-        background: $main-color; @include border-radius(3px);
       }
 
       &:before {
@@ -2206,23 +2187,22 @@ table {
 // EDITMODE
 .dark-background {
   .edy-empty-bordered {
-    border-color: $white;
-    border-color: rgba($white, .63);
+    border-color: rgba($color-white, .63);
 
     .edy-empty-header {
-      @include color($white, .63);
+      @include color($color-white, .63);
     }
   }
 
   .edy-content-element-hover {
-    @include border(all, 1px, solid, $white, .2);
+    @include border(all, 1px, solid, $color-white, .2);
   }
 
   .edy-texteditor-active {
-    outline: 1px solid rgba($white, .4);
+    outline: 1px solid rgba($color-white, .4);
 
     &:hover {
-      outline: 1px solid rgba($white, .63);
+      outline: 1px solid rgba($color-white, .63);
     }
   }
 }

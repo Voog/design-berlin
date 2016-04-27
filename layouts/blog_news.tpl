@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% include "template-variables" %}
 <html lang="{{ page.language_code }}">
 <head prefix="og: http://ogp.me/ns#">
   {% include "edicy-tools-variables" %}
