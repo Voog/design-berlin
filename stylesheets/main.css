@@ -252,11 +252,11 @@ blockquote {
   top: 0;
   width: 30px;
 }
-.jq-select-arrow:before {
+.jq-select-arrow::before {
+  border: solid transparent;
   border-top-color: #222;
   border-width: 6px;
-  border: solid transparent;
-  content: ' ';
+  content: '';
   height: 0;
   left: 50%;
   margin-left: -6px;

@@ -314,11 +314,6 @@ h3,
   color: var(--color-main);
 }
 
-.jq-select,
-.jq-select select {
-  color: var(--color-main);
-}
-
 .main .custom-btn,
 .main .form_submit input,
 .main .submit {
