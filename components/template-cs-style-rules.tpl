@@ -272,10 +272,6 @@ h3,
   text-decoration: var(--content-text-decoration);
   text-transform: var(--content-text-transform);
 }
-.main .formatted table,
-.main .post-content table {
-  max-width: 99%;
-}
 .main .formatted table td,
 .main .formatted table th,
 .main .post-content table td,
@@ -360,7 +356,20 @@ h3,
   opacity: 0.8;
 }
 
+.jq-select-content {
+  padding: 0 28px 0 0;
+}
+
+.jq-select-inner {
+  padding: 4px 10px;
+}
+
+.jq-select-arrow {
+  background-color: var(--form-field-background-color);
+}
+
 .form_field_select,
+.jq-select-inner,
 .form_field_textfield,
 .form_field_textarea {
   background: var(--form-field-background-color);

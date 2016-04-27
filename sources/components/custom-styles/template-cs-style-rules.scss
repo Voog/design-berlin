@@ -334,8 +334,6 @@ h3,
     text-transform: var(--content-text-transform);
 
     table {
-      max-width: 99%;
-
       td,
       th {
         padding: var(--table-cell-padding);
@@ -427,7 +425,20 @@ h3,
   opacity: .8
 }
 
+.jq-select-content {
+  padding: 0 28px 0 0;
+}
+
+.jq-select-inner {
+  padding: 4px 10px;
+}
+
+.jq-select-arrow {
+  background-color: var(--form-field-background-color);
+}
+
 .form_field_select,
+.jq-select-inner,
 .form_field_textfield,
 .form_field_textarea {
   background: var(--form-field-background-color);
