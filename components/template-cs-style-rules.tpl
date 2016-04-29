@@ -222,7 +222,6 @@ h3,
   font-size: var(--h1-font-size);
   font-style: var(--h1-font-style);
   font-weight: var(--h1-font-weight);
-  letter-spacing: var(--h1-letter-spacing);
   line-height: var(--h1-line-height);
   text-align: var(--h1-alignment);
   text-decoration: var(--h1-text-decoration);
@@ -236,7 +235,6 @@ h3,
   font-size: var(--h2-font-size);
   font-style: var(--h2-font-style);
   font-weight: var(--h2-font-weight);
-  letter-spacing: var(--h2-letter-spacing);
   line-height: var(--h2-line-height);
   text-align: var(--h2-alignment);
   text-decoration: var(--h2-text-decoration);
@@ -253,7 +251,6 @@ h3,
   font-style: var(--h3-font-style);
   font-weight: var(--h3-font-weight);
   line-height: var(--h3-line-height);
-  letter-spacing: var(--h3-letter-spacing);
   text-align: var(--h3-alignment);
   text-decoration: var(--h3-text-decoration);
   text-transform: var(--h3-text-transform);
