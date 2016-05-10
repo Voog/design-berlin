@@ -155,6 +155,13 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/template-cs-front-page.tpl",
+      "layout_name": "template-cs-front-page",
+      "title": "template-cs-front-page"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/template-cs-headings.tpl",
       "layout_name": "template-cs-headings",
       "title": "template-cs-headings"

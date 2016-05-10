@@ -299,6 +299,11 @@ h3,
   text-decoration: var(--content-links-hover-text-decoration);
   text-transform: var(--content-links-hover-text-transform);
 }
+.front-page .main .main-inner .formatted {
+  font-size: var(--front-page-font-size);
+  line-height: var(--front-page-line-height);
+  font-weight: 400;
+}
 .main .main-inner .dark-background {
   color: var(--color-white);
 }

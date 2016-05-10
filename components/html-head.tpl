@@ -24,7 +24,12 @@
 {% customstyle %}
   {% include "template-cs-main-styles" %}
   {% include "template-cs-sidebar" %}
-  {% include "template-cs-content" %}
+  {% if front_page %}
+    {% include "template-cs-front-page" %}
+  {% endif %}
+  {% unless front_page %}
+    {% include "template-cs-content" %}
+  {% endunless%}
   {% include "template-cs-headings" %}
   {% include "template-cs-table" %}
   {% include "template-cs-form" %}
