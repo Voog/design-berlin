@@ -20,7 +20,7 @@
      "unit": "em",
      "scope": "global"
   */
-  --front-page-line-height: 1.05em;
+  --front-page-line-height: 1.05;
   /* VoogStyle
     "pathI18n": ["content", "link", "normal"],
     "titleI18n": "font_weight",

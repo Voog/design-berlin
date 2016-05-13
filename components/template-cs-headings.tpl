@@ -20,7 +20,7 @@
      "unit": "em",
      "scope": "global"
   */
-  --h1-line-height: 1.1em;
+  --h1-line-height: 1.1;
   /* VoogStyle
      "pathI18n": ["headings", "title"],
      "titleI18n": "alignment",
@@ -102,7 +102,7 @@
      "unit": "em",
      "scope": "global"
   */
-  --h2-line-height: 1.1em;
+  --h2-line-height: 1.1;
   /* VoogStyle
      "pathI18n": ["headings", "heading"],
      "titleI18n": "alignment",
@@ -184,7 +184,7 @@
      "unit": "em",
      "scope": "global"
   */
-  --h3-line-height: 1.1em;
+  --h3-line-height: 1.1;
   /* VoogStyle
      "pathI18n": ["headings", "subheading"],
      "titleI18n": "alignment",

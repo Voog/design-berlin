@@ -50,7 +50,7 @@
      "unit": "em",
      "scope": "global"
   */
-  --sidebar-site-title-line-height: 1.05em;
+  --sidebar-site-title-line-height: 1.05;
 
   /* VoogStyle
     "pathI18n": ["sidebar", "title"],
@@ -140,7 +140,7 @@
      "unit": "em",
      "scope": "global"
   */
-  --sidebar-mainmenu-line-height: 1.05em;
+  --sidebar-mainmenu-line-height: 1.05;
 
   /* VoogStyle
     "pathI18n": ["sidebar", "main_menu", "normal"],
@@ -385,7 +385,7 @@
      "unit": "em",
      "scope": "global"
   */
-  --sidebar-footer-line-height: 1.6em;
+  --sidebar-footer-line-height: 1.6;
 
   // scss-lint:enable Comment, Indentation
 }
