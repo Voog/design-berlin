@@ -34,7 +34,7 @@ module.exports = function(grunt) {
           'bower_components/textarea-autosize/dist/jquery.textarea_autosize.js',
           'sources/javascripts/concat/*.js'
         ],
-        dest: 'javascripts/main.js'
+        dest: 'javascripts/application.js'
       }
     },
 
