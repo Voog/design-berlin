@@ -28,5 +28,7 @@
         site.frontPageContentCoverBgCommit(data, 'front_page_content_cover');
       }
     });
+
+    template.bindCustomTexteditorStyles('{{ "button" | lc: editor_locale }}');
   </script>
  {% endeditorjsblock %}

@@ -11155,14 +11155,15 @@ MMCQ = (function() {
     return $('html').hasClass('editmode');
   };
 
-  var bindCustomTexteditorStyles = function() {
+  var bindCustomTexteditorStyles = function(buttonTranslation) {
     window.edy = window.edy || [];
-    edy.push(['texteditorStyles', {name: 'Button', tagname:'a', attribute: {'href': '#'}, classname: 'custom-btn', toggle: true}]);
+    edy.push(['texteditorStyles', {name: buttonTranslation, tagname:'a', attribute: {'href': '#'}, classname: 'custom-btn', toggle: true}]);
   };
 
-  if (editmode()) {
-    bindCustomTexteditorStyles();
-  }
+  // Enables the usage of the initiations outside this file
+  window.template = $.extend(window.template || {}, {
+    bindCustomTexteditorStyles: bindCustomTexteditorStyles
+  });
 
 })(jQuery);
 
