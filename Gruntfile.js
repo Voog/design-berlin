@@ -64,7 +64,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: 'sources/stylesheets',
-          src: 'main.scss',
+          src: '*.scss',
           dest: 'stylesheets/',
           ext: '.css'
         }]
@@ -89,7 +89,9 @@ module.exports = function(grunt) {
     postcss: {
       options: {
         processors: [
-          require('autoprefixer')({browsers: 'last 4 versions'})
+          require('autoprefixer')({
+            browsers: 'last 4 versions'
+          })
         ]
       },
       main_styles: {
@@ -259,29 +261,28 @@ module.exports = function(grunt) {
         tasks: ['imagemin:build_assets', 'exec:kitmanifest', 'exec:kit:assets/*']
       },
 
-
       voog: {
         files: ['layouts/*.tpl', 'components/*.tpl'],
         options: {
           spawn: false
         }
       }
-    },
+    }
   });
 
   grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-modernizr-builder');
   grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-postcss');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-exec');
+  grunt.loadNpmTasks('grunt-modernizr-builder');
+  grunt.loadNpmTasks('grunt-postcss');
 
-  grunt.registerTask('default', ['clean:reset', 'modernizr_builder', 'concat', 'uglify', 'sass', 'postcss:main_styles', 'cssmin', 'imagemin', 'postcss:custom_styles', 'copy', 'clean:remove']);
+  grunt.registerTask('default', ['clean:reset', 'modernizr_builder', 'concat', 'copy:assets', 'copy:images', 'copy:javascripts', 'uglify', 'sass', 'postcss:main_styles', 'cssmin', 'imagemin', 'postcss:custom_styles', 'copy:custom_styles', 'clean:remove']);
 
   grunt.event.on('watch', function(action, filepath, target) {
     if (target == 'voog') {
