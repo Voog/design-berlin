@@ -26,7 +26,7 @@
                 <section class="content formatted js-background-type {{ front_page_content_cover_type }}">
                   <div class="tbl">
                     <div class="tbl-row">
-                      <div class="tbl-cell">
+                      <div class="tbl-cell" {{ edy_intro_edit_text }}>
                         {% content %}
                       </div>
                     </div>

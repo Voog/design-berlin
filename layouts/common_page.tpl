@@ -17,7 +17,7 @@
         <div class="container-wrap cfx">
           <div class="container">
             {% include "submenu" %}
-            <section class="content cfx formatted">
+            <section class="content cfx formatted" {{ edy_intro_edit_text }}>
               {% contentblock name="content_header" publish_default_content="true" %}<h1>{{ page.title }}</h1>{% endcontentblock %}
               {% content %}
             </section>
