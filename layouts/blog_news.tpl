@@ -32,7 +32,7 @@
               {% endif %}
             </nav>
           </div>
-          <section class="content blog-content inner cfx">
+          <section class="content blog-content inner cfx" {{ edy_intro_edit_text }}>
             {% content %}
             {% if editmode %}<div style="padding-top: 20px">{% addbutton %}</div>{% endif %}
           </section>

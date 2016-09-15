@@ -17,7 +17,7 @@
         <li>{% menubtn site.hidden_menuitems %}</li>
       {% endif %}
 
-      <li>{% menuadd %}</li>
+      <li><div style="display: inline-block;" {{ edy_intro_add_page }}>{% menuadd %}</div></li>
     {% endif %}
   </ul>
 </nav>
