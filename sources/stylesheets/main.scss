@@ -187,7 +187,6 @@ blockquote {
 }
 
 .custom-btn {
-  // background: #2b2b2b;
   background: $main-color;
   border: 0;
   cursor: pointer;
@@ -196,6 +195,11 @@ blockquote {
   margin-bottom: 1.1em;
   outline: 0;
   padding: 0.44em;
+
+  &::-moz-focus-inner {
+    padding: 0;
+    border: 0
+  }
 
   &,
   &:hover {
