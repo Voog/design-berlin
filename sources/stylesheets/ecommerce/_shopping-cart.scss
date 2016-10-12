@@ -1,0 +1,44 @@
+.public {
+  .edy-ecommerce-shopping-cart-button {
+    display: inline-block;
+    padding: .44em;
+    cursor: pointer;
+    background: $main-color;
+    border: 0;
+    outline: 0;
+
+    &::-moz-focus-inner {
+      padding: 0;
+      border: 0;
+    }
+
+    &,
+    &:hover {
+      @include color($color-white, 1);
+    }
+
+    &:hover {
+      @include bg($main-color, .8);
+    }
+
+    @media screen and (max-width: $break-small) {
+      top: 4px;
+      right: 44px;
+      font-size: 14px;
+    }
+
+    @media screen and (min-width: $break-small + 1) {
+      font-size: 18px;
+    }
+
+    @media screen and (min-width: $break-small + 1) and (max-width: $break-middle) {
+      top: 115px;
+      right: 25px;
+    }
+
+    @media screen and (min-width: $break-middle + 1) {
+      top: 23px;
+      right: 30px;
+    }
+  }
+}

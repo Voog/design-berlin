@@ -2134,3 +2134,47 @@ table th {
 .dark-background .edy-texteditor-active:hover {
   outline: 1px solid rgba(255, 255, 255, 0.63);
 }
+
+.public .edy-ecommerce-shopping-cart-button {
+  display: inline-block;
+  padding: .44em;
+  cursor: pointer;
+  background: #222;
+  border: 0;
+  outline: 0;
+}
+.public .edy-ecommerce-shopping-cart-button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+.public .edy-ecommerce-shopping-cart-button, .public .edy-ecommerce-shopping-cart-button:hover {
+  color: white;
+}
+.public .edy-ecommerce-shopping-cart-button:hover {
+  background-color: #222;
+  background-color: rgba(34, 34, 34, 0.8);
+}
+@media screen and (max-width: 600px) {
+  .public .edy-ecommerce-shopping-cart-button {
+    top: 4px;
+    right: 44px;
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 601px) {
+  .public .edy-ecommerce-shopping-cart-button {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .public .edy-ecommerce-shopping-cart-button {
+    top: 115px;
+    right: 25px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .public .edy-ecommerce-shopping-cart-button {
+    top: 23px;
+    right: 30px;
+  }
+}
