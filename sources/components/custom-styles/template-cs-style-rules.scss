@@ -134,14 +134,14 @@ label .form_field_radio + .form_control_indicator::before {
   #mobile-menu .navigation-menu ul a.active,
   #mobile-menu .language-menu ul a.active {
     color: var(--color-white);
-  }  
+  }
 
   .mobile-menu-toggler span, .mobile-menu-toggler span:before, .mobile-menu-toggler span:after {
     background-color: var(--color-main);
   }
 }
 
-// main font 
+// main font
 body,
 .font-size-small,
 .jq-select,
@@ -316,7 +316,7 @@ h3,
 .main {
   background-color: var(--content-background-color);
 
-  .formatted, 
+  .formatted,
   .post-content {
     font-size: var(--content-font-size);
     font-style: var(--content-font-style);
@@ -377,7 +377,7 @@ h3,
       h1,
       h2,
       h3 {
-        color: var(--color-white);   
+        color: var(--color-white);
       }
     }
 
@@ -450,4 +450,18 @@ h3,
 #mobile-menu {
   background-color: var(--color-main);
   opacity: .9;
+}
+
+//==============================================================================
+// ECOMMERCE
+//==============================================================================
+.public {
+  .edy-ecommerce-shopping-cart-button {
+    background-color: var(--content-button-background-color);
+    color: var(--content-button-color);
+    font-style: var(--content-button-font-style);
+    font-weight: var(--content-button-font-weight);
+    text-decoration: var(--content-button-text-decoration);
+    text-transform: var(--content-button-text-transform);
+  }
 }

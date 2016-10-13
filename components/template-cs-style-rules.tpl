@@ -383,3 +383,12 @@ h3,
   background-color: var(--color-main);
   opacity: .9;
 }
+
+.public .edy-ecommerce-shopping-cart-button {
+  background-color: var(--content-button-background-color);
+  color: var(--content-button-color);
+  font-style: var(--content-button-font-style);
+  font-weight: var(--content-button-font-weight);
+  text-decoration: var(--content-button-text-decoration);
+  text-transform: var(--content-button-text-transform);
+}
