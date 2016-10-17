@@ -50,6 +50,16 @@
   background-color: var(--color-main);
 }
 
+.post-nav-link {
+  &:nth-child(2) {
+    &::before {
+      @media screen and (max-width: $break-small) {
+        background-color: var(--form-field-background-color);
+      }
+    }
+  }
+}
+
 .comments:before,
 label .form_field_checkbox + .form_control_indicator::before,
 .form_field_textfield,
@@ -134,14 +144,14 @@ label .form_field_radio + .form_control_indicator::before {
   #mobile-menu .navigation-menu ul a.active,
   #mobile-menu .language-menu ul a.active {
     color: var(--color-white);
-  }  
+  }
 
   .mobile-menu-toggler span, .mobile-menu-toggler span:before, .mobile-menu-toggler span:after {
     background-color: var(--color-main);
   }
 }
 
-// main font 
+// main font
 body,
 .font-size-small,
 .jq-select,
@@ -316,7 +326,7 @@ h3,
 .main {
   background-color: var(--content-background-color);
 
-  .formatted, 
+  .formatted,
   .post-content {
     font-size: var(--content-font-size);
     font-style: var(--content-font-style);
@@ -346,7 +356,7 @@ h3,
     }
   }
 
-  a {
+  a:not(.post-nav-link) {
     color: var(--content-links-color);
     font-style: var(--content-links-font-style);
     font-weight: var(--content-links-font-weight);
@@ -377,7 +387,7 @@ h3,
       h1,
       h2,
       h3 {
-        color: var(--color-white);   
+        color: var(--color-white);
       }
     }
 
