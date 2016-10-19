@@ -2153,8 +2153,8 @@ table th {
 }
 @media screen and (max-width: 600px) {
   .public .edy-ecommerce-shopping-cart-button {
-    top: 4px;
-    right: 44px;
+    top: 43px;
+    right: 0;
     font-size: 14px;
   }
 }
