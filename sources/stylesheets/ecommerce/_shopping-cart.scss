@@ -1,5 +1,5 @@
-.public {
-  .edy-ecommerce-shopping-cart-button {
+.edy-ecommerce-shopping-cart-button {
+  .public & {
     display: inline-block;
     padding: .44em;
     cursor: pointer;
@@ -40,9 +40,13 @@
       top: 23px;
       right: 30px;
     }
+  }
 
-    .edy-ecommerce-shopping-cart-button-flash {
-      line-height: 2.5;
-    }
+  .mobilemenu-open & {
+    z-index: -1;
+  }
+
+  .edy-ecommerce-shopping-cart-button-flash {
+    line-height: 2.5;
   }
 }

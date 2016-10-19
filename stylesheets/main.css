@@ -2178,6 +2178,9 @@ table th {
     right: 30px;
   }
 }
-.public .edy-ecommerce-shopping-cart-button .edy-ecommerce-shopping-cart-button-flash {
+.mobilemenu-open .edy-ecommerce-shopping-cart-button {
+  z-index: -1;
+}
+.edy-ecommerce-shopping-cart-button .edy-ecommerce-shopping-cart-button-flash {
   line-height: 2.5;
 }
