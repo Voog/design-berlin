@@ -2136,6 +2136,7 @@ table th {
 }
 
 .public .edy-ecommerce-shopping-cart-button {
+  color: white;
   display: inline-block;
   padding: .44em;
   cursor: pointer;
@@ -2147,12 +2148,8 @@ table th {
   padding: 0;
   border: 0;
 }
-.public .edy-ecommerce-shopping-cart-button, .public .edy-ecommerce-shopping-cart-button:hover {
-  color: white;
-}
 .public .edy-ecommerce-shopping-cart-button:hover {
-  background-color: #222;
-  background-color: rgba(34, 34, 34, 0.8);
+  opacity: .8;
 }
 @media screen and (max-width: 600px) {
   .public .edy-ecommerce-shopping-cart-button {
