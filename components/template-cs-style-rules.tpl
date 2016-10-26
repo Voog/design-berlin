@@ -23,6 +23,12 @@
   background-color: var(--color-main);
 }
 
+@media screen and (max-width: 600px) {
+  .post-nav-link:nth-child(2)::before {
+    background-color: var(--form-field-background-color);
+  }
+}
+
 .comments:before,
 label .form_field_checkbox + .form_control_indicator::before,
 .form_field_textfield,
@@ -285,14 +291,14 @@ h3,
 .main .footer .voog-reference a {
   font-size: 11px;
 }
-.main a {
+.main a:not(.post-nav-link) {
   color: var(--content-links-color);
   font-style: var(--content-links-font-style);
   font-weight: var(--content-links-font-weight);
   text-decoration: var(--content-links-text-decoration);
   text-transform: var(--content-links-text-transform);
 }
-.main a:hover {
+.main a:not(.post-nav-link):hover {
   color: var(--content-links-hover-color);
   font-style: var(--content-links-hover-font-style);
   font-weight: var(--content-links-hover-font-weight);
