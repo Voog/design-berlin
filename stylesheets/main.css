@@ -2195,20 +2195,3 @@ table th {
     left: 0;
   }
 }
-.dark-background .edy-empty-bordered {
-  border-color: rgba(255, 255, 255, 0.63);
-}
-.dark-background .edy-empty-bordered .edy-empty-header {
-  color: white;
-  color: rgba(255, 255, 255, 0.63);
-}
-.dark-background .edy-content-element-hover {
-  border: 1px solid white;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-.dark-background .edy-texteditor-active {
-  outline: 1px solid rgba(255, 255, 255, 0.4);
-}
-.dark-background .edy-texteditor-active:hover {
-  outline: 1px solid rgba(255, 255, 255, 0.63);
-}
