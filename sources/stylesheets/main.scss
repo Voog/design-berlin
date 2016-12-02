@@ -855,6 +855,10 @@ $flags:
   left: 30px;
   height: 13px;
 
+  .edy-checkout-button-visible & {
+    top: 38px + 41px; // 41 is the height of the checkout button.
+  }
+
   li {
     display: block;
     font-size: 12px;
@@ -1962,6 +1966,10 @@ table {
     height: 43px;
     outline: 0;
 
+    .edy-checkout-button-visible & {
+      top: 41px; // 41 is the height of the checkout button.
+    }
+
     span {
       &,
       &:before,
@@ -2053,6 +2061,10 @@ table {
       &:after {
         @include rotate(-45deg);
       }
+
+      .edy-checkout-button-visible & {
+        top: 41px; // 41 is the height of the checkout button.
+      }
     }
 
     .language-menu-btn {
@@ -2063,6 +2075,10 @@ table {
       width: 42px;
       height: 42px;
       outline: 0;
+
+      .edy-checkout-button-visible & {
+        top: 14px + 41px; // 41 is the height of the checkout button.
+      }
 
       .lang-menu-btn {
         position: absolute;
@@ -2175,6 +2191,10 @@ table {
     outline: 0;
     background: url('../images/search.png') no-repeat center center;
     background-size: 16px 16px;
+
+    .edy-checkout-button-visible & {
+      top: 41px; // 41 is the height of the checkout button.
+    }
 
     .svg & {
       background-image: url('../assets/search.svg');

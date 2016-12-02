@@ -29,16 +29,26 @@
           event.preventDefault();
           var $body = $('body');
           if ($body.hasClass('mobilesearch-open')) {
-              $body.removeClass('mobilesearch-open');
-              mobilesearch.reset();
-          }
-          else {
-              var top = $('.sidebar').height();
-              $('#mobile-search').css('top', top + 'px');
-              $('body').addClass('mobilesearch-open');
-              $('#mobile-search .search-input').get(0).focus();
-          }
+            $body.removeClass('mobilesearch-open');
+            mobilesearch.reset();
 
+            $('.sidebar').css('padding-top', '');
+          } else {
+            var top,
+                checkoutButtonHeight = 41;
+
+            if ($('body').hasClass('edy-checkout-button-visible')) {
+              var top = $('.sidebar').height() + checkoutButtonHeight;
+              $('.sidebar').css('padding-top', checkoutButtonHeight);
+            } else {
+              var top = $('.sidebar').height();
+              $('.sidebar').css('padding-top', '');
+            }
+
+            $('#mobile-search').css('top', top + 'px');
+            $('body').addClass('mobilesearch-open');
+            $('#mobile-search .search-input').get(0).focus();
+          }
       });
     });
   </script>
