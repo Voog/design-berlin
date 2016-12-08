@@ -959,6 +959,9 @@ label .form_control_indicator:before {
   left: 30px;
   height: 13px;
 }
+.edy-checkout-button-visible .lang-menu {
+  top: 79px;
+}
 .lang-menu li {
   display: block;
   font-size: 12px;
@@ -1956,6 +1959,9 @@ table th {
     height: 43px;
     outline: 0;
   }
+  .edy-checkout-button-visible .mobile-menu-toggler {
+    top: 41px;
+  }
   .mobile-menu-toggler span, .mobile-menu-toggler span:before, .mobile-menu-toggler span:after {
     position: absolute;
     top: 14px;
@@ -2036,6 +2042,9 @@ table th {
     -ms-transform: rotate(-45deg);
         transform: rotate(-45deg);
   }
+  .edy-checkout-button-visible #mobile-menu .mobile-menu-close {
+    top: 41px;
+  }
   #mobile-menu .language-menu-btn {
     position: absolute;
     top: 14px;
@@ -2044,6 +2053,9 @@ table th {
     width: 42px;
     height: 42px;
     outline: 0;
+  }
+  .edy-checkout-button-visible #mobile-menu .language-menu-btn {
+    top: 55px;
   }
   #mobile-menu .language-menu-btn .lang-menu-btn {
     position: absolute;
@@ -2142,6 +2154,9 @@ table th {
     outline: 0;
     background: url("../images/search.png") no-repeat center center;
     background-size: 16px 16px;
+  }
+  .edy-checkout-button-visible .mobile-search-toggler {
+    top: 41px;
   }
   .svg .mobile-search-toggler {
     background-image: url("../assets/search.svg");
