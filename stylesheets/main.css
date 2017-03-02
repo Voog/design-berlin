@@ -1080,6 +1080,58 @@ label .form_control_indicator:before {
 .formatted:empty {
   display: none;
 }
+.formatted h1:first-child,
+.formatted h2:first-child,
+.formatted h3:first-child,
+.formatted h4:first-child,
+.formatted h5:first-child,
+.formatted h6:first-child,
+.formatted p:first-child,
+.formatted ul:first-child,
+.formatted ol:first-child,
+.formatted dl:first-child,
+.formatted table:first-child,
+.formatted pre:first-child,
+.formatted code:first-child,
+.formatted iframe:first-child,
+.formatted table:first-child,
+.formatted form:first-child,
+.formatted .table-container:first-child,
+.formatted .edy-positionable-container-left-block:first-child,
+.formatted .edy-positionable-container-center-block:first-child,
+.formatted .edy-positionable-container-right-block:first-child,
+.formatted .edy-texteditor-container-wrapper-left-block:first-child,
+.formatted .edy-texteditor-container-wrapper-center:first-child,
+.formatted .edy-texteditor-container-wrapper-right-block:first-child,
+.formatted .edy-positionable-container-maxwidth:first-child {
+  margin-top: 0;
+}
+.formatted h1:last-child,
+.formatted h2:last-child,
+.formatted h3:last-child,
+.formatted h4:last-child,
+.formatted h5:last-child,
+.formatted h6:last-child,
+.formatted p:last-child,
+.formatted ul:last-child,
+.formatted ol:last-child,
+.formatted dl:last-child,
+.formatted table:last-child,
+.formatted pre:last-child,
+.formatted code:last-child,
+.formatted iframe:last-child,
+.formatted table:last-child,
+.formatted form:last-child,
+.formatted .table-container:last-child,
+.formatted .edy-positionable-container-left-block:last-child,
+.formatted .edy-positionable-container-center-block:last-child,
+.formatted .edy-positionable-container-right-block:last-child,
+.formatted .edy-texteditor-container-wrapper-left-block:last-child,
+.formatted .edy-texteditor-container-wrapper-center:last-child,
+.formatted .edy-texteditor-container-wrapper-right-block:last-child,
+.formatted .edy-positionable-container-maxwidth:last-child {
+  margin-bottom: 0;
+}
 .formatted ul,
 .formatted ol {
   margin: 15px 0;
@@ -1104,22 +1156,6 @@ label .form_control_indicator:before {
 .formatted .edy-texteditor-container-wrapper-right-block {
   margin-top: 20px;
   margin-bottom: 20px;
-}
-.formatted .edy-positionable-container-center:first-child,
-.formatted .edy-positionable-container-left-block:first-child,
-.formatted .edy-positionable-container-right-block:first-child,
-.formatted .edy-texteditor-container-wrapper-center:first-child,
-.formatted .edy-texteditor-container-wrapper-left-block:first-child,
-.formatted .edy-texteditor-container-wrapper-right-block:first-child {
-  margin-top: 0;
-}
-.formatted .edy-positionable-container-center:last-child,
-.formatted .edy-positionable-container-left-block:last-child,
-.formatted .edy-positionable-container-right-block:last-child,
-.formatted .edy-texteditor-container-wrapper-center:last-child,
-.formatted .edy-texteditor-container-wrapper-left-block:last-child,
-.formatted .edy-texteditor-container-wrapper-right-block:last-child {
-  margin-bottom: 0;
 }
 .formatted .edy-positionable-container-left,
 .formatted .edy-positionable-container-right {
