@@ -996,6 +996,10 @@ $flags:
 }
 
 .formatted {
+  &:empty {
+    display: none;
+  }
+
   ul,
   ol {
     margin: 15px 0;

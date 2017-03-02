@@ -1077,6 +1077,9 @@ label .form_control_indicator:before {
   padding: 70px 30px;
 }
 
+.formatted:empty {
+  display: none;
+}
 .formatted ul,
 .formatted ol {
   margin: 15px 0;
