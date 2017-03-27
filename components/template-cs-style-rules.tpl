@@ -261,6 +261,20 @@ h3,
   text-decoration: var(--h3-text-decoration);
   text-transform: var(--h3-text-transform);
 }
+.formatted a {
+  color: var(--content-links-color);
+  font-style: var(--content-links-font-style);
+  font-weight: var(--content-links-font-weight);
+  text-decoration: var(--content-links-text-decoration);
+  text-transform: var(--content-links-text-transform);
+}
+.formatted a:hover {
+  color: var(--content-links-hover-color);
+  font-style: var(--content-links-hover-font-style);
+  font-weight: var(--content-links-hover-font-weight);
+  text-decoration: var(--content-links-hover-text-decoration);
+  text-transform: var(--content-links-hover-text-transform);
+}
 
 .main {
   background-color: var(--content-background-color);
@@ -283,27 +297,13 @@ h3,
   border-style: var(--table-border-style);
   border-color: var(--color-third);
 }
-.main .footer {
+.main .footer .formatted {
   color: var(--sidebar-footer-color);
   font-size: var(--sidebar-footer-font-size);
   line-height: var(--sidebar-footer-line-height);
 }
-.main .footer .voog-reference a {
+.main .footer .formatted .voog-reference a {
   font-size: 11px;
-}
-.main a:not(.post-nav-link) {
-  color: var(--content-links-color);
-  font-style: var(--content-links-font-style);
-  font-weight: var(--content-links-font-weight);
-  text-decoration: var(--content-links-text-decoration);
-  text-transform: var(--content-links-text-transform);
-}
-.main a:not(.post-nav-link):hover {
-  color: var(--content-links-hover-color);
-  font-style: var(--content-links-hover-font-style);
-  font-weight: var(--content-links-hover-font-weight);
-  text-decoration: var(--content-links-hover-text-decoration);
-  text-transform: var(--content-links-hover-text-transform);
 }
 .front-page .main .main-inner .formatted {
   font-size: var(--front-page-font-size);
@@ -325,8 +325,6 @@ h3,
 .main .custom-btn,
 .main .form_submit input,
 .main .submit {
-  background-color: var(--content-button-background-color);
-  color: var(--content-button-color);
   font-size: var(--content-button-font-size);
   font-style: var(--content-button-font-style);
   font-weight: var(--content-button-font-weight);
@@ -344,8 +342,6 @@ h3,
 .main .submit:hover,
 .main .submit a,
 .main .submit a:hover {
-  background-color: var(--content-button-background-color);
-  color: var(--content-button-color);
   font-size: var(--content-button-font-size);
   font-style: var(--content-button-font-style);
   font-weight: var(--content-button-font-weight);
@@ -353,10 +349,19 @@ h3,
   text-transform: var(--content-button-text-transform);
 }
 
-.main .custom-btn:hover,
+.main .custom-btn:not(.custom-btn-disabled):hover,
 .main .form_submit input:hover,
 .main .submit:hover {
   opacity: 0.8;
+}
+
+.custom-btn:not(.custom-btn-disabled) {
+  background-color: var(--content-button-background-color);
+  color: var(--content-button-color);
+}
+.custom-btn:not(.custom-btn-disabled):hover {
+  background-color: var(--content-button-background-color);
+  color: var(--content-button-color);
 }
 
 .jq-select-content {

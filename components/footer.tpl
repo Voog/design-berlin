@@ -1,5 +1,5 @@
 <footer class="footer">
-  <div class="footer-inner">
+  <div class="footer-inner formatted">
     <div class="cfx">
       {% include "search" %}
       {% xcontent name="footer" %}

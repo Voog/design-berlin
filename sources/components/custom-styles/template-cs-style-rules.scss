@@ -321,6 +321,22 @@ h3,
       text-transform: var(--h3-text-transform);
     }
   }
+  
+  a {
+    color: var(--content-links-color);
+    font-style: var(--content-links-font-style);
+    font-weight: var(--content-links-font-weight);
+    text-decoration: var(--content-links-text-decoration);
+    text-transform: var(--content-links-text-transform);
+    
+    &:hover {
+      color: var(--content-links-hover-color);
+      font-style: var(--content-links-hover-font-style);
+      font-weight: var(--content-links-hover-font-weight);
+      text-decoration: var(--content-links-hover-text-decoration);
+      text-transform: var(--content-links-hover-text-transform);
+    }
+  }
 }
 
 .main {
@@ -347,28 +363,14 @@ h3,
   }
 
   .footer {
-    color: var(--sidebar-footer-color);
-    font-size: var(--sidebar-footer-font-size);
-    line-height: var(--sidebar-footer-line-height);
-
-    .voog-reference a {
-      font-size: 11px;
-    }
-  }
-
-  a:not(.post-nav-link) {
-    color: var(--content-links-color);
-    font-style: var(--content-links-font-style);
-    font-weight: var(--content-links-font-weight);
-    text-decoration: var(--content-links-text-decoration);
-    text-transform: var(--content-links-text-transform);
-
-    &:hover {
-      color: var(--content-links-hover-color);
-      font-style: var(--content-links-hover-font-style);
-      font-weight: var(--content-links-hover-font-weight);
-      text-decoration: var(--content-links-hover-text-decoration);
-      text-transform: var(--content-links-hover-text-transform);
+    .formatted {  
+      color: var(--sidebar-footer-color);
+      font-size: var(--sidebar-footer-font-size);
+      line-height: var(--sidebar-footer-line-height);
+      
+      .voog-reference a {
+        font-size: 11px;
+      }
     }
   }
 
@@ -401,10 +403,7 @@ h3,
 
 .main .custom-btn,
 .main .form_submit input,
-.main .submit
- {
-  background-color: var(--content-button-background-color);
-  color: var(--content-button-color);
+.main .submit {
   font-size: var(--content-button-font-size);
   font-style: var(--content-button-font-style);
   font-weight: var(--content-button-font-weight);
@@ -415,8 +414,6 @@ h3,
   &:hover,
   a,
   a:hover {
-    background-color: var(--content-button-background-color);
-    color: var(--content-button-color);
     font-size: var(--content-button-font-size);
     font-style: var(--content-button-font-style);
     font-weight: var(--content-button-font-weight);
@@ -425,11 +422,22 @@ h3,
   }
 }
 
-.main .custom-btn:hover,
+.main .custom-btn:not(.custom-btn-disabled):hover,
 .main .form_submit input:hover,
 .main .submit:hover {
   opacity: .8
 }
+
+.custom-btn:not(.custom-btn-disabled) {
+  background-color: var(--content-button-background-color);
+  color: var(--content-button-color);
+  
+  &:hover {
+    background-color: var(--content-button-background-color);
+    color: var(--content-button-color);
+  }
+}
+
 
 .jq-select-content {
   padding: 0 28px 0 0;

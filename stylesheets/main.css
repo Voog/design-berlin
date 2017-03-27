@@ -61,13 +61,6 @@ body {
 a {
   text-decoration: none;
 }
-a:not(.post-nav-link) {
-  color: #06b;
-}
-a:not(.post-nav-link):hover {
-  color: #06b;
-  color: rgba(0, 102, 187, 0.85);
-}
 
 .cfx {
   min-height: 1px;
@@ -195,7 +188,6 @@ blockquote {
 .custom-btn {
   background: #222;
   border: 0;
-  cursor: pointer;
   display: inline-block;
   font: 18px/1.67 "Lato", Helvetica, Arial, sans-serif;
   margin-bottom: 1.1em;
@@ -209,6 +201,14 @@ blockquote {
 .custom-btn:hover {
   background-color: #222;
   background-color: rgba(34, 34, 34, 0.8);
+}
+.public .custom-btn {
+  cursor: pointer;
+}
+.public .custom-btn-disabled {
+  cursor: default;
+  color: #848484;
+  background-color: #dadada;
 }
 
 .bgpicker-btn {
@@ -281,9 +281,15 @@ blockquote {
 }
 
 /* form */
-.edy-fe-field,
 .form_field {
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.form_field:first-child {
+  padding-top: 0;
+}
+.form_field:last-child {
+  padding-bottom: 0;
 }
 
 .edy-fe-label,
@@ -1131,6 +1137,14 @@ label .form_control_indicator:before {
 .formatted .edy-texteditor-container-wrapper-right-block:last-child,
 .formatted .edy-positionable-container-maxwidth:last-child {
   margin-bottom: 0;
+}
+.formatted a {
+  text-decoration: none;
+  color: #06b;
+}
+.formatted a:hover {
+  color: #06b;
+  color: rgba(0, 102, 187, 0.85);
 }
 .formatted ul,
 .formatted ol {
