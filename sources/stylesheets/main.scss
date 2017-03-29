@@ -2,10 +2,6 @@
 @import 'mixins';
 @import 'modules/variables';
 
-/* FONTS */
-@include font-face("Montserrat", '../assets/montserrat-light', 400);
-@include font-face("Montserrat", '../assets/montserrat-regular', 700);
-
 %nulling {
   margin: 0;
   padding: 0;
@@ -199,11 +195,11 @@ blockquote {
   &:hover {
     @include bg($main-color, .8);
   }
-  
+
   .public & {
     cursor: pointer;
   }
-  
+
     &-disabled {
       // scss-lint:disable NestingDepth
       .public & {
@@ -291,11 +287,11 @@ blockquote {
 .form_field {
   margin-top: 10px;
   margin-bottom: 10px;
-      
+
   &:first-child {
     padding-top: 0;
   }
-  
+
   &:last-child {
     padding-bottom: 0;
   }
@@ -1045,7 +1041,7 @@ $flags:
       margin-bottom: 0;
     }
   }
-  
+
   a {
     text-decoration: none;
     color: $link-color;

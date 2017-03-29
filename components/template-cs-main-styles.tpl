@@ -7,7 +7,7 @@
      "featured": true,
      "scope": "global"
   */
-  --font-primary: "Lato", Helvetica, Arial, sans-serif;
+  --font-primary: Lato, sans-serif;
   /* VoogStyle
      "pathI18n": ["main_styles", "colors"],
      "titleI18n": "primary_color",
