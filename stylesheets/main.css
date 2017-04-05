@@ -2254,6 +2254,9 @@ table th {
     left: 0;
   }
 }
+.formatted .edy-buy-button-container .form_field {
+  padding-top: 15px;
+}
 .formatted .edy-buy-button-variants .form_field {
   padding-top: 5px;
   padding-bottom: 5px;
