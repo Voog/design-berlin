@@ -177,7 +177,6 @@ blockquote {
   border: 0;
   display: inline-block;
   font: 18px/1.67 "Lato", sans-serif;
-  margin-bottom: 1.1em;
   outline: 0;
   padding: 0.44em;
 }
@@ -192,10 +191,11 @@ blockquote {
 .public .custom-btn {
   cursor: pointer;
 }
-.public .custom-btn-disabled {
+.public .custom-btn-disabled, .public .custom-btn-disabled:hover {
   cursor: default;
   color: #848484;
   background-color: #dadada;
+  opacity: 1;
 }
 
 .bgpicker-btn {
@@ -269,8 +269,8 @@ blockquote {
 
 /* form */
 .form_field {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .form_field:first-child {
   padding-top: 0;
@@ -344,6 +344,10 @@ blockquote {
 .form_field_with_errors textarea {
   background-color: #c70909;
   background-color: rgba(199, 9, 9, 0.2);
+}
+
+.form_submit {
+  padding-top: 20px;
 }
 
 .form_submit input,
@@ -2249,4 +2253,11 @@ table th {
     bottom: 0;
     left: 0;
   }
+}
+.formatted .edy-buy-button-variants .form_field {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.formatted .edy-buy-button-variants .form_field_select {
+  width: initial;
 }
