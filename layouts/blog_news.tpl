@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% include "template-variables" %}
+{% include "blog-article-variables" %}
 <html lang="{{ page.language_code }}">
 <head prefix="og: http://ogp.me/ns#">
   {% include "edicy-tools-variables" %}
@@ -41,7 +42,17 @@
               <div class="post-wrap">
                 <div class="inner">
                   <article class="post">
-                      <div class="post-title"><a href="{{ article.url }}">{{ article.title }}</a> <time class="post-date" datetime="{{ article.created_at | date : "%Y-%m-%d" }}">{{ article.created_at | date : "%d.%m" }}</time></div>
+                      <div class="post-title"><a href="{{ article.url }}">{{ article.title }}</a>
+                        {% assign article_year = article.created_at | format_date: "%Y" | to_num %}
+
+                        {% if article_year == current_year %}
+                          {% assign article_date_format = "long_without_year" %}
+                        {% else %}
+                          {% assign article_date_format = "long" %}
+                        {% endif %} 
+
+                        <time class="post-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: article_date_format }}</time>
+                      </div>
                   </article>
                 </div>
               </div>
