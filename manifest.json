@@ -22,9 +22,9 @@
     {
       "content_type": "blog",
       "component": false,
-      "file": "layouts/blog_news.tpl",
+      "file": "layouts/blog___news.tpl",
       "layout_name": "blog",
-      "title": "Blog & news"
+      "title": "Blog & News"
     },
     {
       "content_type": "blog_article",
