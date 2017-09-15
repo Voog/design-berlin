@@ -27,7 +27,7 @@
      "featured": true,
      "scope": "global"
   */
-  --font-primary: $font-primary;
+  #{--font-primary}: $font-primary;
 
   /* VoogStyle
      "pathI18n": ["main_styles", "colors"],
@@ -46,7 +46,7 @@
         "--form-field-text-color"
       ]
   */
-  --color-main: $main-color;
+  #{--color-main}: $main-color;
 
   /* VoogStyle
      "pathI18n": ["main_styles", "colors"],
@@ -59,7 +59,7 @@
       "--content-submenu-color"
      ]
   */
-  --color-third: $third-color;
+  #{--color-third}: $third-color;
 
   /* VoogStyle
      "pathI18n": ["main_styles", "colors"],
@@ -73,6 +73,6 @@
       "--form-field-background-color"
     ]
   */
-  --color-white: $color-white;
+  #{--color-white}: $color-white;
 
 }

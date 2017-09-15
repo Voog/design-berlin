@@ -26,7 +26,7 @@
      "scope": "global",
      "featured": true
   */
-  --content-button-background-color: $main-color;
+  #{--content-button-background-color}: $main-color;
 
   /* VoogStyle
     "pathI18n": ["button"],
@@ -38,7 +38,7 @@
     "scope": "global",
     "featured": true
   */
-  --content-button-font-size: $font-size;
+  #{--content-button-font-size}: $font-size;
 
   /* VoogStyle
     "pathI18n": ["button"],
@@ -52,7 +52,7 @@
     "icon": "bold",
     "scope": "global"
   */
-  --content-button-font-weight: 400;
+  #{--content-button-font-weight}: 400;
 
   /* VoogStyle
     "pathI18n": ["button"],
@@ -66,7 +66,7 @@
     "icon": "italic",
     "scope": "global"
   */
-  --content-button-font-style: normal;
+  #{--content-button-font-style}: normal;
 
   /* VoogStyle
     "pathI18n": ["button"],
@@ -80,7 +80,7 @@
     "icon": "underline",
     "scope": "global"
   */
-  --content-button-text-decoration: none;
+  #{--content-button-text-decoration}: none;
 
   /* VoogStyle
     "pathI18n": ["button"],
@@ -94,7 +94,7 @@
     "icon": "uppercase",
     "scope": "global"
   */
-  --content-button-text-transform: none;
+  #{--content-button-text-transform}: none;
 
   /* VoogStyle
      "pathI18n": ["button"],
@@ -104,7 +104,7 @@
      "featured": true,
      "type": "button"
   */
-  --content-button-color: $color-white;
+  #{--content-button-color}: $color-white;
 
   // scss-lint:enable Comment, Indentation
 }
