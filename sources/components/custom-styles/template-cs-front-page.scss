@@ -72,7 +72,7 @@
     "icon": "bold",
     "scope": "global"
   */
-  #{--content-links-hover-font}-weight: 400;
+  #{--content-links-hover-font-weight}: 400;
 
   /* VoogStyle
     "pathI18n": ["content", "link", "normal"],
@@ -103,7 +103,7 @@
     "icon": "italic",
     "scope": "global"
   */
-  #{--content-links-hover-font}-style: normal;
+  #{--content-links-hover-font-style}: normal;
 
   /* VoogStyle
     "pathI18n": ["content", "link", "normal"],
@@ -165,7 +165,7 @@
     "icon": "uppercase",
     "scope": "global"
   */
-  #{--content-links-hover-text}-transform: none;
+  #{--content-links-hover-text-transform}: none;
 
   /* VoogStyle
     "pathI18n": ["content", "link", "normal"],
