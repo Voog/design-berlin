@@ -95,6 +95,7 @@
     {% include "footer" %}
   </div>
   {% include "mobilemenu" %}
+  {% include "site-signout" %}
   {% include "javascripts" %}
   {% include "edicy-tools" %}
 </body>
