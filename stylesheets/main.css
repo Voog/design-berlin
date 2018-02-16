@@ -1476,7 +1476,6 @@ table th {
 .main .voog-reference {
   display: none;
   padding-top: 10px;
-  padding-bottom: 20px;
 }
 .main .voog-reference a {
   color: #acacac;
@@ -2314,4 +2313,10 @@ table th {
 }
 .signout-btn-wrap .signout-svg {
   margin-top: 3px;
+}
+
+@media screen and (max-width: 600px) {
+  .signout-btn-pad {
+    padding-top: 10px;
+  }
 }
