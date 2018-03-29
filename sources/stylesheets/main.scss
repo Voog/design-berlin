@@ -1319,6 +1319,7 @@ $flags:
   .comment-email-field {
     float: left;
     width: 250px;
+    padding-top: 0;
 
     input {
       background: none;
@@ -1332,7 +1333,7 @@ $flags:
   }
 
   .submit-holder {
-    padding-top: 20px;
+    padding-top: 0px;
   }
 
   .form_field_with_errors .form_field_textfield {
