@@ -1274,7 +1274,7 @@ $flags:
 
 /* comments */
 .comments {
-  padding: 0 30px 45px;
+  padding: 0 30px 30px;
   position: relative;
 
   &:before {
@@ -1291,6 +1291,10 @@ $flags:
   h3 {
     margin: 0;
     padding: 45px 0 20px;
+  }
+
+  .signout-btn-margin{
+    margin-bottom: 20px;
   }
 }
 

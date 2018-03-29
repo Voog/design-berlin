@@ -87,6 +87,9 @@
                   <div class="comment-info">({{ comment.author }}, {{ comment.created_at | format_date: "long" }}) {% removebutton %}</div>
                 </div>
               {% endfor %}
+              {% if page.private? %}
+              <div class="signout-btn-margin"></div>
+              {% endif %}
             </section>
           </div>
         </div>
