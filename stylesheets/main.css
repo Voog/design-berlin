@@ -1333,7 +1333,7 @@ label .form_control_indicator:before {
 
 /* comments */
 .comments {
-  padding: 0 30px 30px;
+  padding: 0 30px 45px;
   position: relative;
 }
 .comments:before {
