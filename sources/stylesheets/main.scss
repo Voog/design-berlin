@@ -1292,6 +1292,10 @@ $flags:
     margin: 0;
     padding: 45px 0 20px;
   }
+
+  .signout-btn-margin{
+    margin-bottom: 20px;
+  }
 }
 
 .comment-form {
@@ -2308,3 +2312,4 @@ table {
 
 
 @import 'buy-button';
+@import 'site-signout';
