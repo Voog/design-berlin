@@ -18,16 +18,16 @@
         <div class="container">
           <div class="inner">
             <nav class="sub-menu tag-list">
-              {% if site.has_language_tags? %}
+              {% if blog.has_tags? %}
               <ul>
-                {% for tag in site.language_tags %}
+                {% for tag in blog.tags %}
                   {% assign activestr = " " %}
                   {% for tmptag in tags %}
                     {% if tmptag.name == tag.name %}
                       {% assign activestr = " class='active'" %}
                     {% endif %}
                   {% endfor %}
-                <li><a href="{{ page.url }}/tagged/{{ tag.path }}"{{activestr}}>{{ tag.name }}</a></li>
+                <li><a href="/{{ blog.page.path_with_lang }}/tagged/{{ tag.path }}"{{activestr}}>{{ tag.name }}</a></li>
                 {% endfor %}
               </ul>
               {% endif %}
@@ -49,7 +49,7 @@
                           {% assign article_date_format = "long_without_year" %}
                         {% else %}
                           {% assign article_date_format = "long" %}
-                        {% endif %} 
+                        {% endif %}
 
                         <time class="post-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: article_date_format }}</time>
                       </div>
