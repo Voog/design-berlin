@@ -3,7 +3,7 @@
   {% if editmode or site.has_many_languages? %}
     <!-- a href="#" class="">keel</a -->
     <a href="#" role="button" class="language-menu-btn">
-      <span class="lang-menu-btn lang-flag lang-flag-{{ page.language_code }}" data-lang-code="{{ page.language_code }}">
+      <span class="lang-menu-btn lang-flag lang-flag-{{ page.language_code }}" data-lang-code="{{ page.language_locale }}">
         {% if editmode or flags_state == false %}
           <span class="lang-title">
             {% for language in site.languages %}{% if language.selected? %}{{ language.title }}{% endif %}{% endfor %}
