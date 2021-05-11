@@ -1155,9 +1155,13 @@ $flags:
   padding: 0 30px;
 }
 
-.post-date {
-  color: $third-color;
-  display: inline;
+.btn-container {
+  padding-top: 20px; 
+  margin-left: 7px;
+}
+
+.hide-article-date {
+  display: none;
 }
 
 .post-content {
@@ -1297,6 +1301,10 @@ $flags:
 
   .signout-btn-margin{
     margin-bottom: 20px;
+  }
+
+  &.hide-article-comments {
+    display: none;
   }
 }
 

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 {% include "template-variables" %}
 {% include "blog-article-variables" %}
+{% include "blog-settings-variables" %}
 <html lang="{{ page.language_code }}">
 <head prefix="og: http://ogp.me/ns#">
   {% include "edicy-tools-variables" %}
@@ -35,7 +36,14 @@
           </div>
           <section class="content blog-content inner cfx" {{ edy_intro_edit_text }}>
             {% content %}
-            {% if editmode %}<div style="padding-top: 20px">{% addbutton %}</div>{% endif %}
+
+            {% if editmode %}
+              <div class="btn-container"style="padding-top: 20px; margin-left: 7px;">
+                {% addbutton %}
+                {% include "blog-settings-editor" %}
+              </div>
+            {% endif %}
+            
           </section>
           <section class="blog-list">
             {% for article in articles %}
@@ -51,7 +59,7 @@
                           {% assign article_date_format = "long" %}
                         {% endif %}
 
-                        <time class="post-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: article_date_format }}</time>
+                        <time class="post-date {{ toggle_article_date }}" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: article_date_format }}</time>
                       </div>
                   </article>
                 </div>

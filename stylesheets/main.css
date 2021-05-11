@@ -1251,9 +1251,13 @@ label .form_control_indicator:before {
   padding: 0 30px;
 }
 
-.post-date {
-  color: #848484;
-  display: inline;
+.btn-container {
+  padding-top: 20px;
+  margin-left: 7px;
+}
+
+.hide-article-date {
+  display: none;
 }
 
 .post-content {
@@ -1387,6 +1391,9 @@ label .form_control_indicator:before {
 }
 .comments .signout-btn-margin {
   margin-bottom: 20px;
+}
+.comments.hide-article-comments {
+  display: none;
 }
 
 .comment-form {
