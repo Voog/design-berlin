@@ -59,7 +59,9 @@
                           {% assign article_date_format = "long" %}
                         {% endif %}
 
-                        <time class="post-date {{ toggle_article_date }}" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: article_date_format }}</time>
+                        {% if editmode or toggle_article_date == 'show-article-date' %}
+                          <time class="post-date {{ toggle_article_date }}" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: article_date_format }}</time>
+                        {% endif %}
                       </div>
                   </article>
                 </div>

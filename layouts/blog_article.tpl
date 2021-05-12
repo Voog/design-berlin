@@ -44,7 +44,9 @@
 
               <h1>
                 {% editable article.title %}
-                <time class="post-date {{ toggle_article_date }}"  datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: article_date_format }}</time>
+                {% if editmode or toggle_article_date == 'show-article-date' %}
+                  <time class="post-date {{ toggle_article_date }}"  datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: article_date_format }}</time>
+                {% endif %}
               </h1>
             </header>
             
@@ -54,9 +56,9 @@
               <div class="post-body cfx formatted">{% content name="additional_body" bind="Article" %}</div>
 
               {% if editmode %}
-              <div class="post-tags">
-              {% editable article.tags %}
-              </div>
+                <div class="post-tags">
+                  {% editable article.tags %}
+                </div>
               {% endif %}
             </section>
 
@@ -83,25 +85,26 @@
                 </div>
               </div>
             {% endif %}
-            
-            <section class="comments formatted {{ toggle_article_comments }} ">
-              <h3 class="comment-title">
-                {% case article.comments_count %}
-                  {% when 0 %}{{ "write_first_comment" | lc }}
-                  {% else %}{{ 'replies' | lcc : article.comments_count }}</span>
-                {% endcase %}
-              </h3>
-              {% include "comment-form" %}
-              {% for comment in article.comments reversed %}
-                <div class="comment edy-site-blog-comment">
-                  <div class="comment-body">{{ comment.body_html }}</div>
-                  <div class="comment-info">({{ comment.author }}, {{ comment.created_at | format_date: "long" }}) {% removebutton %}</div>
-                </div>
-              {% endfor %}
-              {% if page.private? %}
-              <div class="signout-btn-margin"></div>
-              {% endif %}
-            </section>
+            {% if editmode or toggle_article_comments == 'show-article-comments' %}
+              <section class="comments formatted {{ toggle_article_comments }} ">
+                <h3 class="comment-title">
+                  {% case article.comments_count %}
+                    {% when 0 %}{{ "write_first_comment" | lc }}
+                    {% else %}{{ 'replies' | lcc : article.comments_count }}</span>
+                  {% endcase %}
+                </h3>
+                {% include "comment-form" %}
+                {% for comment in article.comments reversed %}
+                  <div class="comment edy-site-blog-comment">
+                    <div class="comment-body">{{ comment.body_html }}</div>
+                    <div class="comment-info">({{ comment.author }}, {{ comment.created_at | format_date: "long" }}) {% removebutton %}</div>
+                  </div>
+                {% endfor %}
+                {% if page.private? %}
+                <div class="signout-btn-margin"></div>
+                {% endif %}
+              </section>
+            {% endif %}
           </div>
         </div>
       </div>
