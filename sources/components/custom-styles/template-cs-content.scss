@@ -230,23 +230,23 @@
   */
   #{--content-submenu-color}: $third-color;
 
-    /* VoogStyle
-      "pathI18n": ["content", "sub_menu", "hover"],
-      "titleI18n": "color",
-      "type": "button",
-      "editor": "colorPicker",
-      "scope": "global"
-    */
-    #{--content-submenu-hover-color}: $main-color;
+  /* VoogStyle
+    "pathI18n": ["content", "sub_menu", "hover"],
+    "titleI18n": "color",
+    "type": "button",
+    "editor": "colorPicker",
+    "scope": "global"
+  */
+  #{--content-submenu-hover-color}: $main-color;
 
-    /* VoogStyle
-      "pathI18n": ["content", "sub_menu", "active"],
-      "titleI18n": "color",
-      "type": "button",
-      "editor": "colorPicker",
-      "scope": "global"
-    */
-    #{--content-submenu-active-color}: $main-color;
+  /* VoogStyle
+    "pathI18n": ["content", "sub_menu", "active"],
+    "titleI18n": "color",
+    "type": "button",
+    "editor": "colorPicker",
+    "scope": "global"
+  */
+  #{--content-submenu-active-color}: $main-color;
 
   /* VoogStyle
     "pathI18n": ["content", "text"],
@@ -410,7 +410,7 @@
   */
   #{--content-links-color}: $link-color;
 
-   /* VoogStyle
+  /* VoogStyle
     "pathI18n": ["content", "link", "hover"],
     "titleI18n": "color",
     "type": "button",

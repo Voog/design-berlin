@@ -293,21 +293,21 @@
     "featured": true
   */
   --sidebar-mainmenu-color: #848484;
- /* VoogStyle
-  "pathI18n": ["sidebar", "main_menu", "hover"],
-  "titleI18n": "color",
-  "type": "button",
-  "editor": "colorPicker",
-  "scope": "global"
-*/
+  /* VoogStyle
+    "pathI18n": ["sidebar", "main_menu", "hover"],
+    "titleI18n": "color",
+    "type": "button",
+    "editor": "colorPicker",
+    "scope": "global"
+  */
   --sidebar-mainmenu-hover-color: #222;
- /* VoogStyle
-  "pathI18n": ["sidebar", "main_menu", "active"],
-  "titleI18n": "color",
-  "type": "button",
-  "editor": "colorPicker",
-  "scope": "global"
-*/
+  /* VoogStyle
+    "pathI18n": ["sidebar", "main_menu", "active"],
+    "titleI18n": "color",
+    "type": "button",
+    "editor": "colorPicker",
+    "scope": "global"
+  */
   --sidebar-mainmenu-active-color: #222;
   /* VoogStyle
     "pathI18n": ["sidebar", "footer", "text"],

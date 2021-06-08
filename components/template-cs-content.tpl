@@ -362,13 +362,13 @@
     "featured": true
   */
   --content-links-color: #06b;
- /* VoogStyle
-  "pathI18n": ["content", "link", "hover"],
-  "titleI18n": "color",
-  "type": "button",
-  "editor": "colorPicker",
-  "scope": "global",
-  "featured": "true"
-*/
+  /* VoogStyle
+    "pathI18n": ["content", "link", "hover"],
+    "titleI18n": "color",
+    "type": "button",
+    "editor": "colorPicker",
+    "scope": "global",
+    "featured": "true"
+  */
   --content-links-hover-color: rgba(0, 102, 187, 0.8);
 }
