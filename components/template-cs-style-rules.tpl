@@ -11,10 +11,12 @@
   color: var(--color-main);
   opacity: 1;
 }
+
 .blog-list .post-title a:hover {
   color: var(--color-main);
   opacity: .75;
 }
+
 .blog-list .post-wrap {
   border-top-color: var(--color-white);
 }
@@ -54,6 +56,7 @@ h3,
 .site-title {
   color: var(--color-main);
 }
+
 .site-title a {
   color: var(--color-main);
 }
@@ -70,54 +73,45 @@ label .form_field_radio + .form_control_indicator::before {
   .container {
     background: none;
   }
-
   .lang-options .menu .menu-item {
     color: var(--color-white);
     opacity: .5;
   }
-
   .option-btn {
     color: var(--color-white);
   }
-
   .option-btn:hover {
     color: var(--color-white);
     opacity: .8;
   }
-
   .front-page .main-inner {
     color: var(--color-white);
   }
-
   .footer {
     background: var(--sidebar-background-color);
   }
-
   .mobile-menu-toggler span.flags-disabled .language-menu-btn .lang-title,
   .mobile-menu-toggler span:before.flags-disabled .language-menu-btn .lang-title,
   .mobile-menu-toggler span:after.flags-disabled .language-menu-btn .lang-title {
     color: var(--color-white);
   }
-
   #mobile-menu .mobile-menu-close:before, #mobile-menu .mobile-menu-close:after {
     background: var(--color-white);
   }
-
   #mobile-menu .navigation-menu ul a,
   #mobile-menu .language-menu ul a {
     color: var(--color-white);
     opacity: .5;
   }
-
   #mobile-menu .navigation-menu ul a.active,
   #mobile-menu .language-menu ul a.active {
     color: var(--color-white);
   }
-
   .mobile-menu-toggler span, .mobile-menu-toggler span:before, .mobile-menu-toggler span:after {
     background-color: var(--color-main);
   }
 }
+
 body,
 .font-size-small,
 .jq-select,
@@ -155,6 +149,7 @@ h3,
           text-decoration: var(--sidebar-site-title-text-decoration);
   text-transform: var(--sidebar-site-title-text-transform);
 }
+
 .site-title a {
   color: var(--sidebar-site-title-color);
 }
@@ -164,6 +159,7 @@ h3,
     font-size: var(--sidebar-site-title-font-size);
   }
 }
+
 .main-menu ul a {
   color: var(--sidebar-mainmenu-color);
   font-family: var(--sidebar-mainmenu-font-family);
@@ -175,6 +171,7 @@ h3,
           text-decoration: var(--sidebar-mainmenu-text-decoration);
   text-transform: var(--sidebar-mainmenu-text-transform);
 }
+
 .main-menu ul a:hover {
   color: var(--sidebar-mainmenu-hover-color);
   font-style: var(--sidebar-mainmenu-hover-font-style);
@@ -183,6 +180,7 @@ h3,
           text-decoration: var(--sidebar-mainmenu-hover-text-decoration);
   text-transform: var(--sidebar-mainmenu-hover-text-transform);
 }
+
 .main-menu ul a.active {
   color: var(--sidebar-mainmenu-active-color);
   font-style: var(--sidebar-mainmenu-active-font-style);
@@ -203,6 +201,7 @@ h3,
   font-weight: var(--content-submenu-font-weight);
   text-transform: var(--content-submenu-text-transform);
 }
+
 .main .sub-menu a:hover {
   border-bottom-color: var(--content-submenu-hover-color);
   border-bottom-style: var(--content-submenu-hover-text-decoration);
@@ -212,6 +211,7 @@ h3,
   font-weight: var(--content-submenu-hover-font-weight);
   text-transform: var(--content-submenu-hover-text-transform);
 }
+
 .main .sub-menu a.active {
   border-bottom-color: var(--content-submenu-active-color);
   border-bottom-style: var(--content-submenu-active-text-decoration);
@@ -225,6 +225,7 @@ h3,
 .formatted h1 {
   color: var(--h1-color);
 }
+
 .formatted h1,
 .formatted h1 a,
 .formatted h1 a:hover {
@@ -238,10 +239,14 @@ h3,
           text-decoration: var(--h1-text-decoration);
   text-transform: var(--h1-text-transform);
 }
+
 .formatted h2 {
   color: var(--h2-color);
 }
-.formatted h2, .formatted h2 a, .formatted h2 a:hover {
+
+.formatted h2,
+.formatted h2 a,
+.formatted h2 a:hover {
   font-family: var(--h2-font-family);
   font-size: var(--h2-font-size);
   font-style: var(--h2-font-style);
@@ -252,9 +257,11 @@ h3,
           text-decoration: var(--h2-text-decoration);
   text-transform: var(--h2-text-transform);
 }
+
 .formatted h3 {
   color: var(--h3-color);
 }
+
 .formatted h3,
 .formatted h3 a,
 .formatted h3 a:hover {
@@ -268,6 +275,7 @@ h3,
           text-decoration: var(--h3-text-decoration);
   text-transform: var(--h3-text-transform);
 }
+
 .formatted a {
   color: var(--content-links-color);
   font-style: var(--content-links-font-style);
@@ -276,6 +284,7 @@ h3,
           text-decoration: var(--content-links-text-decoration);
   text-transform: var(--content-links-text-transform);
 }
+
 .formatted a:hover {
   color: var(--content-links-hover-color);
   font-style: var(--content-links-hover-font-style);
@@ -288,6 +297,7 @@ h3,
 .main {
   background-color: var(--content-background-color);
 }
+
 .main .formatted,
 .main .post-content {
   font-size: var(--content-font-size);
@@ -299,6 +309,7 @@ h3,
           text-decoration: var(--content-text-decoration);
   text-transform: var(--content-text-transform);
 }
+
 .main .formatted table td,
 .main .formatted table th,
 .main .post-content table td,
@@ -307,27 +318,33 @@ h3,
   border-style: var(--table-border-style);
   border-color: var(--color-third);
 }
+
 .main .footer .formatted {
   color: var(--sidebar-footer-color);
   font-size: var(--sidebar-footer-font-size);
   line-height: var(--sidebar-footer-line-height);
 }
+
 .main .footer .formatted .voog-reference a {
   font-size: 11px;
 }
+
 .front-page .main .main-inner .formatted {
   font-size: var(--front-page-font-size);
   line-height: var(--front-page-line-height);
   font-weight: 400;
 }
+
 .main .main-inner .dark-background {
   color: var(--color-white);
 }
+
 .main .main-inner .dark-background h1,
 .main .main-inner .dark-background h2,
 .main .main-inner .dark-background h3 {
   color: var(--color-white);
 }
+
 .main .main-inner .light-background {
   color: var(--color-main);
 }
@@ -342,6 +359,7 @@ h3,
           text-decoration: var(--content-button-text-decoration);
   text-transform: var(--content-button-text-transform);
 }
+
 .main .custom-btn, .main .custom-btn:hover,
 .main .custom-btn a,
 .main .custom-btn a:hover,
@@ -364,13 +382,14 @@ h3,
 .main .custom-btn:not(.custom-btn-disabled):hover,
 .main .form_submit input:hover,
 .main .submit:hover {
-  opacity: 0.8;
+  opacity: .8;
 }
 
 .custom-btn:not(.custom-btn-disabled) {
   background-color: var(--content-button-background-color);
   color: var(--content-button-color);
 }
+
 .custom-btn:not(.custom-btn-disabled):hover {
   background-color: var(--content-button-background-color);
   color: var(--content-button-color);
