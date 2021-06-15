@@ -17,8 +17,6 @@
       };
     };
 
-    $(".js-popup-menu").jsPopupMenu();
-
     if ($("html").hasClass("no-placeholder")) {
       $('input[type="text"],textarea').each(function () {
         if ($(this).attr("placeholder") && !$(this).val()) {
