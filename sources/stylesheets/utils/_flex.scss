@@ -43,17 +43,8 @@
     &-2 {
       flex-wrap: wrap;
 
-      &--item-60 {
-        width: 60%;
-        margin-bottom: 32px;
-
-        @include query($tablet-2) {
-          width: 100%;
-        }
-      }
-
-      &--item-40 {
-        width: 40%;
+      &--item-50 {
+        width: 50%;
         margin-bottom: 32px;
 
         @include query($tablet-2) {

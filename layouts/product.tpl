@@ -20,8 +20,8 @@
 
               <section class="content cfx formatted" {{ edy_intro_edit_text }}>
                 {% include 'menu-breadcrumbs' %}
-                <div class="flex_row flex_row-2 mar_0-32-neg" data-search-indexing-allowed="true">
-                  <div class="flex_row-2--item-60">
+                <div class="flex_row flex_row-2 reverse-col-tablet mar_0-32-neg" data-search-indexing-allowed="true">
+                  <div class="flex_row-2--item-50">
                     <div class="mar_0-32 p-rel js-product-page-image-wrap">
                       {%- load buy_button to "buy_button" q.content.parent_id=page.id q.content.parent_type="page"
                       q.content.name="body" s="content.position" -%}
@@ -52,9 +52,9 @@
                     </section>
                   </div>
 
-                  <div class="flex_row-2--item-40">
-                    <div class="mar_0-32 flex_col">
-                      <section class="content-body content-formatted js-buy-btn-content mar_32-0"
+                  <div class="flex_row-2--item-50">
+                    <div class="mar_0-32 flex_col t-sticky">
+                      <section class="content-body content-formatted js-buy-btn-content"
                         data-search-indexing-allowed="true">
                         {% contentblock %}{{ "write_product_description_here" | lc: editor_locale }}{% endcontentblock %}
                       </section>
@@ -72,5 +72,8 @@
     {% include "site-signout" %}
     {% include "javascripts" %}
     {% include "edicy-tools" %}
+    <script>
+      site.handleProductPageContent();
+    </script>
   </body>
 </html>
