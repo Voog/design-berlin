@@ -4,7 +4,7 @@
       .product_item-title,
       .product_item-btn,
       .product_item-price {
-        color: var(--primary-color);
+        color: var(--color-main);
         font-size: 18px;
         line-height: 1.3;
         word-break: break-word;
@@ -14,7 +14,7 @@
         }
 
         a {
-          color: var(--primary-color);
+          color: var(--color-main);
         }
       }
 
@@ -65,7 +65,7 @@
 
     &-list {
       a {
-        color: var(--primary-color);
+        color: var(--color-main);
       }
     }
 
@@ -74,7 +74,7 @@
       overflow: hidden;
 
       a {
-        color: var(--primary-color);
+        color: var(--color-main);
       }
       &--wrap {
         display: flex;

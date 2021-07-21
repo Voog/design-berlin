@@ -2862,7 +2862,7 @@ table th {
 .product_item-wrap .product_item-title,
 .product_item-wrap .product_item-btn,
 .product_item-wrap .product_item-price {
-  color: var(--primary-color);
+  color: var(--color-main);
   font-size: 18px;
   line-height: 1.3;
   word-break: break-word;
@@ -2877,7 +2877,7 @@ table th {
 .product_item-wrap .product_item-title a,
 .product_item-wrap .product_item-btn a,
 .product_item-wrap .product_item-price a {
-  color: var(--primary-color);
+  color: var(--color-main);
 }
 
 .product_item-wrap .product_item-btn {
@@ -2944,7 +2944,7 @@ table th {
 }
 
 .product_item-list a {
-  color: var(--primary-color);
+  color: var(--color-main);
 }
 
 .product_item-details {
@@ -2953,7 +2953,7 @@ table th {
 }
 
 .product_item-details a {
-  color: var(--primary-color);
+  color: var(--color-main);
 }
 
 .product_item-details--wrap {

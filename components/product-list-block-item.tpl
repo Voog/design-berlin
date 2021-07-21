@@ -5,16 +5,18 @@ q.content.name="body" s="content.position" -%}
   <div class="mar_0-16">
     <div class="product_item-wrap product_item_list p-rel">
       {%- if _entityData.layout_title == product_list_layout -%}
-      {% include 'content-item', _imageData: _entityData.data.item_image, _entityData: _entityData, _itemType:
-      'page', _id: _entityData.page_id, _targetWidth: '600' %}
-      <a class="p14 mar_t-16" href="{{ _entityData.url }}">
-        <div class="p14 mar_t-16 bold product_item-title">
-          {{ _entityData.title | escape_once }}
+        {% include 'content-item', _imageData: _entityData.data.item_image, _entityData: _entityData, _itemType:
+        'page', _id: _entityData.page_id, _targetWidth: '600' %}
+        <div class="product_item-details--wrap mar_t-16">
+          <div class="flex_auto">
+            <a class="p14 bold product_item-title" href="{{ _entityData.url }}">
+              {{ _entityData.title | escape_once }}
+            </a>
+            <div class="flex_box product_item-details">
+              <a class="product_item-btn p-rel" href="{{ _entityData.url }}">{{ "look_closer" | lc | escape_once }}</a>
+            </div>
+          </div>
         </div>
-      </a>
-      <div class="flex_box product_item-details">
-        <a class="product_item-btn p-rel" href="{{ _entityData.url }}">{{ "look_closer" | lc | escape_once }}</a>
-      </div>
       {%- else -%}
       {% include 'product-item', _buyButton: buy_button, _entityData: _entityData %}
       {%- endif -%}
