@@ -145,4 +145,28 @@
     ]
   {% endcapture %}
 
+  {% capture base_number_of_columns_set %}
+    [
+      {
+        "title": "2",
+        "value": "50%"
+      },
+      {
+        "title": "3",
+        "value": "33.3%"
+      },
+      {
+        "title": "4",
+        "value": "25%"
+      },
+      {
+        "title": "5",
+        "value": "20%"
+      },
+      {
+        "title": "6",
+        "value": "16.6%"
+      }
+    ]
+  {% endcapture %}
 {% endcapture %}

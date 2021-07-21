@@ -3049,6 +3049,12 @@ table th {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .product_list .flex_row-3--item {
+    width: var(--product-list-item__width);
+  }
+}
+
 .flex_row-2 {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
