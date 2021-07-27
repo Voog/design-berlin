@@ -685,6 +685,10 @@ label .form_control_indicator:before {
   margin-right: 5px;
 }
 
+.menu-horizontal.menu-breadcrumbs .menu-item-cms {
+  margin-left: 5px;
+}
+
 .menu-horizontal.menu-breadcrumbs .float-right {
   margin-left: auto;
   -webkit-box-ordinal-group: 3;
