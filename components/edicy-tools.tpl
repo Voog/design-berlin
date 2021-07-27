@@ -37,7 +37,7 @@
     {%- else -%}
       {%- assign dropAreaPlaceholder = "drag_picture_here" | lce | escape -%}
 
-      {%if site.data.settings_root_item %}
+      {% if site.data.settings_root_item %}
         rootItemValuesObj = {{ site.data.settings_root_item | json }};
       {% else %}
         rootItemValuesObj = {};

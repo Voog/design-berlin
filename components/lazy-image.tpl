@@ -3,7 +3,7 @@
 {%- endcomment -%}
 
 {%- if _targetWidth != blank -%}
-  {%- assign _maxWidth = _targetWidth | plus:0 -%}
+  {%- assign _maxWidth = _targetWidth | to_num -%}
   {%- assign sizes = "(min-width: " | append: _targetWidth | append: "px) " | append: _targetWidth | append: 'px' -%}
 {%- else -%}
   {%- assign _maxWidth = _data.width -%}

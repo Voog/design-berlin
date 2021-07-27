@@ -49,7 +49,7 @@
     <div class="item-top">
       <div class="top-inner aspect-ratio-inner image-drop-area {{ image_crop_state }} js-content-item-img-drop-area js-lazyload"
         data-image="{{ _src }}"
-        {%- if _isProductImage == true and _src != blank -%}
+        {% if _isProductImage == true and _src != blank -%}
             style="background-image: url({{_src}});"
         {%- endif -%}
       ></div>

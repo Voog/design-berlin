@@ -3,7 +3,7 @@
   {% if site.root_item.selected? %}
     {% for level_1 in site.visible_menuitems_with_data %}
       {% if level_1.layout_title == product_list_layout or level_1.layout_title == product_layout %}
-      {% include 'product-list-block-item', _entityData: level_1 %}
+        {% include 'product-list-block-item', _entityData: level_1 %}
       {% endif %}
     {% endfor %}
   {% else %}
