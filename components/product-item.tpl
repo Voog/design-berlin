@@ -31,7 +31,7 @@
         _altAttr:
         _entityData.data.image_alt_attr,
         _data: productImage,
-        _targetWidth: '1280',
+        _targetWidth: '700',
         _className: imageClass
       %}
     </div>
