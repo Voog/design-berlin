@@ -1,4 +1,10 @@
 {% capture dont_render %}
+
+  {% assign product_list_layout = "Product list" %}
+  {% assign product_layout = "Product" %}
+
+  {% assign show_product_related_pages_in_main_menu = site.data.settings_root_item.show_product_related_pages_in_main_menu %}
+
   {% comment %}=================================================================
   | Design editor variables.
   ============================================================= {% endcomment %}
@@ -139,4 +145,28 @@
     ]
   {% endcapture %}
 
+  {% capture base_number_of_columns_set %}
+    [
+      {
+        "title": "2",
+        "value": "50%"
+      },
+      {
+        "title": "3",
+        "value": "33.3%"
+      },
+      {
+        "title": "4",
+        "value": "25%"
+      },
+      {
+        "title": "5",
+        "value": "20%"
+      },
+      {
+        "title": "6",
+        "value": "16.6%"
+      }
+    ]
+  {% endcapture %}
 {% endcapture %}
