@@ -21,7 +21,9 @@
                 {% contentblock name="content_header" publish_default_content="true" %}<h1>{{ page.title }}</h1>{% endcontentblock %}
                 {% include 'menu-breadcrumbs' %}
                 {% include 'product-list-block' %}
-                {% content %}
+                <div class="product-list-content" data-search-indexing-allowed="true">
+                  {% content %}
+                </div>
               </section>
             </div>
           </div>
