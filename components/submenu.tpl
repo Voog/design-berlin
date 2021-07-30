@@ -18,7 +18,7 @@
 
 
   <nav class="sub-menu">
-    {%- if lvl2 != blank page.level > 0 -%}
+    {%- if lvl2 != blank and page.level > 0 -%}
       <ul>
         {{ lvl2 }}
       </ul>
