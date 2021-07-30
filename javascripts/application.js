@@ -540,25 +540,80 @@ MMCQ = (function() {
 }).call(this);
 
 (function ($) {
-  // Function to limit the rate at which a function can fire.
-  var debounce = function (func, wait, immediate) {
-    var timeout;
-    return function () {
-      var context = this,
-        args = arguments;
-      var later = function () {
-        timeout = null;
-        if (!immediate) func.apply(context, args);
+  $(function () {
+    // Function to limit the rate at which a function can fire.
+    var debounce = function (func, wait, immediate) {
+      var timeout;
+      return function () {
+        var context = this,
+          args = arguments;
+        var later = function () {
+          timeout = null;
+          if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
       };
-      var callNow = immediate && !timeout;
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-      if (callNow) func.apply(context, args);
     };
-  };
+
+    $(".mobile-menu-toggler").click(function (event) {
+      event.preventDefault();
+      $("body").toggleClass("mobilemenu-open");
+      $("body").removeClass("mobilesearch-open");
+    });
+
+    $(".mobile-menu-close").on("click", function (event) {
+      event.preventDefault();
+
+      if ($("body").hasClass("language-menu-open")) {
+        $("body").removeClass("language-menu-open");
+      } else {
+        $("body").removeClass("mobilemenu-open");
+      }
+    });
+
+    $(".language-menu-btn").on("click", function (event) {
+      event.preventDefault();
+      $("body").addClass("language-menu-open");
+    });
+
+    $(".comment-form-focus-input").focus(function () {
+      var $el = $(this).hide();
+      $(this)
+        .closest(".comment-form")
+        .find(".form_area")
+        .show()
+        .find("textarea")
+        .focus();
+    });
+
+    if ($("body").hasClass("front-page")) {
+      setFrontContent();
+      $(".tbl").css("visibility", "visible");
+      $(window).resize(debounce(setFrontContent, 100));
+    }
+
+    if ($(".comment-form").hasClass("form_with_errors")) {
+      $("html, body").scrollTop($(".comment-form").offset().top);
+    } else if ($("form").find(".form_error, .form_notice").length > 0) {
+      $("html, body").scrollTop(
+        $(".form_error, .form_notice").closest("form").offset().top
+      );
+    }
+
+  });
 
   var editmode = function () {
     return $("html").hasClass("editmode");
+  };
+
+  var setFrontContent = function () {
+    var wh = $(window).height(),
+      $tbl = $(".tbl").css("height", "auto");
+
+    $tbl.height(wh - 140);
   };
 
   $.fn.extend({
