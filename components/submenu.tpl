@@ -16,10 +16,11 @@
   {% endif %}
 {%- endcapture -%}
 
-{%- if lvl2 != blank -%}
+
   <nav class="sub-menu">
-    <ul>
-      {{ lvl2 }}
-    </ul>
+    {%- if lvl2 != blank page.level > 0 -%}
+      <ul>
+        {{ lvl2 }}
+      </ul>
+    {%- endif -%}
   </nav>
-{%- endif -%}
