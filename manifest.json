@@ -8,13 +8,6 @@
     {
       "content_type": "page",
       "component": false,
-      "file": "layouts/front_page.tpl",
-      "layout_name": "page_front",
-      "title": "Front page"
-    },
-    {
-      "content_type": "page",
-      "component": false,
       "file": "layouts/product_list.tpl",
       "layout_name": "product_list",
       "title": "Product list"
@@ -25,6 +18,13 @@
       "file": "layouts/common_page.tpl",
       "layout_name": "page_default",
       "title": "Common page"
+    },
+    {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/front_page.tpl",
+      "layout_name": "page_front",
+      "title": "Front page"
     },
     {
       "content_type": "page",
@@ -46,6 +46,13 @@
       "file": "layouts/blog_article.tpl",
       "layout_name": "blog_article",
       "title": "Blog article"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/settings-editor.tpl",
+      "layout_name": "settings-editor",
+      "title": "settings-editor"
     },
     {
       "content_type": "component",
@@ -81,6 +88,13 @@
       "file": "components/template-cs-front-page.tpl",
       "layout_name": "template-cs-front-page",
       "title": "template-cs-front-page"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/settings-article-page.tpl",
+      "layout_name": "settings-article-page",
+      "title": "settings-article-page"
     },
     {
       "content_type": "component",
@@ -148,9 +162,23 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/settings-blog-page.tpl",
+      "layout_name": "settings-blog-page",
+      "title": "settings-blog-page"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/lazy-image.tpl",
       "layout_name": "lazy-image",
       "title": "lazy-image"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/settings-popover.tpl",
+      "layout_name": "settings-popover",
+      "title": "settings-popover"
     },
     {
       "content_type": "component",
@@ -162,9 +190,23 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/settings-editor-button.tpl",
+      "layout_name": "settings-editor-button",
+      "title": "settings-editor-button"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/footer.tpl",
       "layout_name": "footer",
       "title": "footer"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/article-settings-variables.tpl",
+      "layout_name": "article-settings-variables",
+      "title": "article-settings-variables"
     },
     {
       "content_type": "component",

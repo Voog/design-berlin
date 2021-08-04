@@ -35,10 +35,13 @@
           </div>
           <section class="content blog-content inner cfx" {{ edy_intro_edit_text }}>
             {% content %}
-            {% if editmode %}<div style="padding-top: 20px">{% addbutton %}</div>{% endif %}
+            {% if editmode %}
+              <div class="addbutton">{% addbutton %}</div>
+            {% endif %}
           </section>
           <section class="blog-list">
             {% for article in articles %}
+              {% include "article-settings-variables" %}
               <div class="post-wrap">
                 <div class="inner">
                   <article class="post">
@@ -51,7 +54,7 @@
                           {% assign article_date_format = "long" %}
                         {% endif %}
 
-                        <time class="post-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: article_date_format }}</time>
+                        <time class="post-date{% if show_article_date != true %} hide-article-date{% endif %}{% if article_data_show_date_defined != true%} site-data{% endif %}" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: article_date_format }}</time>
                       </div>
                   </article>
                 </div>
@@ -66,6 +69,6 @@
   {% include "mobilemenu" %}
   {% include "site-signout" %}
   {% include "javascripts" %}
-  {% include "edicy-tools" %}
+  {% include "settings-popover", _blogPage: true %}
 </body>
 </html>

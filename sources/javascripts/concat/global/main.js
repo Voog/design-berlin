@@ -1,72 +1,52 @@
 (function ($) {
-  $(function () {
-    // Function to limit the rate at which a function can fire.
-    var debounce = function (func, wait, immediate) {
-      var timeout;
-      return function () {
-        var context = this,
-          args = arguments;
-        var later = function () {
-          timeout = null;
-          if (!immediate) func.apply(context, args);
-        };
-        var callNow = immediate && !timeout;
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-        if (callNow) func.apply(context, args);
+
+  // Function to limit the rate at which a function can fire.
+  var debounce = function (func, wait, immediate) {
+    var timeout;
+    return function () {
+      var context = this,
+        args = arguments;
+      var later = function () {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
       };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
     };
+  };
 
-    $(".mobile-menu-toggler").click(function (event) {
-      event.preventDefault();
-      $("body").toggleClass("mobilemenu-open");
-      $("body").removeClass("mobilesearch-open");
-    });
-
-    $(".mobile-menu-close").on("click", function (event) {
-      event.preventDefault();
-
-      if ($("body").hasClass("language-menu-open")) {
-        $("body").removeClass("language-menu-open");
-      } else {
-        $("body").removeClass("mobilemenu-open");
-      }
-    });
-
-    $(".language-menu-btn").on("click", function (event) {
-      event.preventDefault();
-      $("body").addClass("language-menu-open");
-    });
-
-    $(".comment-form-focus-input").focus(function () {
-      var $el = $(this).hide();
-      $(this)
-        .closest(".comment-form")
-        .find(".form_area")
-        .show()
-        .find("textarea")
-        .focus();
-    });
-
-    if ($("body").hasClass("front-page")) {
-      setFrontContent();
-      $(".tbl").css("visibility", "visible");
-      $(window).resize(debounce(setFrontContent, 100));
-    }
-
-    if ($(".comment-form").hasClass("form_with_errors")) {
-      $("html, body").scrollTop($(".comment-form").offset().top);
-    } else if ($("form").find(".form_error, .form_notice").length > 0) {
-      $("html, body").scrollTop(
-        $(".form_error, .form_notice").closest("form").offset().top
-      );
-    }
-
+  $(".mobile-menu-toggler").click(function (event) {
+    event.preventDefault();
+    $("body").toggleClass("mobilemenu-open");
+    $("body").removeClass("mobilesearch-open");
   });
 
-  var editmode = function () {
-    return $("html").hasClass("editmode");
-  };
+  $(".mobile-menu-close").on("click", function (event) {
+    event.preventDefault();
+
+    if ($("body").hasClass("language-menu-open")) {
+      $("body").removeClass("language-menu-open");
+    } else {
+      $("body").removeClass("mobilemenu-open");
+    }
+  });
+
+  $(".language-menu-btn").on("click", function (event) {
+    event.preventDefault();
+    $("body").addClass("language-menu-open");
+  });
+
+  $(".comment-form-focus-input").focus(function () {
+    var $el = $(this).hide();
+    $(this)
+      .closest(".comment-form")
+      .find(".form_area")
+      .show()
+      .find("textarea")
+      .focus();
+  });
 
   var setFrontContent = function () {
     var wh = $(window).height(),
@@ -74,6 +54,20 @@
 
     $tbl.height(wh - 140);
   };
+
+  if ($("body").hasClass("front-page")) {
+    setFrontContent();
+    $(".tbl").css("visibility", "visible");
+    $(window).resize(debounce(setFrontContent, 100));
+  }
+
+  if ($(".comment-form").hasClass("form_with_errors")) {
+    $("html, body").scrollTop($(".comment-form").offset().top);
+  } else if ($("form").find(".form_error, .form_notice").length > 0) {
+    $("html, body").scrollTop(
+      $(".form_error, .form_notice").closest("form").offset().top
+    );
+  }
 
   $.fn.extend({
     jsPopupMenu: function (options) {
@@ -181,7 +175,7 @@
     callback_loaded: callback_loaded
   });
 
-  $('.js-cart-btn').click(function() {
+  $('.js-cart-btn').click(function () {
     if ($(this).data('product-id')) {
       Voog.ShoppingCart.addProductById($(this).data('product-id'))
     }
@@ -195,8 +189,8 @@
     });
   };
 
-  var handleWindowScroll = function() {
-    window.addEventListener('scroll', function(e) {
+  var handleWindowScroll = function () {
+    window.addEventListener('scroll', function (e) {
       var wrapperHeight = $('.header_fixed').height();
       $('.t-sticky').css('top', $('.header_fixed').outerHeight() + 32);
 
@@ -210,22 +204,22 @@
     });
   };
 
-  var handleProductPageContent = function() {
-    $(document).ready(function() {
+  var handleProductPageContent = function () {
+    $(document).ready(function () {
       changeProductImagePos();
     });
 
-    $(window).resize(debounce(function() {
+    $(window).resize(debounce(function () {
       changeProductImagePos();
     }, 25));
 
-    var changeProductImagePos = function() {
+    var changeProductImagePos = function () {
       var paroductImage = $('.js-product-page-image');
       var paroductImageWrap = $('.js-product-page-image-wrap');
       var buyBtnContent = $('.js-buy-btn-content');
 
       if ($('.js-buy-btn-content .edy-buy-button-container').length >= 1) {
-        if ($( window ).width() <= 752) {
+        if ($(window).width() <= 752) {
           if ($('.js-buy-btn-content .js-product-page-image').length <= 0) {
             buyBtnContent.prepend(paroductImage);
           }
@@ -238,7 +232,7 @@
     }
   }
 
-  var init = function() {
+  var init = function () {
     handleWindowScroll();
   };
 
