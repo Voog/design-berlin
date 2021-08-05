@@ -1,52 +1,45 @@
 (function ($) {
-  $(function () {
-    // Function to limit the rate at which a function can fire.
-    var debounce = function (func, wait, immediate) {
-      var timeout;
-      return function () {
-        var context = this,
-          args = arguments;
-        var later = function () {
-          timeout = null;
-          if (!immediate) func.apply(context, args);
-        };
-        var callNow = immediate && !timeout;
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-        if (callNow) func.apply(context, args);
+
+  // Function to limit the rate at which a function can fire.
+  var debounce = function (func, wait, immediate) {
+    var timeout;
+    return function () {
+      var context = this,
+        args = arguments;
+      var later = function () {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
       };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
     };
+  };
 
-    if ($("html").hasClass("no-placeholder")) {
-      $('input[type="text"],textarea').each(function () {
-        if ($(this).attr("placeholder") && !$(this).val()) {
-          $(this).val($(this).attr("placeholder"));
-        }
-        $(this)
-          .focus(function () {
-            if ($(this).val() == $(this).attr("placeholder")) {
-              $(this).val("");
-            }
-          })
-          .blur(function () {
-            if (!$(this).val() && $(this).attr("placeholder")) {
-              $(this).val($(this).attr("placeholder"));
-            }
-          });
-      });
-    }
-
-    $(".form_fields:not(.edy-fe-fields) select, .custom-select").jqSelect();
-
-    $("body:not(.editmode) table").each(function () {
-      $(this).wrap('<div class="table-holder" />');
+  if ($("html").hasClass("no-placeholder")) {
+    $('input[type="text"],textarea').each(function () {
+      if ($(this).attr("placeholder") && !$(this).val()) {
+        $(this).val($(this).attr("placeholder"));
+      }
+      $(this)
+        .focus(function () {
+          if ($(this).val() == $(this).attr("placeholder")) {
+            $(this).val("");
+          }
+        })
+        .blur(function () {
+          if (!$(this).val() && $(this).attr("placeholder")) {
+            $(this).val($(this).attr("placeholder"));
+          }
+        });
     });
+  }
 
-    if ($("body").hasClass("editmode")) {
-      setTitlebox();
-      $(window).resize(debounce(setTitlebox, 100));
-    }
+  $(".form_fields:not(.edy-fe-fields) select, .custom-select").jqSelect();
 
+  $("body:not(.editmode) table").each(function () {
+    $(this).wrap('<div class="table-holder" />');
   });
 
   var setTitlebox = function () {
@@ -54,6 +47,70 @@
     if ($c.is(":empty")) {
       $(".site-title-editable").appendTo($c);
     }
+  };
+
+  if ($("body").hasClass("editmode")) {
+    setTitlebox();
+    $(window).resize(debounce(setTitlebox, 100));
+  }
+
+  var initSettingsEditorBtn = function () {
+    window.addEventListener('DOMContentLoaded', function (event) {
+      var shadowDom = document.querySelector(".edy-next-shadowdom").shadowRoot;
+      var setSettingsBtn = setInterval(function () {
+        if (shadowDom.querySelectorAll('div[class^="toolbar__"]').length) {
+          var toolbarExpandBtn = shadowDom.querySelector('div[class^="toolbar-expand"]');
+          var toolbar = shadowDom.querySelector('div[class^="toolbar__"]');
+          var settingsBtn = document.querySelector(".js-layout_settings-btn");
+          var toolbarItem = shadowDom.querySelector('div[class^="toolbar-content-item__"]');
+
+          settingsBtn.className = toolbarItem.className + ' ' + settingsBtn.className;
+
+          toolbar.insertBefore(settingsBtn, toolbarExpandBtn);
+
+          shadowDom.querySelector(".js-layout_settings-btn").addEventListener(
+            "click",
+            function (e) {
+              if (document.querySelector('body').classList.contains('layout_settings-visible')) {
+                document.querySelector('div.editor_default').style.display = 'none';
+              }
+              document.querySelector('body').classList.toggle('layout_settings-visible');
+              e.stopImmediatePropagation();
+            }
+          );
+
+          var positionPopover = function () {
+            var settingsPopover = $('.js-layout_settings-popover');
+            var settingsPopoverArrow = $('.layout_settings-arrow');
+
+            if ($(window).width() > 768) {
+              settingsPopover.css({
+                right: window.innerWidth - settingsBtn.getBoundingClientRect().right - (settingsPopover.width() / 2)
+              });
+              settingsPopoverArrow.css({
+                right: settingsPopover.width() / 2
+              });
+            } else {
+              settingsPopover.css({
+                right: 0
+              });
+              settingsPopoverArrow.css({
+                right: 72
+              });
+            }
+          }
+
+          $(window).resize(debounce(function () {
+            positionPopover();
+          }, 25));
+
+          positionPopover();
+          clearInterval(setSettingsBtn);
+        }
+      }, 500);
+
+      $('body').append($('.js-layout_settings-popover'));
+    });
   };
 
   var toggleFlags = function () {
@@ -99,8 +156,7 @@
           $imgDropAreaTarget
             .removeClass('is-cropped')
             .addClass('not-cropped')
-            .css('opacity', .1)
-            ;
+            .css('opacity', .1);
 
           if (image) {
             removeImagePlaceholder($contentItemBox, $cropToggleButton);
@@ -110,13 +166,11 @@
 
             $contentItemBox
               .removeClass('with-image is-loaded with-error')
-              .addClass('without-image not-loaded')
-              ;
+              .addClass('without-image not-loaded');
 
             $cropToggleButton
               .addClass('is-hidden')
-              .removeClass('is-visible')
-              ;
+              .removeClass('is-visible');
             $contentItemBox.find('.edy-img-drop-area-placeholder').css('opacity', 0);
           }
 
@@ -129,7 +183,10 @@
             id: itemId
           });
 
-          itemData.set({ [cropStateKey]: 'not-cropped', [itemImageKey]: image });
+          itemData.set({
+            [cropStateKey]: 'not-cropped',
+            [itemImageKey]: image
+          });
           $contentItemBox.removeClass('not-loaded with-error').addClass('is-loaded');
           $contentItemBox.find('.edy-img-drop-area-placeholder').css('opacity', 1);
           $imgDropAreaTarget.css('opacity', 1);
@@ -138,12 +195,12 @@
 
       $removeBtn.on('click', function () {
         var $el = $(this),
-        itemId = $contentItemBox.data('item-id'),
-        itemType = $contentItemBox.data('item-type'),
-        itemData = new Edicy.CustomData({
-          type: itemType,
-          id: itemId
-        });
+          itemId = $contentItemBox.data('item-id'),
+          itemType = $contentItemBox.data('item-type'),
+          itemData = new Edicy.CustomData({
+            type: itemType,
+            id: itemId
+          });
 
         itemData.get({
           success: function (data) {
@@ -167,7 +224,9 @@
                 contentType: 'application/json',
                 url: '/admin/api/pages/' + itemId,
                 dataType: 'json',
-                data: JSON.stringify({ "image_id": null })
+                data: JSON.stringify({
+                  "image_id": null
+                })
               }).then(function (product) {
                 addProductImagePlaceholder($el, placeholderText);
               });
@@ -184,13 +243,11 @@
 
     $contentItemBox
       .removeClass('without-image is-loaded with-error')
-      .addClass('with-image not-loaded')
-      ;
+      .addClass('with-image not-loaded');
 
     $cropToggleButton
       .removeClass('is-hidden')
-      .addClass('is-visible')
-      ;
+      .addClass('is-visible');
   }
 
   var addProductImagePlaceholder = function (el, placeholderText) {
@@ -201,8 +258,7 @@
     itemBox.find('.top-inner').attr("style", "");
     itemBox
       .removeClass('with-image is-loaded with-error')
-      .addClass('without-image not-loaded')
-    ;
+      .addClass('without-image not-loaded');
     itemBox.find('.edy-img-drop-area').removeClass('active');
     itemBox.find('.image_settings').hide();
 
@@ -231,15 +287,13 @@
       if ($imgDropAreaTarget.hasClass('is-cropped')) {
         $imgDropAreaTarget
           .removeClass('is-cropped')
-          .addClass('not-cropped')
-          ;
+          .addClass('not-cropped');
 
         imageCropState = 'not-cropped';
       } else {
         $imgDropAreaTarget
           .removeClass('not-cropped')
-          .addClass('is-cropped')
-          ;
+          .addClass('is-cropped');
 
         imageCropState = 'is-cropped';
       }
@@ -275,9 +329,13 @@
           });
         }
 
-        entityData.set({ [dataKey]: val }, {
+        entityData.set({
+          [dataKey]: val
+        }, {
           success: function () {
-            if (dataReload) { location.reload(); };
+            if (dataReload) {
+              location.reload();
+            };
           }
         });
       });
@@ -287,24 +345,22 @@
   // ===========================================================================
   // Toggles product categories visibility in main menu.
   // ===========================================================================
-  var bindRootItemSettings = function(rootItemValuesObj) {
+  var bindRootItemSettings = function (rootItemValuesObj) {
     if (!('show_product_related_pages_in_main_menu' in rootItemValuesObj)) {
       rootItemValuesObj.show_product_related_pages_in_main_menu = false;
     }
 
-    $('.js-root-item-settings-toggle').each(function(index, languageMenuSettingsButton) {
+    $('.js-root-item-settings-toggle').each(function (index, languageMenuSettingsButton) {
       var rootItemSettingsEditor = new Edicy.SettingsEditor(languageMenuSettingsButton, {
-        menuItems: [
-          {
-            "titleI18n": "show_in_main_menu",
-            "type": "checkbox",
-            "key": "show_product_related_pages_in_main_menu",
-            "states": {
-              "on": true,
-              "off": false
-            }
+        menuItems: [{
+          "titleI18n": "show_in_main_menu",
+          "type": "checkbox",
+          "key": "show_product_related_pages_in_main_menu",
+          "states": {
+            "on": true,
+            "off": false
           }
-        ],
+        }],
 
         buttonTitleI18n: "settings",
 
@@ -312,7 +368,7 @@
 
         containerClass: ['js-root-item-settings-popover', 'js-prevent-sideclick'],
 
-        preview: function(data) {
+        preview: function (data) {
           if (!data.show_product_related_pages_in_main_menu === true) {
             $('.js-menu-item-products').addClass('is-hidden');
           } else {
@@ -320,7 +376,7 @@
           }
         },
 
-        commit: function(data) {
+        commit: function (data) {
           siteData.set('settings_root_item', data);
         }
       });
@@ -342,7 +398,7 @@
   };
 
   var frontPageContentBgImageSizesContains = function (sizes, url) {
-    for (var i = sizes.length; i--; ) {
+    for (var i = sizes.length; i--;) {
       if (url.indexOf(sizes[i].url.trim()) > -1) {
         return true;
       }
@@ -370,23 +426,23 @@
     var frontPageContentBgImagePrevious = $(".js-bgpicker-cover-image").css(
         "background-image"
       ),
-      frontPageContentBgImageSuitable = data.imageSizes
-        ? getImageByWidth(data.imageSizes, $(window).width())
-        : null,
+      frontPageContentBgImageSuitable = data.imageSizes ?
+      getImageByWidth(data.imageSizes, $(window).width()) :
+      null,
       frontPageContentBgImage =
-        data.image && data.image !== ""
-          ? "url(" + frontPageContentBgImageSuitable.url + ")"
-          : "none",
+      data.image && data.image !== "" ?
+      "url(" + frontPageContentBgImageSuitable.url + ")" :
+      "none",
       frontPageContentBgImageSizes =
-        data.imageSizes && data.imageSizes !== "" ? data.imageSizes : null,
+      data.imageSizes && data.imageSizes !== "" ? data.imageSizes : null,
       frontPageContentBgColor =
-        data.color && data.color !== "" ? data.color : "rgba(0,0,0,0)",
+      data.color && data.color !== "" ? data.color : "rgba(0,0,0,0)",
       frontPageContentBgColorDataLightness =
-        data.colorData && data.colorData !== "" ? data.colorData.lightness : 1,
+      data.colorData && data.colorData !== "" ? data.colorData.lightness : 1,
       colorExtractImage = $("<img>"),
       colorExtractCanvas = $("<canvas>"),
       colorExtractImageUrl =
-        data.image && data.image !== "" ? data.image : null;
+      data.image && data.image !== "" ? data.image : null;
 
     if (colorExtractImageUrl) {
       if (
@@ -396,9 +452,9 @@
         )
       ) {
         frontPageContentBg.frontPageContentBgImageColor =
-          frontPageContentBg.frontPageContentBgImageColor
-            ? frontPageContentBg.frontPageContentBgImageColor
-            : "rgba(224,210,207,1)";
+          frontPageContentBg.frontPageContentBgImageColor ?
+          frontPageContentBg.frontPageContentBgImageColor :
+          "rgba(224,210,207,1)";
 
         frontPageContentCoverCombinedLightness = getCombinedLightness(
           frontPageContentBg.frontPageContentBgImageColor,
@@ -415,9 +471,9 @@
             colorExtractImage[0],
             colorExtractCanvas[0],
             function (data) {
-              frontPageContentBg.frontPageContentBgImageColor = data.bgColor
-                ? data.bgColor
-                : "rgba(255,255,255,1)";
+              frontPageContentBg.frontPageContentBgImageColor = data.bgColor ?
+                data.bgColor :
+                "rgba(255,255,255,1)";
               frontPageContentCoverCombinedLightness = getCombinedLightness(
                 frontPageContentBg.frontPageContentBgImageColor,
                 frontPageContentBgColor
@@ -439,10 +495,14 @@
     // Updates the frontPageContent background image and background color.
     $(frontPageContent)
       .find(".js-bgpicker-cover-image")
-      .css({ "background-image": frontPageContentBgImage });
+      .css({
+        "background-image": frontPageContentBgImage
+      });
     $(frontPageContent)
       .find(".js-bgpicker-cover-color")
-      .css({ "background-color": frontPageContentBgColor });
+      .css({
+        "background-color": frontPageContentBgColor
+      });
   };
 
   var normalizeValue = function (value) {
@@ -503,17 +563,17 @@
       }
       result[0] = Math.min(
         (fgColor[0] * fgColor[3]) / result[3] +
-          (bgColor[0] * bgColor[3] * (1 - fgColor[3])) / result[3],
+        (bgColor[0] * bgColor[3] * (1 - fgColor[3])) / result[3],
         255
       );
       result[1] = Math.min(
         (fgColor[1] * fgColor[3]) / result[3] +
-          (bgColor[1] * bgColor[3] * (1 - fgColor[3])) / result[3],
+        (bgColor[1] * bgColor[3] * (1 - fgColor[3])) / result[3],
         255
       );
       result[2] = Math.min(
         (fgColor[2] * fgColor[3]) / result[3] +
-          (bgColor[2] * bgColor[3] * (1 - fgColor[3])) / result[3],
+        (bgColor[2] * bgColor[3] * (1 - fgColor[3])) / result[3],
         255
       );
       return $.map(result, function (e) {
@@ -537,7 +597,7 @@
         (+combinedColor[0] * 0.2126 +
           +combinedColor[1] * 0.7152 +
           +combinedColor[2] * 0.0722) /
-          2.55
+        2.55
       ) / 100;
     return color;
   };
@@ -559,23 +619,25 @@
       {
         name: buttonTranslation,
         tagname: "a",
-        attribute: { href: "#" },
+        attribute: {
+          href: "#"
+        },
         classname: "custom-btn",
         toggle: true,
       },
     ]);
   };
 
-  handleProductImage = function(placeholderText, pageId, event, el) {
-    var productId = $('.js-buy-btn-content  .partial .edy-buy-button-container').data( "product-id" );
+  handleProductImage = function (placeholderText, pageId, event, el) {
+    var productId = $('.js-buy-btn-content  .partial .edy-buy-button-container').data("product-id");
     var productImageEl = $('.js-product-page-image .image-drop-area');
     $.ajax({
       type: 'GET',
       contentType: 'application/json',
       url: '/admin/api/pages/' + pageId,
       dataType: 'json'
-    }).then(function(page) {
-      var addPlaceholder = function() {
+    }).then(function (page) {
+      var addPlaceholder = function () {
         if (el.closest('.content-item-box').find('.edy-img-drop-area-placeholder').length < 1) {
           addProductImagePlaceholder(el, placeholderText);
         }
@@ -589,7 +651,7 @@
           $('.js-remove-image').css('display', 'none');
           $('.edy-img-drop-area-placeholder').remove();
           removeImagePlaceholder(productImageEl.closest('.js-content-item-box'), productImageEl.find('.js-toggle-crop-state'))
-          productImageEl.css('background-image', 'url(' + event.detail.product.image.url+ ')');
+          productImageEl.css('background-image', 'url(' + event.detail.product.image.url + ')');
         } else if (!isEmpty(page.image)) {
           productImageEl.css('background-image', 'url(' + page.image.public_url + ')');
           $('.js-remove-image').css('display', 'flex');
@@ -604,13 +666,13 @@
           contentType: 'application/json',
           url: '/admin/api/ecommerce/v1/products/' + productId + '?include=details',
           dataType: 'json'
-        }).then(function(product) {
+        }).then(function (product) {
           if (product.image) {
             $('.image_settings').css('display', 'flex');
             $('.js-remove-image').css('display', 'none');
             $('.edy-img-drop-area-placeholder').remove();
             removeImagePlaceholder(productImageEl.closest('.js-content-item-box'), productImageEl.find('.js-toggle-crop-state'))
-            productImageEl.css('background-image', 'url(' + product.image.url+ ')');
+            productImageEl.css('background-image', 'url(' + product.image.url + ')');
           } else if (!isEmpty(page.image)) {
             productImageEl.css('background-image', 'url(' + page.image.public_url + ')');
             $('.js-remove-image').css('display', 'flex');
@@ -624,7 +686,7 @@
     });
   };
 
-  var isEmpty = function(obj) {
+  var isEmpty = function (obj) {
     for (var prop in obj) {
       if (obj.hasOwnProperty(prop)) {
         return false;
@@ -652,7 +714,7 @@
 
   handleFocus($('.js-toggle-image-settings'), toggleImageSettingsPopover);
 
-  var handleDocument = function() {
+  var handleDocument = function () {
     if ($('.form_field-cms input').length) {
       if ($('.form_field-cms input').val().length >= 1) {
         $('.form_field-cms input').closest('.form_field-cms').addClass('with-input');
@@ -661,8 +723,8 @@
       }
     }
 
-    $(document).ready(function() {
-      $('.form_field-cms input').keyup(function(e) {
+    $(document).ready(function () {
+      $('.form_field-cms input').keyup(function (e) {
         if ($(this).val().length >= 1) {
           $(this).closest('.form_field-cms').addClass('with-input');
         } else {
@@ -694,6 +756,7 @@
 
   window.site = $.extend(window.site || {}, {
     toggleFlags: toggleFlags,
+    initSettingsEditorBtn: initSettingsEditorBtn,
     frontPageContentCoverBgPreview: frontPageContentCoverBgPreview,
     frontPageContentCoverBgCommit: frontPageContentCoverBgCommit,
     handleFrontPageContentCoverColorScheme: handleFrontPageContentCoverColorScheme,
