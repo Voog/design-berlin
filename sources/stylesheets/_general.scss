@@ -196,14 +196,12 @@ blockquote {
 
     &-disabled {
       // scss-lint:disable NestingDepth
-      .public & {
-        &,
-        &:hover {
-          cursor: default;
-          color: $third-color;
-          background-color: $disabled-color;
-          opacity: 1;
-        }
+      &,
+      &:hover {
+        cursor: default;
+        color: $third-color;
+        background-color: $disabled-color;
+        opacity: 1;
       }
       // scss-lint:enable NestingDepth
     }

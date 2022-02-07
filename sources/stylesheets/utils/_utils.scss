@@ -12,7 +12,9 @@
   position: relative;
 }
 
-.t-sticky {
-  position: sticky;
-  top: 32px;
+@media screen and (min-width: $tablet-2) {
+  .t-sticky {
+    position: sticky;
+    top: 32px;
+  }
 }
