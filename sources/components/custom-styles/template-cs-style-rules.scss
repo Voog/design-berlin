@@ -321,14 +321,14 @@ h3,
       text-transform: var(--h3-text-transform);
     }
   }
-  
+
   a {
     color: var(--content-links-color);
     font-style: var(--content-links-font-style);
     font-weight: var(--content-links-font-weight);
     text-decoration: var(--content-links-text-decoration);
     text-transform: var(--content-links-text-transform);
-    
+
     &:hover {
       color: var(--content-links-hover-color);
       font-style: var(--content-links-hover-font-style);
@@ -363,11 +363,11 @@ h3,
   }
 
   .footer {
-    .formatted {  
+    .formatted {
       color: var(--sidebar-footer-color);
       font-size: var(--sidebar-footer-font-size);
       line-height: var(--sidebar-footer-line-height);
-      
+
       .voog-reference a {
         font-size: 11px;
       }
@@ -431,7 +431,7 @@ h3,
 .custom-btn:not(.custom-btn-disabled) {
   background-color: var(--content-button-background-color);
   color: var(--content-button-color);
-  
+
   &:hover {
     background-color: var(--content-button-background-color);
     color: var(--content-button-color);
@@ -468,4 +468,28 @@ h3,
 #mobile-menu {
   background-color: var(--color-main);
   opacity: .9;
+}
+
+.product-content .js-product-content-right {
+  .product-price {
+    color: var(--content-area-product-price__color);
+    font-size: var(--content-area-product-price__font-size);
+    font-weight: var(--content-area-product-price__font-weight);
+    font-style: var(--content-area-product-price__font-style);
+    text-decoration: var(--content-area-product-price__text-decoration);
+  }
+  .product-description {
+    color: var(--content-area-product-description__color);
+    font-size: var(--content-area-product-description__font-size);
+    font-weight: var(--content-area-product-description__font-weight);
+    font-style: var(--content-area-product-description__font-style);
+    text-decoration: var(--content-area-product-description__text-decoration);
+  }
+  .content-item-title h1 {
+    color: var(--content-area-product-title__color);
+    font-size: var(--content-area-product-title__font-size);
+    font-weight: var(--content-area-product-title__font-weight);
+    font-style: var(--content-area-product-title__font-style);
+    text-decoration: var(--content-area-product-title__text-decoration);
+  }
 }

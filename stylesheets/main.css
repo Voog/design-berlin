@@ -204,7 +204,7 @@ blockquote {
   cursor: pointer;
 }
 
-.public .custom-btn-disabled, .public .custom-btn-disabled:hover {
+.custom-btn-disabled, .custom-btn-disabled:hover {
   cursor: default;
   color: #848484;
   background-color: #dadada;
@@ -2527,6 +2527,10 @@ table th {
   left: 0;
 }
 
+.editmode .item-top {
+  cursor: pointer;
+}
+
 .item-top:hover .btn,
 .item-top:hover .custom-btn {
   opacity: 1;
@@ -3337,6 +3341,28 @@ body .edy-settings-editor:not(.editor_default) .edy-popover-content .edy-setting
   display: block;
 }
 
+.product-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.product-content .without-image .item-top {
+  background-image: url("../assets/ico-placeholder.svg");
+  background-color: #F2F2F2;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.product-price {
+  padding: 8px 0 24px 0;
+}
+
 .flex_box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3422,6 +3448,10 @@ body .edy-settings-editor:not(.editor_default) .edy-popover-content .edy-setting
   }
 }
 
+.mar_0-8 {
+  margin: 0 8px;
+}
+
 .mar_0-16-neg {
   margin: 0 -16px;
 }
@@ -3496,14 +3526,16 @@ body .edy-settings-editor:not(.editor_default) .edy-popover-content .edy-setting
   position: relative;
 }
 
-.t-sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 32px;
+@media screen and (min-width: 752px) {
+  .t-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 32px;
+  }
 }
 
 .formatted .edy-buy-button-container .form_field {
-  padding-top: 15px;
+  padding: 16px 0;
 }
 
 .formatted .edy-buy-button-variants .form_field {

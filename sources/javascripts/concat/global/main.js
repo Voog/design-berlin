@@ -230,7 +230,35 @@
         }
       }
     }
-  }
+  };
+
+  var handleAutogenProductPageContent = function () {
+    $(document).ready(function () {
+      changeProductImagePos();
+    });
+
+    $(window).resize(debounce(function () {
+      changeProductImagePos();
+    }, 25));
+
+    var changeProductImagePos = function () {
+      var productGallery = $('.js-product-gallery');
+      var productImageContentBox = $('.js-content-item-box');
+      var productContentRight = $('.js-product-content-right');
+
+      if ($('.js-buy-btn-content .edy-buy-button-container').length >= 1) {
+        if ($(window).width() < 752) {
+          if ($('.js-buy-btn-content + .js-product-gallery').length === 0) {
+            productContentRight.append(productGallery);
+          }
+        } else {
+          if ($('.js-content-item-box + .js-product-gallery').length === 0) {
+            productImageContentBox.parent().append(productGallery);
+          }
+        }
+      }
+    }
+  };
 
   var init = function () {
     handleWindowScroll();
@@ -238,6 +266,10 @@
 
   window.site = $.extend(window.site || {}, {
     handleProductPageContent: handleProductPageContent
+  });
+
+  window.template = $.extend(window.template || {}, {
+    handleAutogenProductPageContent: handleAutogenProductPageContent
   });
 
   init();
