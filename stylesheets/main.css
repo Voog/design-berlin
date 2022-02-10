@@ -2527,6 +2527,10 @@ table th {
   left: 0;
 }
 
+[data-view-state="editmode"] .item-top {
+  cursor: pointer;
+}
+
 .item-top:hover .btn,
 .item-top:hover .custom-btn {
   opacity: 1;
