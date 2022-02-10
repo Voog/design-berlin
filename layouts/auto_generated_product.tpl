@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% include "template-variables" %}
-<html class="{% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}" data-view-state="{{ view_mode }}">
+<html class="{% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
 <head prefix="og: http://ogp.me/ns#">
   {% include "edicy-tools-variables" %}
   {% include "html-head" %}
@@ -115,10 +115,12 @@
   {% include "javascripts" %}
 
   <script>
-    template && template.handleAutogenProductPageContent();
-    {%- if product and editmode %}
-      template && template.handleProductImageClick({{ product.id }});
-    {% endif -%}
+    if (template) {
+      template.handleAutogenProductPageContent();
+      {%- if product and editmode %}
+        template.handleProductImageClick({{ product.id }});
+      {% endif -%}
+    }
   </script>
 </body>
 </html>
