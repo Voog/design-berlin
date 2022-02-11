@@ -453,3 +453,7 @@ h3,
   -webkit-text-decoration: var(--content-area-product-title__text-decoration);
           text-decoration: var(--content-area-product-title__text-decoration);
 }
+
+.menu-item.current-page a {
+  color: var(--color-main);
+}

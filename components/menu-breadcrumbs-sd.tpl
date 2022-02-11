@@ -5,7 +5,7 @@
   {%- for listItem in breadcrumbsObj.itemListElement %}
     {%- assign pageUrl = page.url | remove_first: "/" -%}
 
-    <li class="menu-item">
+    <li class="menu-item {% if forloop.last %}current-page{% endif %}">
       <a href="/{{ listItem.item.id }}">
         {{ listItem.item.name }}
       </a>
