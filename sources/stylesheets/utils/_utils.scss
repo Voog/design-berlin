@@ -16,5 +16,6 @@
   .t-sticky {
     position: sticky;
     top: 32px;
+    z-index: $zindex-ca-interaction-button + 1;
   }
 }
