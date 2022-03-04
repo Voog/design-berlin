@@ -526,3 +526,14 @@ body .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-
 .menu-item.current-page a {
   color: var(--color-main);
 }
+
+.edy-product-widget-filter-sort option {
+  color: var(--color-main);
+}
+
+.dark-background .edy-product-widget-filter-name,
+.dark-background .edy-product-widget-filter-sort,
+.dark-background .edy-product-widget-filter-label,
+.dark-background .edy-product-widget-filter-search-input {
+  color: var(--color-white);
+}

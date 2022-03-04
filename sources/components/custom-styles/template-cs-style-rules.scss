@@ -587,3 +587,16 @@ body .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-
     }
   }
 }
+
+.edy-product-widget-filter-sort option {
+  color: var(--color-main);
+}
+
+.dark-background {
+  .edy-product-widget-filter-name,
+  .edy-product-widget-filter-sort,
+  .edy-product-widget-filter-label,
+  .edy-product-widget-filter-search-input {
+    color: var(--color-white);
+  }
+}
