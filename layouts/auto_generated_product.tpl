@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-{% include "template-variables" %}
+{%- include "template-settings" -%}
+{%- include "template-variables" -%}
 <html class="{% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
 <head prefix="og: http://ogp.me/ns#">
   {% include "edicy-tools-variables" %}
@@ -50,7 +51,7 @@
                       <div class="item-top product-image">
                         <div class="top-inner">
                           {%- if product.image != blank %}
-                            {% image product.image loading: 'lazy' target_width: "1280" class: "item-image not-cropped" %}
+                            {% image product.image loading: 'lazy' target_width: "600" class: "item-image not-cropped" %}
                           {% endif -%}
                         </div>
                       </div>
