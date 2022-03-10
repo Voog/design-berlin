@@ -1,3 +1,3 @@
 {
-  "version": "berlin-2.3.1"
+  "version": "berlin-2.3.2"
 }
