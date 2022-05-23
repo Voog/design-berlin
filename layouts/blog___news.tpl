@@ -34,8 +34,10 @@
               {% endif %}
             </nav>
           </div>
-          <section class="content blog-content inner cfx" {{ edy_intro_edit_text }}>
-            {% content %}
+          <section class="content blog-content inner cfx">
+            {%- assign content_default_title = "content" | lce -%}
+            {%- assign content_default_title_tooltip = "content_tooltip_specific_page" | lce -%}
+            {% content title=content_default_title title_tooltip=content_default_title_tooltip %}
             {% if editmode %}
               <div class="addbutton">{% addbutton %}</div>
             {% endif %}
