@@ -3371,6 +3371,10 @@ body .edy-settings-editor:not(.editor_default) .edy-popover-content .edy-setting
   background-position: center;
 }
 
+.product-content .product-cross-page-info {
+  margin-bottom: 32px;
+}
+
 .product-price {
   padding: 8px 0 24px 0;
 }

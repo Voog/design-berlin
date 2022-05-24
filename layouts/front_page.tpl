@@ -27,8 +27,10 @@
                 <section class="content formatted js-background-type {{ front_page_content_cover_type }}">
                   <div class="tbl">
                     <div class="tbl-row">
-                      <div class="tbl-cell" {{ edy_intro_edit_text }}>
-                        {% content %}
+                      <div class="tbl-cell">
+                        {%- assign content_default_title = "content" | lce -%}
+                        {%- assign content_default_title_tooltip = "content_tooltip_specific_page" | lce -%}
+                        {% content title=content_default_title title_tooltip=content_default_title_tooltip %}
                       </div>
                     </div>
                   </div>

@@ -19,11 +19,17 @@
             <div class="container">
               {% include "submenu" %}
               <section class="content cfx formatted" {{ edy_intro_edit_text }}>
-                {% contentblock name="content_header" publish_default_content="true" %}<h1>{{ page.title }}</h1>{% endcontentblock %}
+                {%- assign page_title_content_title = "title" | lce -%}
+                {%- assign page_title_content_title_tooltip = "content_tooltip_current_page_title" | lce -%}
+                {% contentblock name="content_header" publish_default_content="true" title=page_title_content_title title_tooltip=page_title_content_title_tooltip %}
+                  <h1>{{ page.title }}</h1>
+                {% endcontentblock %}
                 {% include 'menu-breadcrumbs' %}
                 {% include 'product-list-block' %}
                 <div class="product-list-content" data-search-indexing-allowed="true">
-                  {% content %}
+                  {%- assign content_default_title = "content" | lce -%}
+                  {%- assign content_default_title_tooltip = "content_tooltip_specific_page" | lce -%}
+                  {% content title=content_default_title title_tooltip=content_default_title_tooltip %}
                 </div>
               </section>
             </div>
