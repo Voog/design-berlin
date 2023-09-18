@@ -78,5 +78,5 @@
      "featured": true,
      "type": "button"
   */
-  --content-button-color: white;
+  --content-button-color: rgb(255, 255, 255);
 }

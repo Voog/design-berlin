@@ -50,5 +50,5 @@
       "--form-field-background-color"
     ]
   */
-  --color-white: white;
+  --color-white: rgb(255, 255, 255);
 }

@@ -6,7 +6,7 @@
      "scope": "global",
      "featured": true
   */
-  --sidebar-background-color: white;
+  --sidebar-background-color: rgb(255, 255, 255);
   /* VoogStyle
     "pathI18n": ["sidebar", "title"],
     "titleI18n": "size",

@@ -88,5 +88,5 @@
     "editor": "colorPicker",
     "scope": "global"
   */
-  --form-field-background-color: white;
+  --form-field-background-color: rgb(255, 255, 255);
 }
