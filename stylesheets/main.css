@@ -3099,6 +3099,14 @@ body .edy-settings-editor:not(.editor_default) .edy-popover-content .edy-setting
 .product-price {
   padding: 8px 0 24px 0;
 }
+.product-price .product-price-original {
+  display: inline-block;
+  padding-right: 4px;
+  opacity: 0.4;
+}
+.product-price .product-price-final {
+  display: inline-block;
+}
 
 .dark-background .edy-product-widget-filter-sort,
 .dark-background .edy-product-widget-filter-search-input {
@@ -3256,6 +3264,9 @@ body .edy-settings-editor:not(.editor_default) .edy-popover-content .edy-setting
 }
 .formatted .edy-buy-button-container .form_field {
   padding: 16px 0;
+}
+.formatted .edy-buy-button-container .edy-buy-button-price-container .edy-buy-button-price-original {
+  opacity: 0.4;
 }
 .formatted .edy-buy-button-variants .form_field {
   padding-top: 5px;
