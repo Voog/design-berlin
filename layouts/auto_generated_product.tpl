@@ -51,20 +51,19 @@
               <div class="flex_row flex_row-2 product-content" data-search-indexing-allowed="true">
                 <div class="flex_row-2--item-50">
                   <div class="mar_0-8 p-rel js-product-page-image-wrap">
-                    {%- if product.image != blank %}
-                      {% assign item_image_state = "with-image" %}
+
+                    {%- if product.photos != blank %}
+                      {% assign item_image_state = "with-images" %}
                     {% else %}
-                      {% assign item_image_state = "without-image" %}
+                      {% assign item_image_state = "without-images" %}
                     {% endif -%}
 
                     <div class="content-item-box {{ item_image_state }} js-content-item-box">
-                      <div class="item-top product-image">
-                        <div class="top-inner">
-                          {%- if product.image != blank %}
-                            {% image product.image loading: 'lazy' target_width: "600" class: "item-image not-cropped" %}
-                          {% endif -%}
-                        </div>
-                      </div>
+                      {%- if product.photos == blank -%}
+                        <div class="item-top without-pointer"></div>
+                      {%- else -%}
+                        {% gallery product layout="product_slider" %}
+                      {%- endif -%}
                     </div>
                   </div>
 
@@ -162,9 +161,6 @@
   <script>
     if (template) {
       template.handleAutogenProductPageContent();
-      {%- if product and editmode %}
-        template.handleProductImageClick({{ product.id }});
-      {% endif -%}
     }
   </script>
 </body>

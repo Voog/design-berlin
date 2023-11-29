@@ -737,16 +737,6 @@
     });
   };
 
-  // Opens product admin view on product image click
-
-  var handleProductImageClick = function(product_id) {
-    if (editmode()) {
-      $('.product-content .product-image').click(function() {
-        window.open('/admin/ecommerce/products/' + product_id, '_blank').focus();
-      });
-    }
-  };
-
   var toggleImageSettingsPopover = function () {
     $('.js-image-settings-popover').toggleClass('active');
   }
@@ -764,8 +754,7 @@
   // Enables the usage of the initiations outside this file
   window.template = $.extend(window.template || {}, {
     bindCustomTexteditorStyles: bindCustomTexteditorStyles,
-    bindRootItemSettings: bindRootItemSettings,
-    handleProductImageClick: handleProductImageClick
+    bindRootItemSettings: bindRootItemSettings
   });
 
   window.site = $.extend(window.site || {}, {
